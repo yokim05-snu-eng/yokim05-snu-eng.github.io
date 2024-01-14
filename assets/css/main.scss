@@ -1,0 +1,136 @@
+---
+---
+/* stylelint-disable */
+$primary: {{ site.colors.primary | default: '#20509e' }};
+$secondary: {{ site.colors.secondary | default: '#ff9c07' }};
+
+$gradient-1: $primary;
+$gradient-2: $secondary;
+
+$base: #FFFFFF;
+$base-100: #edf2f4;  // original: #edf2f4 change to yellow
+$base-200: #e3e4e8;
+$base-300: #D1D5DB;  // original: #D1D5DB change to yellow
+$base-400: #9CA3AF;  // original: #9CA3AF change to dark yellow
+$base-500: #6B7280;
+$base-600: #4B5563;
+$base-700: #272525;
+$base-800: #201f1f;
+$base-900: #121418;  
+
+$base-dark: #121418;
+$base-dark-100: #1c1f25;
+$base-dark-200: #1f232b;
+$base-dark-300: #222833;
+$base-dark-400: #4B5563;
+$base-dark-500: #6B7280;
+$base-dark-600: #9CA3AF;
+$base-dark-700: #D1D5DB;
+$base-dark-800: #E5E7EB;
+$base-dark-900: #F4F4F5;
+
+$font-family-monospace: {{ site.fonts.monospace }}, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base: {{ site.fonts.base }}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; 
+$font-family-heading: {{ site.fonts.heading }}, -apple-system, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+$font-family-serif: {{ site.fonts.serif }} -apple-system, serif;
+$font-family-sans-serif: $font-family-base;
+
+:root{  
+  --color-primary: #{$primary};
+  --color-secondary: #{$secondary};
+  --color-gradient-1: #{$gradient-1};
+  --color-gradient-2: #{$gradient-2};
+  --color-base: #{$base};
+  --color-base-100: #{$base-100};
+  --color-base-200: #{$base-200};
+  --color-base-300: #{$base-300};
+  --color-base-400: #{$base-400};
+  --color-base-500: #{$base-500};
+  --color-base-600: #{$base-600};
+  --color-base-700: #{$base-700};
+  --color-base-800: #{$base-800};
+  --color-base-900: #{$base-900};
+}
+  
+html[data-mode='dark'] {
+  --color-base: #{$base-dark};
+  --color-base-100: #{$base-dark-100};
+  --color-base-200: #{$base-dark-200};
+  --color-base-300: #{$base-dark-300};
+  --color-base-400: #{$base-dark-400};
+  --color-base-500: #{$base-dark-500};
+  --color-base-600: #{$base-dark-600};
+  --color-base-700: #{$base-dark-700};
+  --color-base-800: #{$base-dark-800};
+  --color-base-900: #{$base-dark-900};
+}
+
+// #menuMain ul li a{
+//   font-size: 18px;
+// }
+
+#mainImgHeroContainer{
+  margin-right: 7.5%;
+}
+#mainImgHeroTextCover{
+  padding: 0;
+  margin:0;
+}
+#mainImgHeroText{
+  align-items: flex-end;
+}
+#infoDesc{
+  font-weight:bold;
+}
+
+#학-력,
+#주요-학회-경력,
+#서울대학교-현-소속-및-직위,
+#주요-경력,
+#연구-업적
+{
+  font-weight:bold;
+}
+#heroPromiseImg{
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+
+@media (min-width: 768px){
+  #infoDesc{
+    width: 100%;
+  }
+}
+@media (max-width: 768px){
+  #mainImgHero{
+    align-items: flex-end;
+    padding-bottom:0;
+  }  
+  #mainImgHeroContainer{
+    padding:0;
+    margin:0;
+  }
+  #mainImgHeroText{
+    align-items: center;
+  }
+}
+@media (max-width: 425px){
+  #infoTitle{
+    font-size:28px;
+  }
+  #infoContainer{
+    padding-left:15px;
+    padding-right:15px;
+  }
+  #infoDesc{
+    font-weight:normal;
+  }
+}
+@media (max-width: 375px){
+  #infoTitle{
+    font-size:24px;
+  }
+}
+
+
+@import 'style';

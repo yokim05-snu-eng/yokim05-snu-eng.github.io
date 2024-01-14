@@ -1,0 +1,64 @@
+---
+layout: default
+body_classes: page-list
+---
+
+{% if page.hero.enabled %} {% include components/hero.html
+heading=page.hero.heading sub_heading=page.hero.sub_heading
+background_image=page.hero.background_image
+background_image_blend_mode=page.hero.background_image_blend_mode
+background_color=page.hero.background_color
+background_gradient=page.hero.background_gradient
+text_color=page.hero.text_color fullscreen_mobile=page.hero.fullscreen_mobile
+fullscreen_desktop=page.hero.fullscreen_desktop height=page.hero.height
+buttons=page.hero.buttons %} {% else %} {% include components/title.html
+fa_icon=page.fa_icon icon=page.icon title=page.title
+description=page.description image=page.image %} {% endif %} {% if
+page.intro.enabled == true %}
+<div class="strip strip-alt strip-border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% include components/info.html heading=page.intro.heading
+        sub_heading=page.intro.sub_heading align=page.intro.align
+        buttons=page.intro.buttons features=page.intro.features
+        image=page.intro.image %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="strip">
+  <div class="container">
+    {% include components/grid.html collection=page.collection limit=page.limit
+    sort=page.sort hide_thumbnail=page.hide_thumbnail hide_icon=page.hide_icon
+    hide_text=page.hide_description %}
+  </div>
+</div>
+
+{% if page.outro.enabled == true %}
+<div class="strip strip-alt strip-border-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% include components/info.html heading=page.outro.heading
+        sub_heading=page.outro.sub_heading description=page.outro.description
+        align=page.outro.align buttons=page.outro.buttons
+        features=page.outro.features image=page.outro.image %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %} {% assign content = content | strip_newlines %} {% if content != ""
+%}
+<div class="strip strip-border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8">
+        <div class="content">{{ content }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,9 @@
+<div class="menu-main-mobile" id="menu-main-mobile">
+  <ul class="menu">
+    {% for item in site.data.menu.main %}
+      <li class="menu-item-{{ item.name }}{% if item.url == page.url %} active {% endif %}">
+        <a href="{{ item.url }}">{{ item.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,31 @@
+.logos {
+  margin-right: auto;
+  a {
+    display: block;
+    opacity: 1;
+    &:hover {
+      opacity: 0.7;
+    }
+    img {
+      vertical-align: bottom;
+    }
+  }
+  .logo {
+    display: none;
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+  }
+  .logo-mobile {
+    display: block;
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+  .logo-invert {
+    display: none;
+  }
+  .logo-invert-mobile {
+    display: none;
+  }
+}

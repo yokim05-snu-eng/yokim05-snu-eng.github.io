@@ -1,0 +1,16 @@
+.grid {
+  .grid-heading {
+    text-align: center;
+    h2 {
+      font-size: 30px;
+      font-weight: normal;
+      color: var(--color-base-700);
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .grid-footer {
+    text-align: center;
+  }
+}

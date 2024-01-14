@@ -1,0 +1,242 @@
+@import "variables";
+
+// Bootstrap
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+// @import 'bootstrap/root';
+@import "bootstrap/reboot";
+@import "bootstrap/grid";
+// @import 'bootstrap/type';
+@import "bootstrap/images";
+// @import 'bootstrap/code';
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+// @import "bootstrap/transitions";
+// @import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+// @import "bootstrap/custom-forms";
+// @import "bootstrap/nav";
+// @import "bootstrap/navbar";
+// @import "bootstrap/card";
+// @import "bootstrap/breadcrumb";
+// @import "bootstrap/pagination";
+@import "bootstrap/badge";
+// @import "bootstrap/jumbotron";
+// @import "bootstrap/alert";
+// @import "bootstrap/progress";
+// @import "bootstrap/media";
+// @import "bootstrap/list-group";
+// @import "bootstrap/close";
+// @import "bootstrap/toasts";
+// @import "bootstrap/modal";
+// @import "bootstrap/tooltip";
+// @import "bootstrap/popover";
+// @import "bootstrap/carousel";
+// @import "bootstrap/spinners";
+@import "bootstrap/utilities";
+// @import "bootstrap/print";
+
+// Theme CSS
+@import "theme/type";
+@import "theme/content";
+@import "theme/syntax";
+@import "theme/strip";
+@import "theme/header";
+@import "theme/footer";
+@import "theme/logo";
+@import "theme/dark-mode-switcher";
+@import "theme/main-menu";
+@import "theme/main-menu-mobile";
+@import "theme/grid";
+@import "theme/title";
+@import "theme/hero";
+@import "theme/info";
+@import "theme/sidebar";
+@import "theme/social";
+@import "theme/breadcrumbs";
+@import "theme/pagination";
+@import "theme/partners";
+@import "theme/author";
+@import "theme/card";
+@import "theme/card-team";
+@import "theme/card-work";
+
+// Font Awesome
+$fa-font-path: "../fonts/fontawesome-free-5.15.3-web/webfonts";
+@import "libraries/fontawesome-free-5.15.3-web/fontawesome.scss";
+@import "libraries/fontawesome-free-5.15.3-web/solid.scss";
+@import "libraries/fontawesome-free-5.15.3-web/regular.scss";
+@import "libraries/fontawesome-free-5.15.3-web/brands.scss";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: 16px;
+  color: var(--color-base-900);
+  background: var(--color-base);
+  transition: background-color 0.3s;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.page {
+  .wrapper {
+    flex: 1;
+  }
+}
+.container {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+
+#vision-table {
+  margin: 50px auto;
+  text-align: center;
+  width: 90%;
+  /* total computed width = 222 x 3 + 226 */
+}
+
+#vision-table .plan {
+  font: 14px;
+  text-shadow: 0 1px rgba(255, 255, 255, .8);
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 20px;
+  width: 50%;
+  /* plan width = 180 + 20 + 20 + 1 + 1 = 222px */
+  float: left;
+  position: relative;
+}
+
+#vision-table #most-popular {
+  z-index: 2;
+  top: -13px;
+  border-width: 3px;
+  padding: 30px 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
+  box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
+}
+
+#vision-table .plan:nth-child(1) {
+  -moz-border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+}
+
+#vision-table .plan:nth-child(4) {
+  -moz-border-radius: 0 5px 5px 0;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+/* --------------- */
+
+#vision-table h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  margin: -20px -20px 50px -20px;
+  background-color: #eee;
+  background-image: -moz-linear-gradient(#fff, #eee);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));
+  background-image: -webkit-linear-gradient(#fff, #eee);
+  background-image: -o-linear-gradient(#fff, #eee);
+  background-image: -ms-linear-gradient(#fff, #eee);
+  background-image: linear-gradient(#fff, #eee);
+}
+
+#vision-table #most-popular h3 {
+  background-color: #ddd;
+  background-image: -moz-linear-gradient(#eee, #ddd);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#ddd));
+  background-image: -webkit-linear-gradient(#eee, #ddd);
+  background-image: -o-linear-gradient(#eee, #ddd);
+  background-image: -ms-linear-gradient(#eee, #ddd);
+  background-image: linear-gradient(#eee, #ddd);
+  margin-top: -30px;
+  padding-top: 30px;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+
+#vision-table .plan:nth-child(1) h3 {
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
+}
+
+#vision-table .plan:nth-child(4) h3 {
+  -moz-border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;
+}
+
+#vision-table h3 span {
+  display: block;
+  font: bold 25px/100px Georgia, Serif;
+  color: #777;
+  background: #fff;
+  border: 5px solid #fff;
+  height: 100px;
+  width: 100px;
+  margin: 10px auto -65px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+  -moz-box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+  -webkit-box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+  box-shadow: 0 5px 20px #ddd inset, 0 3px 0 #999 inset;
+}
+
+/* --------------- */
+
+#vision-table ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+#vision-table li {
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.clear:before,
+.clear:after {
+  content: "";
+  display: table
+}
+
+.clear:after {
+  clear: both
+}
+
+.clear {
+  zoom: 1
+}
+
+#rcorners1 {
+  border-radius: 25px;
+  background: #fbe976;
+  padding: 20px;
+  width: 750px;
+  height: 150px;
+}
+
+.sign {
+  margin: 0;
+}

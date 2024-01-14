@@ -1,0 +1,71 @@
+---
+layout: default
+comments: true
+body_classes: page-post
+---
+
+{% if page.hero.enabled %}
+  {% include components/hero.html 
+    heading=page.hero.heading
+    sub_heading=page.hero.sub_heading
+    text_color=page.hero.text_color
+    background_image=page.hero.background_image
+    background_image_blend_mode=page.hero.background_image_blend_mode
+    background_color=page.hero.background_color
+    background_gradient=page.hero.background_gradient
+    fullscreen_mobile=page.hero.fullscreen_mobile
+    fullscreen_desktop=page.hero.fullscreen_desktop
+    height=page.hero.height
+    buttons=page.hero.buttons
+  %}
+{% else %}
+  {% include components/title.html
+    title=page.title
+    image=page.image
+    date=page.date
+    align="center"
+  %}
+{% endif %}
+
+<div class="strip">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        {% if page.authors %}
+          {% for author in page.authors %}
+            {% include blocks/author.html 
+            author=author
+            style='row'
+            show_author_name=true
+          %}
+          {% endfor %}
+        {% endif %}
+        <div class="content">{{ content }}</div>
+
+        <div id="disqus_thread"></div>
+        <script>
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+          /*
+          var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+          */
+          (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://trust-snu.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+            
+      </div>
+    </div>
+  </div>
+</div>
+
+

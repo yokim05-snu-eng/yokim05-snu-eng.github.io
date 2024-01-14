@@ -1,0 +1,49 @@
+.author {
+  .author-content {
+    .author-name {
+      display: block;
+      font-weight: bold;
+    }
+    .author-job {
+      display: block;
+      color: var(--color-base-600);
+    }
+  }
+  .author-image {
+    img {
+      height: 36px;
+      width: 36px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+  }
+}
+.author.author-row {
+  display: flex;
+  align-items: center;
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      margin-bottom: 15px;
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.author.author-inline {
+  z-index: 1;
+  margin: 0;
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      margin-left: ($i - 1) * -18px;
+    }
+  }
+  .author-image {
+    img {
+      height: 26px;
+      width: 26px;
+      border: 2px solid var(--color-base);
+      margin-right: 0;
+    }
+  }
+}

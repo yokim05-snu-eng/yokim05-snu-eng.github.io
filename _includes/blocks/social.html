@@ -1,0 +1,9 @@
+{% if .site.data.social %}
+  <div class="social" id="social">
+    {% for social in .site.data.social %}
+      <a href="{{ social.url }}" target="blank" title="{{ social.title }}">
+        <i class="{{ social.fa_icon }}"></i>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}

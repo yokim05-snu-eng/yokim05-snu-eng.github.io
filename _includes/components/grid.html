@@ -1,0 +1,112 @@
+{% assign collection = include.collection %} {% assign cards = site[collection]
+%} {% assign limit = include.limit | default: nil %} {% assign sort =
+include.sort | default: 'weight' %} {% assign hide_thumbnail =
+include.hide_thumbnail | default: false %} {% assign hide_icon =
+include.hide_icon | default: false %} {% assign hide_description =
+include.hide_description | default: false %} {% assign heading = include.heading
+%} {% assign sub_heading = include.sub_heading %} {% assign
+view_more_button_enabled = include.view_more_button_enabled %} {% assign
+view_more_button_text = include.view_more_button_text | defafult: "View More" %}
+{% assign view_more_button_link = include.view_more_button_link: %} {% if sort
+== 'date' %} {% assign cards = cards | sort: 'date' | 'reverse' %} {% elsif sort
+== 'weight' %} {% assign cards = cards | sort: 'weight' %} {% endif %} {% if
+cards.size > 0 %}
+<div class="row grid">
+  <div class="col-12">
+    {% if heading or sub_heading %}
+    <div class="grid-heading">
+      {% if heading != "" %}
+      <h2 style="font-weight: bold">{{ heading }}</h2>
+      {% endif %} {% if sub_heading and sub_heading != "" %}
+      <p class="large">{{ sub_heading }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  {% for card in cards limit: limit %} {% case collection %} {% when 'services'
+  %}
+  <div class="col-12 col-md-6 col-lg-4 mb-gutter-half mt-gutter-half">
+    {% assign thumbnail = card.thumbnail %} {% assign description =
+    card.description %} {% assign fa_icon = card.fa_icon %} {% assign icon =
+    card.icon %} {% if hide_thumbnail %}{% assign thumbnail = false %}{% endif
+    %} {% if hide_icon %}{% assign icon = false %}{% assign fa_icon = false %}{%
+    endif %} {% if hide_description %}{% assign description = false %}{% endif
+    %} {% include cards/card.html title=card.title description=description
+    icon=icon fa_icon=icon thumbnail=thumbnail url=card.url %}
+  </div>
+  {% when 'projects' %}
+  <div class="col-12 col-md-6 mb-gutter-half mt-gutter-half">
+    {% assign thumbnail = card.thumbnail %} {% assign description =
+    card.description %} {% if hide_thumbnail %}{% assign thumbnail = false %}{%
+    endif %} {% if hide_description %}{% assign description = false %}{% endif
+    %} {% include cards/card.html title=card.title description=description
+    thumbnail=thumbnail client=card.client url=card.url %}
+  </div>
+  {% when 'posts' %}
+  <div class="col-12 col-md-6 col-lg-4 mb-gutter-half mt-gutter-half">
+    {% assign thumbnail = card.thumbnail %} {% assign description =
+    card.description %} {% if hide_thumbnail %}{% assign thumbnail = false %}{%
+    endif %} {% if hide_description %}{% assign description = false %}{% endif
+    %} {% include cards/card.html title=card.title description=description
+    thumbnail=thumbnail authors=card.authors date=card.date url=card.url %}
+  </div>
+  {% when 'blog_categories' %}
+  <div class="col-12 col-md-6 col-lg-6 mb-gutter-half mt-gutter-half">
+    {% assign thumbnail = card.thumbnail %} {% assign description =
+    card.description %} {% if hide_thumbnail %}{% assign thumbnail = false %}{%
+    endif %} {% if hide_description %}{% assign description = false %}{% endif
+    %} {% include cards/card-blogCategory.html title=card.title
+    description=description thumbnail=thumbnail authors=card.authors
+    date=card.date url=card.categoryUrl %}
+  </div>
+  {% when 'team' %}
+  <div class="col-12 col-md-6 col-lg-4 mb-gutter-half mt-gutter-half">
+    {% include cards/card-team.html title=card.title
+    description=card.description thumbnail=card.thumbnail jobtitle=card.jobtitle
+    links=card.links %}
+  </div>
+  {% when 'promises' %}
+  <div class="col-12 col-md-6 col-lg-6 mb-gutter-half mt-gutter-half">
+    {% assign thumbnail = card.thumbnail %} {% assign description =
+    card.description %} {% assign fa_icon = card.fa_icon %} {% assign icon =
+    card.icon %} {% if hide_thumbnail %}{% assign thumbnail = false %}{% endif
+    %} {% if hide_icon %}{% assign icon = false %}{% assign fa_icon = false %}{%
+    endif %} {% if hide_description %}{% assign description = false %}{% endif
+    %} {% include cards/card.html title=card.title description=description
+    icon=icon fa_icon=icon thumbnail=thumbnail url=card.url %}
+  </div>
+  {% when 'courses' %}
+  <div class="col-12 col-md-6 col-lg-6 mb-gutter-half mt-gutter-half">
+    {% assign thumbnail = card.thumbnail %} {% assign description =
+    card.description %} {% assign fa_icon = card.fa_icon %} {% assign icon =
+    card.icon %} {% if hide_thumbnail %}{% assign thumbnail = false %}{% endif
+    %} {% if hide_icon %}{% assign icon = false %}{% assign fa_icon = false %}{%
+    endif %} {% if hide_description %}{% assign description = false %}{% endif
+    %} {% include cards/card-courses.html title=card.title
+    description=description icon=icon fa_icon=icon thumbnail=thumbnail
+    url=card.video_url %}
+  </div>
+  {% else %}
+  <div class="col-12 col-md-6 col-lg-4 mb-gutter-half mt-gutter-half">
+    {% assign thumbnail = card.thumbnail %} {% assign description =
+    card.description %} {% assign fa_icon = card.fa_icon %} {% assign icon =
+    card.icon %} {% if hide_thumbnail %}{% assign thumbnail = false %}{% endif
+    %} {% if hide_icon %}{% assign icon = false %}{% assign fa_icon = false %}{%
+    endif %} {% if hide_description %}{% assign description = false %}{% endif
+    %} {% include cards/card.html title=card.title description=description
+    icon=icon fa_icon=icon thumbnail=thumbnail url=card.url %}
+  </div>
+  {% endcase %} {% endfor %}
+
+  <div class="col-12">
+    {% if view_more_button_enabled and view_more_button_link %}
+    <div class="grid-footer mt-1">
+      {% include blocks/button.html text=view_more_button_text
+      url=view_more_button_link external=button.external size='small'
+      outline=true style='primary' %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

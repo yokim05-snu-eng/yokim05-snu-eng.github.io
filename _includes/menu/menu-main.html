@@ -1,0 +1,25 @@
+<div id="menuMain" class="menu-main">
+  <ul>
+    {% for item in site.data.menu.main %} {% if item.child %}
+    <li
+      class="menu-item-{{ item.name }}{% if item.url == page.url %} active {% endif %}"
+    >
+      <a href="{{ item.url }}">{{ item.name }}</a>
+      <div class="dropdown">
+        <ul class="sub-menu">
+          {% for childitem in item.child %}
+          <li class="{% if childitem.url == page.url %} active {% endif %}">
+            <a href="{{ childitem.url }}">{{ childitem.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </li>
+    {% else %} {% if item.url == page.url %} {% assign active = true %} {% else
+    %} {% assign active = nil %} {% endif %}
+    <li class="{% if item.url == page.url %}active{% endif %}">
+      <a href="{{ item.url }}">{{ item.name }}</a>
+    </li>
+    {% endif %} {% endfor %}
+  </ul>
+</div>

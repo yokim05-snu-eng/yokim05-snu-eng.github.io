@@ -1,0 +1,57 @@
+{% assign title = include.title %}
+{% assign description = include.description %}
+{% assign image = include.image %}
+{% assign icon = include.icon %}
+{% assign fa_icon = include.fa_icon %}
+{% assign align = include.align | default: 'left' %}
+{% assign authors = include.authors %}
+{% assign date = include.date %}
+
+<div class="strip strip-border-bottom title">
+  <div class="container">
+    <div class="row {% if align == 'center' %}justify-content-center text-center{% endif %}">
+      <div class="col-12 {% if align == 'center' and image %}mb-4{% endif %}{% if align == 'center' %}col-md-8{% else %}col-md-6{% endif %} {% if align == 'left' %}order-1{% elsif align == 'right' %}order-2{% elsif align == 'center' %}{% endif %}">
+
+        {% if icon and icon != '' %}
+          <div class="title-icon">
+            <img width="48" height="48" src="{{ icon | relative_url }}"/>
+          </div>
+        {% elsif fa_icon and fa_icon != '' %}
+          <div class="title-icon">
+            <i class="{{fa_icon}}"></i>
+          </div>
+        {% endif %}
+
+        {% if date %}
+          <div class="title-date">
+            {% assign day = date | date: "%-d"  %}
+            {% case day %}
+              {% when '1' or '21' or '31' %}
+                {{ day }}st
+              {% when '2' or '22' %}
+                {{ day }}nd
+              {% when '3' or '23' %}
+                {{ day }}rd
+              {% else %}
+                {{ day }}th
+            {% endcase %}
+            {{ date | date: "of %B, %Y" }}
+          </div>
+        {% endif %}
+
+        <h1>{{ title }}</h1>
+        {% if description %}
+          <p>{{ description }}</p>
+        {% endif %}
+
+      </div>
+
+      {% if image and image != "" %}
+      <div class="col-12 mt-2 mb-0 {% if image and align == 'center' %}col-md-10{% else %}col-md-6 mt-md-0 {% endif %} {% if align == 'left' %}order-2{% elsif align == 'right' %}order-1{% elsif align == 'center' %}{% endif %}">
+          <img width="{% if align == 'center' %}1280{% else %}640{% endif %}" height="{% if align == 'center' %}720{% else %}360{% endif %}" {% if title %} alt="{{ title }}" {% endif %} class="img-fluid shadow rounded" src="{{ image | relative_url }}"/>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
