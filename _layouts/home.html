@@ -14,26 +14,6 @@ fullscreen_desktop=page.hero.fullscreen_desktop height=page.hero.height
 buttons=page.hero.buttons %} {% else %} {% include components/title.html
 title=page.title description=page.description image=page.image %} {% endif %}
 
-<!-- {% if page.services.enabled %}
-  <div class="strip strip-base">
-    <div class="container">
-      {% include components/grid.html 
-        collection="services"
-        heading=page.services.heading
-        sub_heading=page.services.sub_heading
-        limit=page.services.limit
-        sort=page.services.sort
-        view_more_button_enabled=page.services.view_more_button_enabled
-        view_more_button_text=page.services.view_more_button_text
-        view_more_button_link=page.services.view_more_button_link
-        hide_thumbnail=page.services.hide_thumbnail
-        hide_icon=page.services.hide_icon
-        hide_description=page.services.hide_description
-      %}
-    </div>
-  </div>
-{% endif %} -->
-
 {% if page.intro.enabled %}
 <div class="strip strip-alt">
   <div id="infoContainer" class="container">
@@ -44,74 +24,6 @@ title=page.title description=page.description image=page.image %} {% endif %}
   </div>
 </div>
 {% endif %}
-<!-- {% if page.visions.enabled %}
-<div class="strip strip-base">
-  <div class="container">
-    {% include components/grid.html collection="visions"
-    heading=page.visions.heading sub_heading=page.visions.sub_heading
-    limit=page.visions.limit sort=page.visions.sort
-    view_more_button_enabled=page.visions.view_more_button_enabled
-    view_more_button_text=page.visions.view_more_button_text
-    view_more_button_link=page.visions.view_more_button_link
-    hide_thumbnail=page.visions.hide_thumbnail hide_icon=page.visions.hide_icon
-    hide_description=page.visions.hide_description %}
-  </div>
-</div>
-{% endif %}  -->
-{% if page.promises.enabled %}
-<div class="strip strip-base">
-  <div class="container">
-    {% include components/grid.html collection="promises"
-    heading=page.promises.heading sub_heading=page.promises.sub_heading
-    limit=page.promises.limit sort=page.promises.sort
-    view_more_button_enabled=page.promises.view_more_button_enabled
-    view_more_button_text=page.promises.view_more_button_text
-    view_more_button_link=page.promises.view_more_button_link
-    hide_thumbnail=page.promises.hide_thumbnail
-    hide_icon=page.promises.hide_icon
-    hide_description=page.promises.hide_description %}
-  </div>
-</div>
-{% endif %}
-
-<!-- {% if page.projects.enabled %}
-  <div class="strip strip-base">
-    <div class="container">
-      {% include components/grid.html 
-        collection="projects"
-        heading=page.projects.heading
-        sub_heading=page.projects.sub_heading
-        limit=page.projects.limit
-        sort=page.projects.sort
-        hide_thumbnail=page.projects.hide_thumbnail
-        hide_icon=page.projects.hide_icon
-        hide_description=page.projects.hide_description
-        view_more_button_enabled=page.projects.view_more_button_enabled
-        view_more_button_text=page.projects.view_more_button_text
-        view_more_button_link=page.projects.view_more_button_link
-      %}
-    </div>
-  </div>
-{% endif %} -->
-
-<!-- {% if page.partners.enabled %}
-  {% assign partners = site.data.partners %}
-  {% assign partners_limit = page.partners.limit | default: 4 %}
-  {% assign partners_sort = page.partners.sort | default: 'weight' %}
-  {% if partners.size > 0 %}
-    <div class="strip strip-base pt-0 partners">
-      <div class="container">
-        <div class="row justify-content-center align-items-center">
-          {% for partner in partners limit: partners_limit %}
-            <div class="col-4 col-lg-2 text-center mb-1 mt-1">
-              <img src="{{ partner.image | relative_url }}" alt="{{ partner.title }}"/>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  {% endif %}
-{% endif %} -->
 
 {% if page.outro.enabled %}
 <div class="strip strip-alt">
@@ -120,33 +32,6 @@ title=page.title description=page.description image=page.image %} {% endif %}
     sub_heading=page.outro.sub_heading align=page.outro.align
     features=page.outro.features buttons=page.outro.buttons
     image=page.outro.image %}
-  </div>
-</div>
-{% endif %}
-<!-- {% if page.posts.enabled %}
-<div class="strip">
-  <div class="container">
-    {% include components/grid.html collection="posts"
-    heading=page.posts.heading limit=page.posts.limit sort=page.posts.sort
-    hide_thumbnail=page.posts.hide_thumbnail
-    hide_description=page.posts.hide_description
-    view_more_button_enabled=page.posts.view_more_button_enabled
-    view_more_button_text=page.posts.view_more_button_text
-    view_more_button_link=page.posts.view_more_button_link %}
-  </div>
-</div>
-{% endif %}  -->
-{% if page.blog_categories.enabled %}
-<div class="strip">
-  <div class="container">
-    {% include components/grid.html collection="blog_categories"
-    heading=page.blog_categories.heading limit=page.blog_categories.limit
-    sort=page.blog_categories.sort
-    hide_thumbnail=page.blog_categories.hide_thumbnail
-    hide_description=page.blog_categories.hide_description
-    view_more_button_enabled=page.blog_categories.view_more_button_enabled
-    view_more_button_text=page.blog_categories.view_more_button_text
-    view_more_button_link=page.blog_categories.view_more_button_link %}
   </div>
 </div>
 {% endif %}

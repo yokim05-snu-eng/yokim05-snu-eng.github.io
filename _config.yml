@@ -12,74 +12,18 @@ sass:
   precision: 10
 
 collections:
-  services:
-    output: true
-    permalink: /:collection/:path/
-  visions:
-    output: true
-    permalink: /:collection/:path/
-  projects:
-    output: true
-    permalink: /:collection/:path/
-  team:
-    output: true
-    permalink: /:collection/:path/
   posts:
-    output: true
-    permalink: /blog/:path/
-  promises:
-    output: true
-    permalink: /:collection/:path/
-  courses:
-    output: true
-    permalink: /:collection
-  blog_categories:
-    output: true
-    permalink: /:collection/:path
+    output: false
 
 defaults:
-  - scope:
-      path: ""
-      type: services
-    values:
-      layout: service
-  - scope:
-      path: ""
-      type: projects
-    values:
-      layout: project
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
   - scope:
       path: "images"
     values:
       image: true
   - scope:
-      path: "categories"
-    values:
-      permalink: /category/:basename/
-  - scope:
       path: "pages"
     values:
       permalink: /:basename/
-  - scope:
-      path: ""
-      type: visions
-    values:
-      layout: visions
-  - scope:
-      path: ""
-      type: promises
-    values:
-      layout: promises
-  - scope:
-      path: ""
-      type: blog_categories
-    values:
-      layout: blog_categories
 
 # Theme Config
 # google_analytics_id: "G-YB8SKVCHYJ"
@@ -118,10 +62,10 @@ footer:
   footer_secondary_menu_title: "Vision"
   enable_menu_footer_tertiary: true
   footer_tertiary_menu_title: "&nbsp;"
-  enable_bottom_menu: true
+  enable_bottom_menu: false
 
   enable_copyright: true
-  copyright: "© 2023 Kim, Young Oh / Graphic Images Created By ChatGPT"
+  copyright: "© 2026 김영오"
 
 contact:
   show_contact_details: true

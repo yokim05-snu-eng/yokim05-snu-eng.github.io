@@ -1,118 +1,35 @@
 main:
-  - name: 첫페이지
-    url: /
+  - name: 33대 학장에 출마하며
+    url: /statement/
     weight: 1
-  - name: 학장에 출마하며
-    url: /statement/
+  - name: 발전계획서
+    url: /vision/
     weight: 2
-    child:
-      - name: "학장에 출마하며"
-        url: /statement/
-      - name: "김영오는?"
-        url: /about/
-
-  # - name: 김영오의 약속
-  #   url: /visions/
-  #   weight: 3
-  #   child:
-  #     - name: "법인화 2.0"
-  #       url: /visions/SNU2.0/
-  #     - name: "거버넌스"
-  #       url: /visions/governance/
-  #     - name: "연구"
-  #       url: /visions/research/
-  #     - name: "교육"
-  #       url: /visions/education/
-  #     - name: "복지"
-  #       url: /visions/welfare/
-  #     - name: "멀티캠퍼스"
-  #       url: /visions/multicampus/
-  #     - name: "국제화/공헌"
-  #       url: /visions/international/
-  #     - name: "재정"
-  #       url: /visions/finance/
-
-  - name: 김영오의 약속
-    url: /promises/
+  - name: 32대 학장단 실적
+    url: /achievements/
     weight: 3
-    child:
-      - name: "서울공대, 신명나는 일터"
-        url: /promises/1-workplace/
-      - name: "서울공대의 도약, 든든한 재원부터"
-        url: /promises/2-finance/
-      - name: "서울공대 연구환경, 과감한 업그레드를 제안합니다"
-        url: /promises/3-research-environment/
-      - name: "서울공대가 선도하는 공학교육 혁신"
-        url: /promises/4-education-innovation/
-
-  # - name: Projects
-  #   url: /projects/
-  #   weight: 2
-  - name: 김영오의 글
-    url: /category/김영오의-글/
+  - name: 2년 전의 초심 확인
+    url: /legacy/
     weight: 4
+  - name: 김영오는?
+    url: /about/
+    weight: 5
 
-  # - name: 김영오의 강의
-  #   url: /courses/
-  #   weight: 5
-  # - name: Buy Now
-  #   url: https://www.zerostatic.io/theme/jekyll-advance/
-  #   weight: 6
 footer_primary:
-  - name: 학장에 출마하며
+  - name: 33대 학장에 출마하며
     url: /statement/
+    weight: 1
+  - name: 발전계획서
+    url: /vision/
     weight: 2
-  - name: 김영오의 약속
-    url: /promises/
+  - name: 32대 학장단 실적
+    url: /achievements/
     weight: 3
-  - name: 김영오의 글
-    url: /blog_categories/
+  - name: 2년 전의 초심 확인
+    url: /legacy/
     weight: 4
-  # - name: 김영오의 강의
-  #   url: /courses/
-  #   weight: 5
-
-  # - name: Projects
-  #   url: /projects/
-  #   weight: 3
-  # - name: Team
-  #   url: /team/
-  #   weight: 4
-# footer_secondary:
-#   - name: 법인화 2.0
-#     url: /visions/SNU2.0/
-#     weight: 1
-#   - name: 거버넌스
-#     url: /visions/governance/
-#     weight: 2
-#   - name: 연구
-#     url: /visions/research/
-#     weight: 3
-#   - name: 교육
-#     url: /visions/education/
-#     weight: 4
-#   - name: 복지
-#     url: /visions/welfare/
-#     weight: 5
-#   - name: 멀티캠퍼스
-#     url: /visions/multicampus/
-#     weight: 6
-#   - name: 국제화/공헌
-#     url: /visions/international/
-#     weight: 7
-#   - name: 재정
-#     url: /visions/finance/
-#     weight: 8
+  - name: 김영오는?
+    url: /about/
+    weight: 5
 
 footer_tertiary:
-
-  # - name: Buy Now
-  #   url: https://www.zerostatic.io/theme/jekyll-advance/
-  #   weight: 2
-# bottom:
-#   - name: Privacy Policy
-#     url: /privacy-policy/
-#     weight: 3
-#   - name: Terms and Conditions
-#     url: /terms-and-conditions/
-#     weight: 4
