@@ -48,6 +48,19 @@ hero:
         </div>
       </a>
 
+      <a href="/assets/2026/images/last-term-highlight.jpeg" target="_blank" class="res-card">
+        <div class="res-card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+        <div class="res-card-body">
+          <span class="res-card-title">32대 학장단 실적 요약</span>
+          <span class="res-card-meta">Image &middot; JPEG</span>
+        </div>
+        <div class="res-card-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </div>
+      </a>
+
     </div>
   </section>
 
