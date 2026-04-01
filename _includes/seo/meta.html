@@ -1,6 +1,8 @@
 
 <title>{% if page.meta_title %}{{ page.meta_title }}{% elsif page.title %}{{ page.title }} - {{ site.title}}{% else %}{{ site.title }}{% endif %}</title>
 
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}" />
+
 {% if page.meta_description %}
   <meta name="description" content="{{ page.meta_description }}"/>
 {% elsif page.description %}
@@ -30,3 +32,10 @@
 {% if page.meta_twitter_creator %}
   <meta name="twitter:creator" content="{{ page.meta_twitter_creator }}"/>
 {% endif %}
+
+{% unless page.meta_og_type %}
+  <meta property="og:type" content="website"/>
+{% endunless %}
+{% unless page.meta_twitter_card %}
+  <meta name="twitter:card" content="summary_large_image"/>
+{% endunless %}
