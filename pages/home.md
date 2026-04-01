@@ -52,7 +52,7 @@ hero:
       #   size: large
       #   outline: true
       #   style: "light"
-      - text: "김영오는?"
+      - text: "프로필"
         url: "/about/"
         external: false
         fa_icon: false

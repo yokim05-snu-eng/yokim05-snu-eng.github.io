@@ -17,32 +17,9 @@ description=page.description image=page.image %} {% endif %} {% assign content =
 content | strip_newlines %} {% if content != "" %}
 <div class="strip strip-border-top">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-lg-8">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
         <div class="content">{{ content }}</div>
-      </div>
-
-      <div class="col-12 col-lg-3">
-        <div class="sidebar">
-          <h5>바로가기</h5>
-          <ul>
-            <li>
-              <a href="/statement/">33대 학장에 출마하며</a>
-            </li>
-            <li>
-              <a href="/vision/">발전계획서</a>
-            </li>
-            <li>
-              <a href="/achievements/">32대 학장단 실적</a>
-            </li>
-            <!-- <li>
-              <a href="/legacy/">2년 전의 초심 확인</a>
-            </li> -->
-            <li>
-              <a href="/about/">김영오는?</a>
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
