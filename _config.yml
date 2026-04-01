@@ -1,4 +1,5 @@
 # Jekyll Config
+url: "https://yokim05-snu-eng.github.io"
 baseurl: "/"
 permalink: pretty
 title: "김영오 홈페이지"
@@ -81,6 +82,7 @@ enable_breadcrumbs_courses: false
 plugins:
   - jekyll-environment-variables
   - jekyll-paginate-v2
+  - jekyll-sitemap
   # - jekyll-paginate
 
 pagination:

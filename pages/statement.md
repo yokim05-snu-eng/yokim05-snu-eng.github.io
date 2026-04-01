@@ -3,6 +3,10 @@ layout: statement
 title: "학장에 출마하며"
 permalink: "/statement/"
 header_transparent: true
+meta_og_title: "김영오 홈페이지"
+meta_og_description: "서울공대 33대 학장에 출마합니다."
+meta_og_image: "https://yokim05-snu-eng.github.io/assets/images/home/preview.jpg"
+meta_og_url: "https://yokim05-snu-eng.github.io/statement/"
 hero:
   enabled: false
 ---
@@ -57,11 +61,10 @@ hero:
           <strong>'변함없이' 소통과 실행</strong>에 나서며 <strong>'변화의 속도'</strong>를 올리겠습니다.
         </blockquote>
 
-        <div class="stmt-dark-closing">
-          <span class="stmt-dark-date">2026년 3월</span>
-          <span class="stmt-dark-sign">서울공대 건설환경공학부 교수</span>
-          <span class="stmt-dark-name">김영오 드림</span>
-        </div>
+        <p style="text-align:right; margin-top:2em;">
+          2026년 3월 31일<br>
+          서울공대 33대 학장후보대상자 김영오 드림
+        </p>
 
       </div>
 
@@ -95,11 +98,11 @@ hero:
           <strong>With unwavering communication and execution,</strong> I will <strong>increase the pace of change.</strong>
         </blockquote>
 
-        <div class="stmt-dark-closing">
-          <span class="stmt-dark-date">March 2026</span>
-          <span class="stmt-dark-sign">Professor, Department of Civil and Environmental Engineering</span>
-          <span class="stmt-dark-name">KIM Young-Oh</span>
-        </div>
+        <p style="text-align:right; margin-top:2em;">
+          March 31, 2025<br>
+          Young-Oh Kim<br>
+          Candidate for the 33rd Dean, SNU College of Engineering
+        </p>
 
       </div>
 

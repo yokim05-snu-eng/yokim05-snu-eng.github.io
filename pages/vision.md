@@ -2,8 +2,12 @@
 layout: vision
 title: "발전계획서"
 permalink: "/vision/"
-description: null
+description: "서울공대 33대 학장 발전계획서"
 header_transparent: true
+meta_og_title: "김영오 홈페이지"
+meta_og_description: "서울공대 33대 학장에 출마합니다."
+meta_og_image: "https://yokim05-snu-eng.github.io/assets/images/home/preview.jpg"
+meta_og_url: "https://yokim05-snu-eng.github.io/vision/"
 hero:
   enabled: false
 ---
@@ -355,12 +359,6 @@ hero:
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="vis-dark-closing">
-      <span class="vis-dark-closing-date">2025년 3월 31일</span>
-      <span class="vis-dark-closing-title">서울공대 33대 학장후보대상자</span>
-      <span class="vis-dark-closing-name">김영오 드림</span>
     </div>
 
   </section>

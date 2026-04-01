@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yokim05-snu-eng.github.io/sitemap.xml
