@@ -1536,6 +1536,30 @@ $vis-rule: rgba(255, 255, 255, 0.07);
     }
   }
 
+  // Closing signature
+  .vis-dark-closing {
+    margin-top: 64px;
+    padding-top: 48px;
+    border-top: 1px solid $vis-rule;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  .vis-dark-closing-date {
+    font-size: 1.02rem;
+    color: $vis-muted;
+    letter-spacing: 0.05em;
+  }
+  .vis-dark-closing-title {
+    font-size: 0.98rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .vis-dark-closing-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+  }
 }
 
 // ─── Statement page (dark cinematic — letter style) ────────────
