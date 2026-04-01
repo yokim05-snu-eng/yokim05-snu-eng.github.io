@@ -333,6 +333,8 @@ hero:
     </div>
   </section>
 
+  {% include components/page-nav.html current="/achievements/" %}
+
 </div>
 
 <script>

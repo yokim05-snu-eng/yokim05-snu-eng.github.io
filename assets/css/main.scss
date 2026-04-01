@@ -2127,3 +2127,123 @@ $abt-rule: rgba(255, 255, 255, 0.07);
     }
   }
 }
+
+// ─── Bottom Page Navigation ───
+.page-bottom-nav {
+  padding: 80px 24px 60px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.page-bottom-nav-inner {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+// Primary "next page" CTA
+.page-bottom-nav-next {
+  display: block;
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+  position: relative;
+  &:hover {
+    border-color: rgba(255, 156, 7, 0.5);
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #fff;
+    .page-bottom-nav-next-arrow {
+      transform: translateX(4px);
+      color: #ff9c07;
+    }
+  }
+}
+.page-bottom-nav-next-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #ff9c07;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.page-bottom-nav-next-title {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.page-bottom-nav-next-desc {
+  display: block;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 400;
+}
+.page-bottom-nav-next-arrow {
+  display: block;
+  margin-top: 16px;
+  color: rgba(255, 255, 255, 0.35);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+// Secondary links to all pages
+.page-bottom-nav-all {
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+.page-bottom-nav-all-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.page-bottom-nav-all-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 16px;
+}
+.page-bottom-nav-link {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  padding: 4px 0;
+  transition: color 0.2s ease;
+  &:hover {
+    color: #ff9c07;
+    text-decoration: none;
+  }
+  &.is-next {
+    color: rgba(255, 255, 255, 0.55);
+  }
+}
+
+@media (max-width: 767px) {
+  .page-bottom-nav {
+    padding: 56px 20px 48px;
+  }
+  .page-bottom-nav-next {
+    padding: 24px 20px;
+  }
+  .page-bottom-nav-next-title {
+    font-size: 1.15rem;
+  }
+  .page-bottom-nav-all-links {
+    gap: 6px 14px;
+  }
+}

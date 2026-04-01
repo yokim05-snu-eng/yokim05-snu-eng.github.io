@@ -225,6 +225,8 @@ hero:
     </div>
   </section>
 
+  {% include components/page-nav.html current="/about/" %}
+
 </div>
 
 <script>

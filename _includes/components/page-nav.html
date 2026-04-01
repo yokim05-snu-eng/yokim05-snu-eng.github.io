@@ -1,0 +1,53 @@
+{% comment %}
+  Bottom page navigation component.
+  Usage: {% include components/page-nav.html current="/statement/" %}
+
+  Page order: / → /statement/ → /vision/ → /achievements/ → /about/ → /
+{% endcomment %}
+
+{% assign pages_order = "/" | append: "," | append: "/statement/" | append: "," | append: "/vision/" | append: "," | append: "/achievements/" | append: "," | append: "/about/" %}
+{% assign pages_titles = "홈" | append: "," | append: "33대 학장에 출마하며" | append: "," | append: "발전계획서" | append: "," | append: "32대 학장단 실적" | append: "," | append: "프로필" %}
+{% assign pages_descs = "메인 페이지" | append: "," | append: "교수님들께 드리는 출마의 변" | append: "," | append: "5대 영역 15개 과제" | append: "," | append: "2024–2026 핵심 성과" | append: "," | append: "학력·경력·연구업적" %}
+
+{% assign p_urls = pages_order | split: "," %}
+{% assign p_titles = pages_titles | split: "," %}
+{% assign p_descs = pages_descs | split: "," %}
+
+{% assign current_idx = -1 %}
+{% for url in p_urls %}
+  {% if url == include.current %}
+    {% assign current_idx = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% assign next_idx = current_idx | plus: 1 %}
+{% if next_idx >= p_urls.size %}
+  {% assign next_idx = 0 %}
+{% endif %}
+
+{% assign next_url = p_urls[next_idx] %}
+{% assign next_title = p_titles[next_idx] %}
+{% assign next_desc = p_descs[next_idx] %}
+
+<section class="page-bottom-nav" data-reveal>
+  <div class="page-bottom-nav-inner">
+    <a href="{{ next_url }}" class="page-bottom-nav-next">
+      <span class="page-bottom-nav-next-label">다음으로</span>
+      <span class="page-bottom-nav-next-title">{{ next_title }}</span>
+      <span class="page-bottom-nav-next-desc">{{ next_desc }}</span>
+      <span class="page-bottom-nav-next-arrow">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </span>
+    </a>
+    <div class="page-bottom-nav-all">
+      <span class="page-bottom-nav-all-label">바로가기</span>
+      <div class="page-bottom-nav-all-links">
+        {% for url in p_urls %}
+          {% if url != include.current %}
+            <a href="{{ url }}" class="page-bottom-nav-link{% if url == next_url %} is-next{% endif %}">{{ p_titles[forloop.index0] }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

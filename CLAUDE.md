@@ -66,6 +66,10 @@ bundle exec jekyll build    # Build to _site/
 
 Note: Ruby deprecation warnings about csv/base64/bigdecimal and Sass `/` division warnings are expected and harmless.
 
+## Versioning
+
+The site version is stored in `_config.yml` under `footer.copyright` (e.g., `"© 2026 김영오. v2.0.1"`). **Before pushing to `main` or creating a PR to `main`, bump the version number.** Use semver-style: bump patch for small fixes, minor for new content/features, major for redesigns.
+
 ## Content Notes
 
 - The `statement.md` content still references the first campaign — Thomas needs to provide updated text for re-election

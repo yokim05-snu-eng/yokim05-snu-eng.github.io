@@ -123,6 +123,8 @@ posts:
     <p class="home-closing-sub">여러분의 지지를 부탁드립니다.</p>
   </section>
 
+  {% include components/page-nav.html current="/" %}
+
 </div>
 
 <script>

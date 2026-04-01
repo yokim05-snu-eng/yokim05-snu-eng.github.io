@@ -363,6 +363,8 @@ hero:
 
   </section>
 
+  {% include components/page-nav.html current="/vision/" %}
+
 </div>
 
 <script>

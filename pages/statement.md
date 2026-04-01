@@ -109,6 +109,8 @@ hero:
     </div>
   </section>
 
+  {% include components/page-nav.html current="/statement/" %}
+
 </div>
 
 <script>
