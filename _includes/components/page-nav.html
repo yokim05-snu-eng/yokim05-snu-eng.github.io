@@ -5,9 +5,9 @@
   Page order: / → /statement/ → /vision/ → /achievements/ → /about/ → /
 {% endcomment %}
 
-{% assign pages_order = "/" | append: "," | append: "/statement/" | append: "," | append: "/vision/" | append: "," | append: "/achievements/" | append: "," | append: "/about/" %}
-{% assign pages_titles = "홈" | append: "," | append: "33대 학장에 출마하며" | append: "," | append: "발전계획서" | append: "," | append: "32대 학장단 실적" | append: "," | append: "프로필" %}
-{% assign pages_descs = "메인 페이지" | append: "," | append: "교수님들께 드리는 출마의 변" | append: "," | append: "5대 영역 15개 과제" | append: "," | append: "2024–2026 핵심 성과" | append: "," | append: "학력·경력·연구업적" %}
+{% assign pages_order = "/" | append: "," | append: "/statement/" | append: "," | append: "/vision/" | append: "," | append: "/achievements/" | append: "," | append: "/about/" | append: "," | append: "/resources/" %}
+{% assign pages_titles = "홈" | append: "," | append: "33대 학장에 출마하며" | append: "," | append: "발전계획서" | append: "," | append: "32대 학장단 실적" | append: "," | append: "프로필" | append: "," | append: "자료실" %}
+{% assign pages_descs = "메인 페이지" | append: "," | append: "교수님들께 드리는 출마의 변" | append: "," | append: "5대 영역 15개 과제" | append: "," | append: "2024–2026 핵심 성과" | append: "," | append: "학력·경력·연구업적" | append: "," | append: "PDF 자료 다운로드" %}
 
 {% assign p_urls = pages_order | split: "," %}
 {% assign p_titles = pages_titles | split: "," %}
@@ -32,11 +32,14 @@
 <section class="page-bottom-nav" data-reveal>
   <div class="page-bottom-nav-inner">
     <a href="{{ next_url }}" class="page-bottom-nav-next">
-      <span class="page-bottom-nav-next-label">다음으로</span>
+      <span class="page-bottom-nav-next-label">{% if next_idx == 0 %}처음으로{% else %}다음으로{% endif %}</span>
       <span class="page-bottom-nav-next-title">{{ next_title }}</span>
-      <span class="page-bottom-nav-next-desc">{{ next_desc }}</span>
       <span class="page-bottom-nav-next-arrow">
+        {% if next_idx == 0 %}
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        {% else %}
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        {% endif %}
       </span>
     </a>
     <div class="page-bottom-nav-all">

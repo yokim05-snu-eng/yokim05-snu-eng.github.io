@@ -14,6 +14,9 @@ main:
   - name: 프로필
     url: /about/
     weight: 5
+  - name: 자료실
+    url: /resources/
+    weight: 6
 
 footer_primary:
   - name: 33대 학장에 출마하며
@@ -31,5 +34,8 @@ footer_primary:
   - name: 프로필
     url: /about/
     weight: 5
+  - name: 자료실
+    url: /resources/
+    weight: 6
 
 footer_tertiary:
