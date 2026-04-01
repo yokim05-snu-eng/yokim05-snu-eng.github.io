@@ -11,7 +11,7 @@ main:
   # - name: 2년 전의 초심 확인
   #   url: /legacy/
   #   weight: 4
-  - name: 김영오는?
+  - name: 프로필
     url: /about/
     weight: 5
 
@@ -28,7 +28,7 @@ footer_primary:
   # - name: 2년 전의 초심 확인
   #   url: /legacy/
   #   weight: 4
-  - name: 김영오는?
+  - name: 프로필
     url: /about/
     weight: 5
 

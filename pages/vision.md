@@ -4,6 +4,7 @@ title: "발전계획서"
 permalink: "/vision/"
 description: null # "김영오 33대 발전계획서"
 header_transparent: false
+body_classes: "page-basic page-no-title"
 
 hero:
   enabled: false

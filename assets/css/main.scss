@@ -133,6 +133,19 @@ html[data-mode='dark'] {
 }
 
 
+// Statement page — reduce gap before first image
+.page-basic .content > figure:first-child {
+  margin-top: 0;
+}
+
+// Hide the title strip on pages that don't need it
+.page-no-title .strip.strip-border-bottom.title {
+  display: none;
+}
+.page-no-title .strip.strip-border-top {
+  padding-top: 100px;
+}
+
 @import 'style';
 
 // Hero component
@@ -195,202 +208,292 @@ html[data-mode='dark'] {
   }
 }
 
-// ─── Achievements page ───────────────────────────────────
+// ─── Achievements page (V3 — dark cinematic) ────────────
+$ach-bg: #0f1218;
+$ach-surface: #161a22;
+$ach-accent: $secondary;
+$ach-text: rgba(255, 255, 255, 0.88);
+$ach-muted: rgba(255, 255, 255, 0.4);
+$ach-rule: rgba(255, 255, 255, 0.07);
+
 .page-achievements {
-  .ach-hero {
-    padding: 100px 0 40px;
-    background: #f8f9fa;
-    border-bottom: 1px solid #eee;
-  }
-  .ach-period {
-    display: block;
-    font-size: 0.8rem;
-    letter-spacing: 0.2em;
-    color: #999;
-    margin-bottom: 12px;
-    font-weight: 600;
-  }
-  .ach-page-title {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #111;
-    margin: 0;
+  background: $ach-bg;
+
+  .ach-dark {
+    color: $ach-text;
   }
 
-  // Section header
-  .ach-section {
-    padding: 64px 0 80px;
-  }
-  .ach-section-header {
+  // Hero
+  .ach-dark-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 56px;
-  }
-  .ach-section-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #111;
-    margin: 0 0 6px;
-  }
-  .ach-section-sub {
-    display: block;
-    font-size: 0.7rem;
-    letter-spacing: 0.35em;
-    color: #bbb;
-    font-weight: 600;
-  }
-  .ach-section-rule {
-    width: 48px;
-    height: 3px;
-    background: $primary;
-    margin: 20px auto 0;
-    border-radius: 2px;
-  }
-
-  // Grid
-  .ach-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    max-width: 880px;
-    margin: 0 auto;
-  }
-
-  // Cards
-  .ach-card {
+    padding: 0 24px;
     position: relative;
-    padding: 36px 32px 32px;
-    background: #fff;
-    border: 1px solid #e8e8e8;
-    border-radius: 6px;
+  }
+  .ach-dark-period {
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    color: $ach-muted;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .ach-dark-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 14px;
+    letter-spacing: -0.02em;
+  }
+  .ach-dark-sub {
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    color: $ach-muted;
+    font-weight: 500;
+  }
+  .ach-dark-scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    animation: ach-float 2.5s ease-in-out infinite;
+  }
+  .ach-scroll-dot {
+    animation: ach-scroll-dot 2.5s ease-in-out infinite;
+  }
+  @keyframes ach-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  @keyframes ach-scroll-dot {
+    0% { cy: 8; opacity: 1; }
+    50% { cy: 18; opacity: 0.3; }
+    100% { cy: 8; opacity: 1; }
+  }
+
+  // Domain sections
+  .ach-dark-domain {
+    text-align: center;
+    padding: 100px 24px;
+    border-top: 1px solid $ach-rule;
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
     &.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
-    &:hover {
-      border-color: #d0d0d0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    &:nth-child(odd) {
+      background: $ach-surface;
     }
   }
-  .ach-card-accent {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    height: 3px;
-    background: $primary;
-    border-radius: 6px 6px 0 0;
-  }
-  .ach-card-title {
-    font-size: 1rem;
+  .ach-dark-label {
+    display: block;
+    font-size: 0.68rem;
     font-weight: 700;
-    color: #333;
-    margin: 0 0 28px;
-    letter-spacing: -0.01em;
-    line-height: 1.5;
+    letter-spacing: 0.2em;
+    color: $ach-accent;
+    margin-bottom: 16px;
+  }
+  .ach-dark-domain-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $ach-muted;
+    margin: 0 0 48px;
+    letter-spacing: 0.04em;
   }
 
-  // Metrics
-  .ach-metric {
-    margin-bottom: 24px;
-    &:last-child { margin-bottom: 0; }
+  // Big centered number
+  .ach-dark-hero-stat {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
   }
-  .ach-metric-value {
-    font-size: 2.6rem;
-    font-weight: 300;
-    color: $primary;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+  .ach-dark-big {
+    font-size: 5.5rem;
+    font-weight: 200;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: -0.04em;
   }
-  .ach-unit {
-    font-size: 1rem;
-    font-weight: 500;
-    color: $primary;
-    margin-left: 3px;
-    vertical-align: baseline;
-  }
-  .ach-plus {
+  .ach-dark-big-unit {
     font-size: 1.4rem;
-    font-weight: 400;
-    color: $primary;
-    margin-left: 1px;
+    font-weight: 500;
+    color: $ach-accent;
   }
-  .ach-metric-desc {
-    font-size: 0.82rem;
-    color: #888;
-    margin-top: 6px;
+  .ach-dark-big-plus {
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: $ach-accent;
+  }
+  .ach-dark-hero-desc {
+    font-size: 0.88rem;
+    color: $ach-muted;
+    margin: 0 0 48px;
+  }
+
+  // Supporting row
+  .ach-dark-row {
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    max-width: 640px;
+    margin: 0 auto;
+    background: $ach-rule;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .ach-dark-cell {
+    flex: 1;
+    padding: 28px 20px;
+    background: $ach-surface;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:first-child { border-radius: 6px 0 0 6px; }
+    &:last-child { border-radius: 0 6px 6px 0; }
+  }
+  .ach-dark-cell-num {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1;
+  }
+  .ach-dark-cell-unit {
+    font-size: 0.78rem;
+    color: $ach-accent;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+  .ach-dark-cell-desc {
+    font-size: 0.72rem;
+    color: $ach-muted;
+    margin-top: 8px;
     line-height: 1.4;
   }
+  .ach-dark-cell--badge {
+    background: $ach-accent;
+    justify-content: center;
+  }
+  .ach-dark-badge-text {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: $ach-bg;
+    line-height: 1.5;
+    text-align: center;
+  }
 
-  // Badge
-  .ach-badge {
-    display: inline-block;
-    padding: 7px 16px;
-    background: $primary;
+  // Trio (3 numbers side by side)
+  .ach-dark-trio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .ach-dark-trio-item {
+    flex: 1;
+    text-align: center;
+  }
+  .ach-dark-trio-num {
+    font-size: 4rem;
+    font-weight: 200;
     color: #fff;
-    font-size: 0.78rem;
-    font-weight: 600;
-    border-radius: 4px;
-    letter-spacing: 0.02em;
-    margin-top: 4px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .ach-dark-trio-plus {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: $ach-accent;
+    vertical-align: top;
+  }
+  .ach-dark-trio-desc {
+    display: block;
+    font-size: 0.82rem;
+    color: $ach-muted;
+    margin-top: 12px;
+  }
+  .ach-dark-trio-div {
+    width: 1px;
+    height: 64px;
+    background: $ach-rule;
+    flex-shrink: 0;
   }
 
   // Check items
-  .ach-check {
+  .ach-dark-checks {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 12px;
+  }
+  .ach-dark-check {
     position: relative;
-    padding-left: 26px;
-    margin-bottom: 14px;
-    font-size: 0.88rem;
-    color: #555;
-    line-height: 1.55;
-    &:last-child { margin-bottom: 0; }
+    padding-left: 28px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.5;
+    text-align: left;
     &::before {
       content: '';
       position: absolute;
       left: 0;
-      top: 4px;
+      top: 3px;
       width: 16px;
       height: 16px;
       border-radius: 50%;
-      background: rgba($primary, 0.08);
-      border: 1.5px solid rgba($primary, 0.4);
+      border: 1.5px solid $ach-accent;
+      background: rgba($ach-accent, 0.1);
     }
     &::after {
       content: '';
       position: absolute;
       left: 4px;
-      top: 8px;
+      top: 7px;
       width: 8px;
       height: 4px;
-      border-left: 1.5px solid $primary;
-      border-bottom: 1.5px solid $primary;
+      border-left: 1.5px solid $ach-accent;
+      border-bottom: 1.5px solid $ach-accent;
       transform: rotate(-45deg);
     }
   }
 
   // Mobile
   @media (max-width: 767px) {
-    .ach-hero {
-      padding: 80px 0 28px;
+    .ach-dark-title {
+      font-size: 1.8rem;
     }
-    .ach-page-title {
-      font-size: 1.6rem;
+    .ach-dark-domain {
+      padding: 64px 20px;
     }
-    .ach-section {
-      padding: 48px 0 56px;
+    .ach-dark-big {
+      font-size: 3.6rem;
     }
-    .ach-grid {
-      grid-template-columns: 1fr;
-      gap: 20px;
+    .ach-dark-row {
+      flex-direction: column;
+      gap: 1px;
     }
-    .ach-card {
-      padding: 28px 24px 24px;
+    .ach-dark-cell {
+      border-radius: 0 !important;
+      padding: 20px;
+      &:first-child { border-radius: 6px 6px 0 0 !important; }
+      &:last-child { border-radius: 0 0 6px 6px !important; }
     }
-    .ach-metric-value {
-      font-size: 2.2rem;
+    .ach-dark-trio {
+      flex-direction: column;
+      gap: 36px;
+    }
+    .ach-dark-trio-num {
+      font-size: 3rem;
+    }
+    .ach-dark-trio-div {
+      width: 48px;
+      height: 1px;
     }
   }
 }
