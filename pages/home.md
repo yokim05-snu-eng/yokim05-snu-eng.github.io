@@ -20,7 +20,7 @@ hero:
   background_image_blend_mode: multiply
   fullscreen_mobile: true
   fullscreen_desktop: false
-  height: "80vh"
+  height: "auto"
   buttons:
     enabled: true
     list:
@@ -45,13 +45,13 @@ hero:
         size: large
         outline: false
         style: "light"
-      - text: "2년 전의 초심 확인"
-        url: "/legacy/"
-        external: false
-        fa_icon: false
-        size: large
-        outline: true
-        style: "light"
+      # - text: "2년 전의 초심 확인"
+      #   url: "/legacy/"
+      #   external: false
+      #   fa_icon: false
+      #   size: large
+      #   outline: true
+      #   style: "light"
       - text: "김영오는?"
         url: "/about/"
         external: false

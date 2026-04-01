@@ -70,14 +70,14 @@ html[data-mode='dark'] {
 // }
 
 #mainImgHeroContainer{
-  margin-right: 7.5%;
+  margin: 0 auto;
 }
 #mainImgHeroTextCover{
   padding: 0;
   margin:0;
 }
 #mainImgHeroText{
-  align-items: flex-end;
+  align-items: center;
 }
 #infoDesc{
   font-weight:bold;
@@ -135,15 +135,262 @@ html[data-mode='dark'] {
 
 @import 'style';
 
-// Homepage nav buttons - stack vertically
-.page-home .hero-buttons {
+// Hero component
+.hero-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-top: 24px;
-  .btn {
-    min-width: 280px;
+}
+.hero-text-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+// Homepage hero - fit longer text + 5 nav buttons
+.page-home {
+  .hero {
+    height: auto !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  #mainImgHeroContainer {
+    padding-top: 80px; // clear the fixed transparent header
+    padding-bottom: 40px;
+    width: 100%;
+  }
+  .hero-text h1 {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    .btn {
+      min-width: 280px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+      transition: background 0.25s ease, border-color 0.25s ease;
+      &:hover, &:focus {
+        background: rgba(255, 255, 255, 0.22);
+        border-color: rgba(255, 255, 255, 0.5);
+        color: #fff;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .page-home .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+// ─── Achievements page ───────────────────────────────────
+.page-achievements {
+  .ach-hero {
+    padding: 100px 0 40px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+  }
+  .ach-period {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    color: #999;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .ach-page-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111;
+    margin: 0;
+  }
+
+  // Section header
+  .ach-section {
+    padding: 64px 0 80px;
+  }
+  .ach-section-header {
     text-align: center;
+    margin-bottom: 56px;
+  }
+  .ach-section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 6px;
+  }
+  .ach-section-sub {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    color: #bbb;
+    font-weight: 600;
+  }
+  .ach-section-rule {
+    width: 48px;
+    height: 3px;
+    background: $primary;
+    margin: 20px auto 0;
+    border-radius: 2px;
+  }
+
+  // Grid
+  .ach-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  // Cards
+  .ach-card {
+    position: relative;
+    padding: 36px 32px 32px;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    &:hover {
+      border-color: #d0d0d0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+  }
+  .ach-card-accent {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    height: 3px;
+    background: $primary;
+    border-radius: 6px 6px 0 0;
+  }
+  .ach-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 28px;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+  }
+
+  // Metrics
+  .ach-metric {
+    margin-bottom: 24px;
+    &:last-child { margin-bottom: 0; }
+  }
+  .ach-metric-value {
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: $primary;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .ach-unit {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $primary;
+    margin-left: 3px;
+    vertical-align: baseline;
+  }
+  .ach-plus {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: $primary;
+    margin-left: 1px;
+  }
+  .ach-metric-desc {
+    font-size: 0.82rem;
+    color: #888;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+
+  // Badge
+  .ach-badge {
+    display: inline-block;
+    padding: 7px 16px;
+    background: $primary;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    margin-top: 4px;
+  }
+
+  // Check items
+  .ach-check {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 14px;
+    font-size: 0.88rem;
+    color: #555;
+    line-height: 1.55;
+    &:last-child { margin-bottom: 0; }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: rgba($primary, 0.08);
+      border: 1.5px solid rgba($primary, 0.4);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 8px;
+      width: 8px;
+      height: 4px;
+      border-left: 1.5px solid $primary;
+      border-bottom: 1.5px solid $primary;
+      transform: rotate(-45deg);
+    }
+  }
+
+  // Mobile
+  @media (max-width: 767px) {
+    .ach-hero {
+      padding: 80px 0 28px;
+    }
+    .ach-page-title {
+      font-size: 1.6rem;
+    }
+    .ach-section {
+      padding: 48px 0 56px;
+    }
+    .ach-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .ach-card {
+      padding: 28px 24px 24px;
+    }
+    .ach-metric-value {
+      font-size: 2.2rem;
+    }
   }
 }

@@ -41,14 +41,14 @@ fonts:
   monospace: "Fira Mono"
 
 logo:
-  logo: assets/images/logo/logo.png
-  logo_mobile: assets/images/logo/logo-mobile.png
-  logo_invert: assets/images/logo/logo-invert.png
-  logo_invert_mobile: assets/images/logo/logo-invert-mobile.png
-  logo_desktop_height: "30px"
-  logo_desktop_width: "132px"
-  logo_mobile_height: "30px"
-  logo_mobile_width: "68px"
+  logo: assets/2026/images/snu-engineering-logo.svg
+  logo_mobile: assets/2026/images/snu-engineering-logo.svg
+  logo_invert: assets/2026/images/snu-engineering-logo.svg
+  logo_invert_mobile: assets/2026/images/snu-engineering-logo.svg
+  logo_desktop_height: "40px"
+  logo_desktop_width: "auto"
+  logo_mobile_height: "32px"
+  logo_mobile_width: "auto"
 
 footer:
   enable_contact_details: true
@@ -57,7 +57,7 @@ footer:
   enable_social_media_icons: false
 
   enable_menu_footer_primary: true
-  footer_primary_menu_title: "About"
+  footer_primary_menu_title: "Menu"
   enable_menu_footer_secondary: false
   footer_secondary_menu_title: "Vision"
   enable_menu_footer_tertiary: true

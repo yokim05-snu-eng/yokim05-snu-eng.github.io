@@ -1,0 +1,58 @@
+<h2>Site Architecture: 2 Approaches</h2>
+<p class="subtitle">Both use minimal custom HTML/CSS on Jekyll. The difference is in page structure and navigation style.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Single-Page App Feel</h3>
+      <p><strong>Homepage is the entire experience.</strong> The 5 nav buttons scroll to sections on the same page (anchor links). Each "page" is a full-viewport section: Hero → Statement → 발전계획서 → 실적 → 초심 → About. The nav bar highlights the current section as you scroll.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Extremely simple — one page, one flow</li>
+            <li>Mobile-friendly scrolling experience</li>
+            <li>Easy to maintain — everything in one file</li>
+            <li>Modern, clean feel</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>발전계획서 (15 subsections) could make the page very long</li>
+            <li>About page with full CV may feel cramped as a section</li>
+            <li>Harder to link directly to specific content</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Minimal Multi-Page (Recommended)</h3>
+      <p><strong>Homepage is the hero + nav buttons. Each button leads to its own clean page.</strong> 6 total pages: Home, Statement, 발전계획서, 실적, 초심, About. Shared minimal header/footer. Each page is focused and self-contained.</p>
+      <div class="pros-cons">
+        <div class="pros">
+          <h4>Pros</h4>
+          <ul>
+            <li>Each page can breathe — 발전계획서 gets its full long-scroll treatment</li>
+            <li>About page works naturally as a full CV</li>
+            <li>Direct URLs for sharing specific pages</li>
+            <li>Homepage stays punchy — hero text + 5 buttons, done</li>
+            <li>Still very simple — just 6 HTML pages with shared layout</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h4>Cons</h4>
+          <ul>
+            <li>Slightly more files to manage (still only 6)</li>
+            <li>Page transitions instead of smooth scrolling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

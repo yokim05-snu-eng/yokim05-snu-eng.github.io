@@ -2,26 +2,33 @@
 layout: basic
 title: "발전계획서"
 permalink: "/vision/"
-description: "김영오 33대 발전계획서"
+description: null # "김영오 33대 발전계획서"
 header_transparent: false
 
 hero:
   enabled: false
 ---
 
-<div style="text-align: center; margin-bottom: 2rem;">
-  <a href="/assets/2026/files/2026-vision-kor.pdf" class="btn btn-primary btn-lg mr-1" target="_blank">발전계획서 (한국어) PDF</a>
-  <a href="/assets/2026/files/2026-vision-eng.pdf" class="btn btn-outline-primary btn-lg" target="_blank">Development Plan (English) PDF</a>
-</div>
-
 # 김영오 33대 발전계획서
 
-> '변화의 시작'을 제안한 학장으로서
-> 계속 방향타를 잡고 **'변화의 가속'** 페달을 밟기 위해
-> 다시 학장 후보로 나섰습니다.
+<br/>
+
+<div style="text-align: center; margin-bottom: 2rem;">
+  <a href="/assets/2026/files/2026-vision-kor.pdf" class="btn btn-primary btn-lg mr-1" target="_blank" style="text-decoration: none;">발전계획서 PDF (한국어)</a>
+  <a href="/assets/2026/files/2026-vision-eng.pdf" class="btn btn-outline-primary btn-lg" target="_blank" style="text-decoration: none;">Development Plan PDF (English)</a>
+</div>
+
+
+> '변화의 시작'을 제안한 학장으로서 
+> 계속 방향타를 잡고 **'변화의 가속'** 페달을 밟기 위해 
+> 다시 학장 후보로 나섰습니다. 
 > 변화의 벡터를 가장 잘 알기 때문입니다.
 
 ---
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/assets/2026/images/last-term-pic-3.png" alt="Last Term Picture 3" style="max-width: 100%; height: auto;">
+</div>
 
 2년 전 봄, 학장 선거에 나서면서 **'변화의 시작'**을 약속드렸습니다. 그리고 학장 취임과 동시에 저는 330여 명의 교수님들과 함께 실행에 나섰습니다. 그런데 그동안 세계가, 한국이 말 그대로 급변했습니다. 공학을 바라보는 시선도 많이 바뀌었습니다. 우리 이웃들이 동네 카페에서, 사우나에서 반도체, AI, 에너지, 전력망을 화제로 스스럼없이 대화를 나누고 있습니다.
 
