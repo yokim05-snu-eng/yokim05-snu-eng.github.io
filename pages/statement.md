@@ -1,58 +1,139 @@
 ---
-layout: basic
+layout: statement
 title: "학장에 출마하며"
-date: 2022-07-12T15:15:34+10:00
-header_transparent: false
 permalink: "/statement/"
-description: ""
-image: ""
-
+header_transparent: true
 hero:
   enabled: false
-  heading: "About Us"
-  sub_heading: "Business plan hackathon handshake responsive web design."
-  background_image: ""
-  background_image_blend_mode: false
-  full_height_mobile: false
-  buttons:
-    enabled: false
-    list:
-      - text: "Buy Now"
-        url: "https://www.zerostatic.io/theme/jekyll-advance/"
-        external: true
-        fa_icon: false
-        size: large
 ---
 
-{% include markdown/figure.html src="/assets/2026/images/last-term-pic-2.jpeg" %}
+<!-- Source content: assets/2026/md/2026-vision-kor.md (statement section) -->
 
-존경하는 서울공대 교수님께,
+<div class="stmt-dark">
 
-안녕하십니까? 2026년 초 진행될 서울공대 학장 선거에 출마하고자 이렇게 인사드립니다. “국가 과학기술 이슈에 서울공대 차원의 목소리가 실종되었습니다”, “서울공대 내에 토론과 교류가 너무 없습니다”라는 교수님들의 자조 섞인 일침이 가장 먼저 떠오릅니다. 이렇게 안타까운 우리의 현실 속에 제 뜻을 밝히게 되어 송구함이 앞섭니다.
+  <section class="stmt-dark-hero">
+    <span class="stmt-dark-period">33대 서울공대 학장 후보</span>
+    <h1 class="stmt-dark-title">학장에 출마하며</h1>
+    <span class="stmt-dark-sub">CANDIDACY STATEMENT</span>
+    <div class="stmt-dark-scroll-hint">
+      <svg width="20" height="28" viewBox="0 0 20 28" fill="none"><rect x="1" y="1" width="18" height="26" rx="9" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><circle class="stmt-scroll-dot" cx="10" cy="8" r="2" fill="rgba(255,255,255,0.5)"/></svg>
+    </div>
+  </section>
 
-### 내년 초 신임 학장 선출을 위한 직접 투표가 있습니다
+  <section class="stmt-dark-letter" data-reveal>
+    <div class="stmt-dark-letter-inner">
 
-내년 3월경 있을 신임 학장 선거는, 2021년 3월 3일 개정된 「서울대학교 공과대학 학장 후보 추천에 관한 규정」 및 동 시행세칙에 따라, 서울공대 전임교수 전원을 대상으로 직접 투표로 실시됩니다. 2년의 학장 역임 후 재신임이 아니라 경선 투표를 진행하도록 개정된 취지는 그만큼 2년의 학장 임기에 충실하라는 엄중한 요구입니다.
+      <div class="stmt-lang-toggle">
+        <button class="stmt-lang-btn is-active" data-lang="ko">한국어</button>
+        <button class="stmt-lang-btn" data-lang="en">English</button>
+      </div>
 
-### 풍부한 본부 행정 경험으로 복잡한 실타래를 풀겠습니다
+      <!-- Korean -->
+      <div class="stmt-lang-content" data-lang-content="ko">
 
-저는 지난 8개월 동안 200여명의 서울공대 교수님들을 만나 경청의 시간을 가졌습니다. 많은 교수님들께서 임용과 승진 시 겪었던 애로사항, 식당과 주차장에서 매일 겪는 고충, 코앞에 다가온 첨단융합학부 출범 및 해동첨단공학관 완공에 대한 궁금증과 우려 등 다양한 학내 문제들을 토로해 주셨습니다. 제가 미처 생각하지도 못했던 문제에 대해 하나 하나 교수님들과 공감해 나가면서 저는 여기에 제 역할이 있음을 확신할 수 있었습니다. 실타래와 같이 엉켜있던 학내 이슈들을 풀어나갔던 많은 경험들, 그리고 그 누구보다 폭 넓은 서울대학교 인적 네트워크가 제게는 축적되어 있기 때문입니다.
+        <blockquote class="stmt-dark-quote">
+          '변화의 시작'을 제안한 학장으로서<br>
+          계속 방향타를 잡고 <strong>'변화의 가속'</strong> 페달을 밟기 위해<br>
+          다시 학장 후보로 나섰습니다.<br>
+          변화의 벡터를 가장 잘 알기 때문입니다.
+        </blockquote>
 
-### 당당한 목소리를 내는 서울공대의 선봉에 서겠습니다
+        <div class="stmt-dark-photo">
+          <img src="/assets/2026/images/last-term-pic-3.png" alt="32대 학장단 활동">
+        </div>
 
-"서울공대의 위상과 대외 인지도가 점점 떨어지고 있다", "R&D 예산 일괄 삭감과 의대 정원 확대에 서울공대가 너무 침묵하고 있다"는 교수님들의 뼈아픈 지적도 많았습니다. 그러나 오히려 저는 사면초가의 위기 속에서 제가 서야 하는 이유를 확인하였습니다. 이는 홍보와 국제 업무를 담당하였던 서울공대 대외부학장과 시민단체 과실연의 상임대표의 시간이 있었기 때문입니다. 특히 서울공대 선배 교수님들께서 주축이 되어 창립한 시민단체 과실연은 그동안 성명서와 이슈페이퍼 등을 통해 시민 그리고 정부를 향해 당당한 목소리를 내어 왔고 저는 담대히 그 목소리를 전달해 왔습니다.
+        <div class="stmt-dark-body">
+          <p>2년 전 봄, 학장 선거에 나서면서 <strong>'변화의 시작'</strong>을 약속드렸습니다. 그리고 학장 취임과 동시에 저는 330여 명의 교수님들과 함께 실행에 나섰습니다. 그런데 그동안 세계가, 한국이 말 그대로 급변했습니다. 공학을 바라보는 시선도 많이 바뀌었습니다. 우리 이웃들이 동네 카페에서, 사우나에서 반도체, AI, 에너지, 전력망을 화제로 스스럼없이 대화를 나누고 있습니다.</p>
+          <p>이런 점에서 볼 때 저는 운이 좋은 사람입니다. 제 임기 중 이런 흐름이 더 강해졌으니까요. 저는 서울공대의 이름으로, 서울공대의 힘으로, 그 흐름을 강화하고 또 올라타려고 안간힘을 썼습니다. 이제는 외람되지만 이렇게 말씀드릴 수 있습니다. "우리는 스스로 변화함으로써 세계의 변화를 선도하고 있습니다."</p>
+          <p>이 변화의 시작이 가능했던 가장 큰 원천은 무엇보다 <strong>서울공대 막강 교수진</strong>이었습니다. 신규 프로그램과 조직 기획, 대형 연구과제 준비, 산학 협력 확대, 정부 위원회 참여, 언론 기고에 이르기까지 교수님들께서는 언제나 흔쾌히 응답해 주셨습니다. 그 열정과 사명감이 서울공대 변화의 가장 든든한 기반이 되었습니다.</p>
+          <p>두 번째 원천은 <strong>7만여 서울공대 동문</strong>이었습니다. 모교에 대한 관심을 요청드렸을 때 한 분 한 분 응답이 이어졌고, 그 결과 제 스마트폰에는 천명 가까운 주요 동문의 리스트가 내장되어 있습니다. 이분들이 저의 빅데이터입니다. 이 네트워크를 중심으로 다양한 협력이 시작되고 있습니다.</p>
+          <p>세 번째 원천은 <strong>정부와 지자체, 기업, 그리고 언론</strong>이었습니다. 정부, 기업, 국회, 도지사실, 시장실을 문턱이 닳게 돌아다녔습니다. 신문에 글을 쓰고 인터뷰에 응하고 방송에 출연했습니다. KBS 특별기획 〈공대에 미친 중국, 의대에 미친 한국〉을 자문하고 직접 출연했습니다. 아시다시피 꽤 큰 반향을 일으켰습니다.</p>
+          <p>서울대학 내 실리실도 놓치지 않았습니다. 단과대학으로는 드물게 2년 연속 신축 건물 예산(총 예산 <strong>국고 700억원, 민간 300억원</strong>)이 본부를 통과 중이며, 교원 확보와 강의 책임시수 완화에도 실질적 소득이 있었습니다. 특히 2025년에 저는 전국 공과대학을 대상으로 수여하는 '최우수학장상'을 수상하였고, 우리 공대는 <strong>서울대학교 '최우수 행정기관'</strong>으로 선정되었습니다.</p>
+          <p>이제 제게는 누구보다 풍부한 인적 네트워크, 정부와 기업으로부터의 신뢰, 그리고 언론과 대중의 인지도가 쌓여 있습니다. 서울공대에 지금부터 필요한 것은 이 <strong>변화의 속도를 높이는 것</strong>입니다. 변화의 시작은 우리의 용기였습니다. 변화의 속도를 '높이는 것'은 '우리의 책임'입니다. 그 책임 위에 서울공대 혁신의 역사를 함께, 그리고 거침없이 써가겠습니다. 여러분의 지지를 부탁드립니다.</p>
+        </div>
 
-### 2배의 발전기금, 3배의 복지, 5배의 교류, 10배의 홍보
+        <blockquote class="stmt-dark-quote stmt-dark-quote--closing">
+          지금 핸들을 잡고 있는 사람이 가속기어를 잘 넣을 수 있습니다.<br><br>
+          <strong>'변함없이' 소통과 실행</strong>에 나서며 <strong>'변화의 속도'</strong>를 올리겠습니다.
+        </blockquote>
 
-저는 차원이 다른 서울공대만의 인재상을 정립하고 대내외에 선포하여 이에 상응하는 국가 지원과 민간 기부를 획기적으로 이끌어내겠습니다. 우리 자신의 지경을 밖으로 확장하고, 서울공대만의 가치를 널리 알려 늘 선한 뉴스의 중심이 되겠습니다. 그 성과가 학생에게 투자되고 교수에게 환원되어 공부하고 싶은 캠퍼스, 일하고 싶은 직장을 함께 만들어가겠습니다. 지금보다 발전기금 모금은 2배로 늘리고, 복지 체감은 3배로 높이며, 내부 교류와 소통은 5배, 국내외 홍보는 10배 더 하겠습니다. 구체적이고 단단한 실행계획은 이어지는 이메일에서 차근차근히 공유드리겠습니다.
+        <div class="stmt-dark-closing">
+          <span class="stmt-dark-date">2026년 3월</span>
+          <span class="stmt-dark-sign">서울공대 건설환경공학부 교수</span>
+          <span class="stmt-dark-name">김영오 드림</span>
+        </div>
 
-### 새로운 물결과 대전환, 교수님의 지지를 부탁드립니다
+      </div>
 
-교수님들을 만나 뵈면서 한분 한분이 정말 훌륭하고 귀한 분들임을 새삼 실감하면서, 서울공대의 무한한 발전 가능성을 확인하였습니다. 동시에 교수님들께서 새로운 물결과 대전환을 절실히 바라고 계심을 깨달았습니다. 이제 경청의 시간을 집약한 발전계획서가 준비되었습니다. 교수님들과 제가 꿈꾸는 서울공대를 교수님들과 함께 어떻게 구현해 갈지 하나씩 말씀드리고 기탄없는 조언을 기다리겠습니다. 그럼 11월 16일, 두번째 이메일에서 뵙겠습니다. 
+      <!-- English -->
+      <div class="stmt-lang-content" data-lang-content="en" style="display:none;">
 
-긴 글 읽어주셔서 감사합니다. 관악캠퍼스 어디를 둘러봐도 아름다운 계절, 교수님의 행복과 건승을 기원하겠습니다.
+        <blockquote class="stmt-dark-quote">
+          As the dean who proposed the "Beginning of Change,"<br>
+          I have decided to run once again as a candidate for dean<br>
+          to continue steering the course and<br>
+          pressing the <strong>"Acceleration of Change."</strong><br>
+          Because I understand best the vector of change.
+        </blockquote>
 
-2026년 3월 21일
+        <div class="stmt-dark-photo">
+          <img src="/assets/2026/images/last-term-pic-3.png" alt="Dean Kim Young-Oh">
+        </div>
 
-서울공대 건설환경공학부 교수 김영오 드림
+        <div class="stmt-dark-body">
+          <p>Two years ago in the spring, as I ran for dean, I promised a "Beginning of Change." Upon assuming office, I immediately moved into action together with approximately 330 faculty members. Since then, however, the world — and Korea — has changed at a breathtaking pace. The way society views engineering has also shifted significantly. Today, our neighbors casually discuss semiconductors, AI, energy, and power grids in local coffee shops and even in saunas.</p>
+          <p>In this sense, I consider myself fortunate. These trends have only intensified during my service as the dean. In the name of SNU Engineering, and with its collective strength, I have made every effort to reinforce and ride this momentum. Now, with due humility, I can say this: "By transforming ourselves, we are leading a global change."</p>
+          <p>The greatest driving force behind this transformation was the <strong>outstanding faculty of SNU Engineering</strong>. Whether in planning and launching new programs and organizations, preparing large-scale research projects, expanding industry collaboration, participating in government committees, or contributing to the media, our faculty have always responded willingly. Their passion and sense of mission have formed the strongest foundation for our transformation.</p>
+          <p>The second driving force was our <strong>70,000 alumni</strong>. When I asked for their interest and support, responses came one by one. As a result, my smartphone now contains a list of nearly a thousand key alumni — this is my "big data." Around this network, various collaborations are now taking shape.</p>
+          <p>The third driving force was <strong>the government, local authorities, industry, and the media</strong>. I have worked tirelessly — visiting ministries, corporations, the National Assembly, governors' and mayors' offices. I have written newspaper columns, given interviews, and appeared on broadcasts. I also advised and appeared in the KBS special feature "China Obsessed with Engineering, Korea Obsessed with Medicine," which, as you know, generated significant public response.</p>
+          <p>At the same time, I did not neglect internal university affairs. Rare for a single college, we have secured university headquarter's approval for new building construction budgets for two consecutive years (totaling <strong>KRW 70 billion in government funding and KRW 30 billion in private funding</strong>). We have also achieved tangible progress in faculty recruitment and in reducing mandatory teaching hour requirements. In particular, in 2025, I was honored to receive the "Best Dean Award", presented to engineering colleges deans nationwide, and our college was selected as the <strong>"Best Administrative Organization" at Seoul National University</strong>.</p>
+          <p>I now possess a uniquely strong network, trust from government and industry, and broad recognition in the media and among the public. What SNU Engineering needs now is to <strong>accelerate the pace of this change</strong>. The beginning of change required our courage; accelerating it is our responsibility. Upon that responsibility, we will continue to write the history of innovation at SNU Engineering — together, and without hesitation. I ask for your support.</p>
+        </div>
 
+        <blockquote class="stmt-dark-quote stmt-dark-quote--closing">
+          The person holding the wheel now is the one who can shift into acceleration most effectively.<br><br>
+          <strong>With unwavering communication and execution,</strong> I will <strong>increase the pace of change.</strong>
+        </blockquote>
+
+        <div class="stmt-dark-closing">
+          <span class="stmt-dark-date">March 2026</span>
+          <span class="stmt-dark-sign">Professor, Department of Civil and Environmental Engineering</span>
+          <span class="stmt-dark-name">KIM Young-Oh</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Language toggle
+  var btns = document.querySelectorAll('.stmt-lang-btn');
+  var contents = document.querySelectorAll('.stmt-lang-content');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var lang = btn.getAttribute('data-lang');
+      btns.forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      contents.forEach(function (c) {
+        c.style.display = c.getAttribute('data-lang-content') === lang ? '' : 'none';
+      });
+    });
+  });
+
+  // Scroll reveal
+  var els = document.querySelectorAll('[data-reveal]');
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { obs.observe(el); });
+});
+</script>

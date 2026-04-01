@@ -55,6 +55,7 @@ Campaign website for **Kim Young-Oh (김영오)**, candidate for **33대 Dean of
 - **Hero:** Thomas's photo as background with dark overlay, campaign text centered
 - **Navigation:** Flat (no dropdowns), header + footer show same links
 - **Sidebar:** All content pages show "바로가기" sidebar with links to other pages
+- **Design principles:** NYT-style infographics — big numbers as focal points, scroll-triggered animated counters, minimal text, clean data visualization over tables. Pages should feel like editorial data stories, not boring documents. Use IntersectionObserver for scroll-triggered reveals and counter animations.
 
 ## Build & Run
 

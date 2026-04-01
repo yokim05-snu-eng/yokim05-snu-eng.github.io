@@ -103,3 +103,11 @@ I now possess a uniquely strong network, trust from government and industry, and
 
 - **Current Diagnosis:** As the importance of international collaborative research continues to grow, overseas sabbatical leave has become a considerable financial burden due to global inflation and unfavorable exchange rates.
 - **Implementation Plan:** In partnership with external foundations, we will newly establish a sabbatical support program (KRW 25 million per semester) to lay the groundwork for collaborative research with leading overseas scholars and to create pathways for securing international joint research projects.
+
+---
+
+<p style="text-align:right;">
+March 31, 2025<br>
+Young-Oh Kim<br>
+Candidate for the 33rd Dean, SNU College of Engineering
+</p>
