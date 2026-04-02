@@ -2305,6 +2305,27 @@ $abt-rule: rgba(255, 255, 255, 0.07);
   }
 }
 
+// Split two-button bottom nav (used on resources page)
+.page-bottom-nav-split {
+  display: flex;
+  gap: 16px;
+  max-width: 720px;
+  .page-bottom-nav-next {
+    flex: 1;
+  }
+  .page-bottom-nav-left {
+    &:hover .page-bottom-nav-next-arrow {
+      transform: translateX(-4px);
+    }
+  }
+}
+@media (max-width: 767px) {
+  .page-bottom-nav-split {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 /* ── Resources page (자료실) ── */
 $res-bg: #0e1117;
 $res-bg-card: rgba(255, 255, 255, 0.04);
