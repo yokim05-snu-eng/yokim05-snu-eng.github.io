@@ -18,34 +18,14 @@ hero:
 
   <section class="vis-dark-hero">
     <span class="vis-dark-period">33대 서울공대 학장 후보</span>
-    <h1 class="vis-dark-title">33대 발전계획서</h1>
+    <h1 class="vis-dark-title">발전계획서</h1>
     <span class="vis-dark-sub">DEVELOPMENT PLAN</span>
     <div class="vis-dark-hero-buttons">
-      <a href="/assets/2026/files/2026-vision-kor.pdf" class="vis-btn" target="_blank">발전계획서 PDF (한국어)</a>
-      <a href="/assets/2026/files/2026-vision-eng.pdf" class="vis-btn vis-btn--outline" target="_blank">Development Plan PDF (English)</a>
+      <a href="/vision-kor/" class="vis-btn" target="_blank">이미지로 보기 (한국어)</a>
+      <a href="/vision-eng/" class="vis-btn vis-btn--outline" target="_blank">View as Images (English)</a>
     </div>
     <div class="vis-dark-scroll-hint">
       <svg width="20" height="28" viewBox="0 0 20 28" fill="none"><rect x="1" y="1" width="18" height="26" rx="9" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><circle class="vis-scroll-dot" cx="10" cy="8" r="2" fill="rgba(255,255,255,0.5)"/></svg>
-    </div>
-  </section>
-
-  <!-- ═══ INLINE PDF PAGES ═══ -->
-  <section class="vis-pdf-pages" data-reveal>
-    <div class="vis-pdf-pages-inner">
-      <div class="vis-pdf-lang-tabs">
-        <button class="vis-pdf-tab is-active" data-lang="kor">한국어</button>
-        <button class="vis-pdf-tab" data-lang="eng">English</button>
-      </div>
-      <div class="vis-pdf-gallery" data-lang-content="kor">
-        <img src="/assets/2026/images/vision-kor/page-1.png" alt="발전계획서 1페이지" loading="lazy">
-        <img src="/assets/2026/images/vision-kor/page-2.png" alt="발전계획서 2페이지" loading="lazy">
-        <img src="/assets/2026/images/vision-kor/page-3.png" alt="발전계획서 3페이지" loading="lazy">
-      </div>
-      <div class="vis-pdf-gallery" data-lang-content="eng" style="display:none;">
-        <img src="/assets/2026/images/vision-eng/page-1.png" alt="Development Plan page 1" loading="lazy">
-        <img src="/assets/2026/images/vision-eng/page-2.png" alt="Development Plan page 2" loading="lazy">
-        <img src="/assets/2026/images/vision-eng/page-3.png" alt="Development Plan page 3" loading="lazy">
-      </div>
     </div>
   </section>
 
@@ -422,18 +402,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.5 });
   counters.forEach(function (c) { counterObs.observe(c); });
-
-  // PDF language tabs
-  document.querySelectorAll('.vis-pdf-tab').forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      document.querySelectorAll('.vis-pdf-tab').forEach(function (t) { t.classList.remove('is-active'); });
-      tab.classList.add('is-active');
-      var lang = tab.getAttribute('data-lang');
-      document.querySelectorAll('.vis-pdf-gallery').forEach(function (g) {
-        g.style.display = g.getAttribute('data-lang-content') === lang ? '' : 'none';
-      });
-    });
-  });
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
