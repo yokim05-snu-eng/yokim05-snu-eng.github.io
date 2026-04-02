@@ -51,7 +51,11 @@ $font-family-sans-serif: $font-family-base;
   --color-base-800: #{$base-800};
   --color-base-900: #{$base-900};
 }
-  
+
+body {
+  word-break: keep-all;
+}
+
 html[data-mode='dark'] {
   --color-base: #{$base-dark};
   --color-base-100: #{$base-dark-100};

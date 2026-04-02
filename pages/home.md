@@ -82,7 +82,7 @@ posts:
       </div>
     </div>
     <div class="home-numbers-badge">
-      <span>2025 서울대학교 최우수 행정기관 &middot; 한국이공학진흥원 최고학장상</span>
+      <span>2025 서울대학교 최우수 행정기관<br>한국이공학진흥원 최고학장상</span>
     </div>
   </section>
 
