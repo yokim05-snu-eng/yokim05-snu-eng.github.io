@@ -17,6 +17,7 @@ hero:
 <div class="vis-dark">
 
   <section class="vis-dark-hero">
+    <div class="vis-dark-hero-bg" style="background-image: url('/assets/2026/images/last-term-pic-5.jpeg');"></div>
     <span class="vis-dark-period">33대 서울공대 학장 후보</span>
     <h1 class="vis-dark-title">발전계획서</h1>
     <span class="vis-dark-sub">DEVELOPMENT PLAN</span>
@@ -160,6 +161,9 @@ hero:
         </div>
       </div>
     </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/graduation-2026.jpeg" alt="2026 서울대학교 공과대학 최우수 졸업생 시상식">
+    </div>
   </section>
 
   <section class="vis-dark-domain" data-reveal id="domain-02">
@@ -259,6 +263,9 @@ hero:
           </div>
         </div>
       </div>
+    </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/last-term-pic-3.png" alt="연구시설 방문">
     </div>
   </section>
 

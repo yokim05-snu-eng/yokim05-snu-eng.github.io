@@ -16,6 +16,7 @@ hero:
 <div class="stmt-dark">
 
   <section class="stmt-dark-hero">
+    <div class="stmt-dark-hero-bg" style="background-image: url('/assets/2026/images/last-term-pic-2.jpeg');"></div>
     <span class="stmt-dark-period">33대 서울공대 학장 후보</span>
     <h1 class="stmt-dark-title">학장에 출마하며</h1>
     <span class="stmt-dark-sub">CANDIDACY STATEMENT</span>
@@ -43,7 +44,7 @@ hero:
         </blockquote>
 
         <div class="stmt-dark-photo">
-          <img src="/assets/2026/images/last-term-pic-3.png" alt="32대 학장단 활동">
+          <img src="/assets/2026/images/4-solo4.png" alt="김영오">
         </div>
 
         <div class="stmt-dark-body">

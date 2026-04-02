@@ -16,8 +16,10 @@ Campaign website for **Kim Young-Oh (김영오)**, candidate for **33대 Dean of
 - **Framework:** Jekyll static site generator (do not change)
 - **Theme:** Jekyll Advance Pro (keep as-is, minimal modifications only)
 - **CSS:** SCSS with Bootstrap 4
-- **Deployment:** Netlify (configured in `netlify.toml`)
-- **Branch:** `2026-draft` is the working branch; `main` is production
+- **Deployment:** Two Netlify sites:
+  - **2026 campaign:** `yokim05-2026` site, deploys from `2026-draft` branch
+  - **2024 campaign (archive):** original Netlify site, deploys from `main` branch
+- **Branch:** `main` is the 2024 campaign (frozen); `2026-draft` is the 2026 working branch
 
 ## Site Structure
 

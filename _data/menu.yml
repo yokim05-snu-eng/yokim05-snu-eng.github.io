@@ -8,14 +8,14 @@ main:
   - name: 32대 학장단 실적
     url: /achievements/
     weight: 3
-  # - name: 2년 전의 초심 확인
-  #   url: /legacy/
-  #   weight: 4
   - name: 프로필
     url: /about/
-    weight: 5
+    weight: 4
   - name: 자료실
     url: /resources/
+    weight: 5
+  - name: 2년 전의 초심 확인
+    url: https://yokim05-snu-eng.github.io/
     weight: 6
 
 footer_primary:
@@ -28,14 +28,14 @@ footer_primary:
   - name: 32대 학장단 실적
     url: /achievements/
     weight: 3
-  # - name: 2년 전의 초심 확인
-  #   url: /legacy/
-  #   weight: 4
   - name: 프로필
     url: /about/
-    weight: 5
+    weight: 4
   - name: 자료실
     url: /resources/
+    weight: 5
+  - name: 2년 전의 초심 확인
+    url: https://yokim05-snu-eng.github.io/
     weight: 6
 
 footer_tertiary:

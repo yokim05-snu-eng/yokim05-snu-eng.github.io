@@ -1098,6 +1098,29 @@ $vis-rule: rgba(255, 255, 255, 0.07);
     padding: 0 24px;
     position: relative;
   }
+  .vis-dark-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    mix-blend-mode: luminosity;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 20%,
+      black 60%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 20%,
+      black 60%,
+      transparent 100%
+    );
+  }
   .vis-dark-period {
     font-size: 0.98rem;
     letter-spacing: 0.25em;
@@ -1258,6 +1281,17 @@ $vis-rule: rgba(255, 255, 255, 0.07);
     color: $vis-muted;
     margin: 0 0 56px;
     letter-spacing: 0.04em;
+  }
+
+  .vis-domain-photo {
+    margin: 48px auto 0;
+    max-width: 640px;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      opacity: 0.8;
+    }
   }
 
   // Policy items
@@ -1563,6 +1597,29 @@ $stmt-rule: rgba(255, 255, 255, 0.07);
     text-align: center;
     padding: 0 24px;
     position: relative;
+  }
+  .stmt-dark-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    mix-blend-mode: luminosity;
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 20%,
+      black 60%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      black 20%,
+      black 60%,
+      transparent 100%
+    );
   }
   .stmt-dark-period {
     font-size: 0.98rem;
