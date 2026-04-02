@@ -612,18 +612,19 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     padding: 10px 22px;
     font-size: 1.02rem;
     font-weight: 600;
-    color: $ach-muted;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 100px;
+    background: rgba(0, 0, 0, 0.4);
     text-decoration: none;
     transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     &:hover {
       color: #fff;
-      border-color: rgba(255, 255, 255, 0.3);
-      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(0, 0, 0, 0.5);
       text-decoration: none;
     }
-    svg { opacity: 0.7; }
+    svg { opacity: 0.85; }
   }
   .ach-dark-scroll-hint {
     position: absolute;
@@ -1138,8 +1139,9 @@ $vis-rule: rgba(255, 255, 255, 0.07);
     background-size: cover;
     background-position: center 20%;
     background-repeat: no-repeat;
-    opacity: 0.15;
+    opacity: 0.10;
     mix-blend-mode: luminosity;
+    pointer-events: none;
     mask-image: linear-gradient(
       to bottom,
       transparent 0%,
@@ -1189,9 +1191,9 @@ $vis-rule: rgba(255, 255, 255, 0.07);
     font-weight: 600;
     border-radius: 100px;
     text-decoration: none;
-    color: $vis-muted;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: transparent;
+    color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     &:hover {
       color: #fff;
@@ -1200,14 +1202,44 @@ $vis-rule: rgba(255, 255, 255, 0.07);
       text-decoration: none;
     }
     &--outline {
-      color: $vis-muted;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: transparent;
+      color: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.4);
       &:hover {
         color: #fff;
         border-color: rgba(255, 255, 255, 0.3);
         background: rgba(255, 255, 255, 0.05);
       }
+    }
+  }
+  .vis-lang-toggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    width: fit-content;
+  }
+  .vis-lang-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 10px 24px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    &.is-active {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+    }
+    & + & {
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
     }
   }
   .vis-dark-scroll-hint {
@@ -1640,6 +1672,7 @@ $stmt-rule: rgba(255, 255, 255, 0.07);
     background-repeat: no-repeat;
     opacity: 0.15;
     mix-blend-mode: luminosity;
+    pointer-events: none;
     mask-image: linear-gradient(
       to bottom,
       transparent 0%,
@@ -1674,6 +1707,41 @@ $stmt-rule: rgba(255, 255, 255, 0.07);
     letter-spacing: 0.35em;
     color: $stmt-muted;
     font-weight: 500;
+  }
+  .stmt-dark-hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .stmt-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    border-radius: 100px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    &:hover {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+    }
+    &--outline {
+      color: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.4);
+      &:hover {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
   }
   .stmt-dark-scroll-hint {
     position: absolute;

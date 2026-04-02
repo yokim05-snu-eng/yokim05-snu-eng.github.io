@@ -22,17 +22,22 @@ hero:
     <h1 class="vis-dark-title">발전계획서</h1>
     <span class="vis-dark-sub">DEVELOPMENT PLAN</span>
     <div class="vis-dark-hero-buttons">
-      <a href="/vision-kor/" class="vis-btn" target="_blank">이미지로 보기 (한국어)</a>
-      <a href="/vision-eng/" class="vis-btn vis-btn--outline" target="_blank">View as Images (English)</a>
+      <a href="/vision-kor/" class="vis-btn" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>이미지로 보기 (한국어)</a>
+      <a href="/vision-eng/" class="vis-btn vis-btn--outline" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>View as Images (English)</a>
     </div>
     <div class="vis-dark-scroll-hint">
       <svg width="20" height="28" viewBox="0 0 20 28" fill="none"><rect x="1" y="1" width="18" height="26" rx="9" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><circle class="vis-scroll-dot" cx="10" cy="8" r="2" fill="rgba(255,255,255,0.5)"/></svg>
     </div>
   </section>
 
+  <div class="vis-lang-content" data-lang-content="ko">
   <!-- ═══ AT-A-GLANCE OVERVIEW ═══ -->
   <section class="vis-overview" data-reveal id="vis-overview-anchor">
     <div class="vis-overview-inner">
+      <div class="vis-lang-toggle">
+        <button class="vis-lang-btn is-active" data-lang="ko">한국어</button>
+        <button class="vis-lang-btn" data-lang="en">English</button>
+      </div>
       <span class="vis-overview-eyebrow">AT A GLANCE</span>
       <h2 class="vis-overview-heading">5대 핵심 분야 · 15개 추진과제</h2>
       <p class="vis-overview-sub">각 분야를 클릭하면 세부 계획으로 이동합니다</p>
@@ -48,8 +53,8 @@ hero:
           </div>
           <ul class="vis-overview-card-list">
             <li>혁신인재 육성사업 정착</li>
-            <li>AI 시대 공학교육 선도</li>
-            <li>강의시수 연 9학점 실현</li>
+            <li>AI 시대 공학교육 정책 선도</li>
+            <li>실질 강의시수 연 9학점 실현</li>
           </ul>
         </a>
 
@@ -75,9 +80,9 @@ hero:
             <span class="vis-overview-card-stat-label">연간 발전기금 목표</span>
           </div>
           <ul class="vis-overview-card-list">
-            <li>발전기금 및 선제적 홍보</li>
-            <li>80주년 공유 사업 완료</li>
-            <li>2배의 동문 참여 전환</li>
+            <li>발전기금 및 선제적 홍보 지속</li>
+            <li>80주년 공유(工遺) 사업 완료</li>
+            <li>2배의 동문 참여 모교 전환</li>
           </ul>
         </a>
 
@@ -89,7 +94,7 @@ hero:
             <span class="vis-overview-card-stat-label">매년 불합리 제도 개선율</span>
           </div>
           <ul class="vis-overview-card-list">
-            <li>구태의연 제도 매년 개선</li>
+            <li>불합리 제도 매년 개선</li>
             <li>교류와 복지 넘치는 일터</li>
             <li>아름다운 캠퍼스 조성</li>
           </ul>
@@ -103,9 +108,9 @@ hero:
             <span class="vis-overview-card-stat-label">매년 초우수 해외 인재 유치</span>
           </div>
           <ul class="vis-overview-card-list">
-            <li>초우수 해외 인재 유치</li>
-            <li>해외 대학원생·교수 지원</li>
-            <li>연구년 해외 파견 지원</li>
+            <li>해외 인재 유치 지속</li>
+            <li>해외 대학원생 · 지도교수 지원</li>
+            <li>연구년 해외 파견 지원 사업 마련</li>
           </ul>
         </a>
 
@@ -370,6 +375,246 @@ hero:
 
   </section>
 
+  </div><!-- /ko -->
+
+  <div class="vis-lang-content" data-lang-content="en" style="display:none;">
+
+  <section class="vis-overview" data-reveal>
+    <div class="vis-overview-inner">
+      <div class="vis-lang-toggle">
+        <button class="vis-lang-btn" data-lang="ko">한국어</button>
+        <button class="vis-lang-btn is-active" data-lang="en">English</button>
+      </div>
+      <span class="vis-overview-eyebrow">AT A GLANCE</span>
+      <h2 class="vis-overview-heading">5 Key Areas · 15 Action Items</h2>
+      <p class="vis-overview-sub">Click each area to see details</p>
+      <div class="vis-overview-grid">
+        <a href="#domain-01-en" class="vis-overview-card">
+          <span class="vis-overview-card-num">01</span>
+          <h3 class="vis-overview-card-title">Education · Faculty</h3>
+          <div class="vis-overview-card-stat">
+            <span class="vis-overview-card-big" data-count="85">0</span><span class="vis-overview-card-unit">억원</span>
+            <span class="vis-overview-card-stat-label">New Ministry of Education program</span>
+          </div>
+          <ul class="vis-overview-card-list">
+            <li>EXCEL Innovative Talent Program</li>
+            <li>AI-era education policy</li>
+            <li>9-credit teaching load</li>
+          </ul>
+        </a>
+        <a href="#domain-02-en" class="vis-overview-card">
+          <span class="vis-overview-card-num">02</span>
+          <h3 class="vis-overview-card-title">Startups · Research</h3>
+          <div class="vis-overview-card-stat">
+            <span class="vis-overview-card-big" data-count="500">0</span><span class="vis-overview-card-unit">억원</span>
+            <span class="vis-overview-card-stat-label">Annual government-industry-academia target</span>
+          </div>
+          <ul class="vis-overview-card-list">
+            <li>Double student startup outcomes</li>
+            <li>Go-to resource for government</li>
+            <li>Large-scale joint research projects</li>
+          </ul>
+        </a>
+        <a href="#domain-03-en" class="vis-overview-card">
+          <span class="vis-overview-card-num">03</span>
+          <h3 class="vis-overview-card-title">Fundraising · PR · Alumni</h3>
+          <div class="vis-overview-card-stat">
+            <span class="vis-overview-card-big" data-count="365">0</span><span class="vis-overview-card-unit">억원</span>
+            <span class="vis-overview-card-stat-label">Annual dev. fund target</span>
+          </div>
+          <ul class="vis-overview-card-list">
+            <li>Development fund &amp; proactive outreach</li>
+            <li>80th anniversary legacy project</li>
+            <li>2x alumni engagement</li>
+          </ul>
+        </a>
+        <a href="#domain-04-en" class="vis-overview-card">
+          <span class="vis-overview-card-num">04</span>
+          <h3 class="vis-overview-card-title">Admin · Welfare · Campus</h3>
+          <div class="vis-overview-card-stat">
+            <span class="vis-overview-card-big" data-count="20">0</span><span class="vis-overview-card-unit">%</span>
+            <span class="vis-overview-card-stat-label">Annual reform rate</span>
+          </div>
+          <ul class="vis-overview-card-list">
+            <li>Reform outdated practices</li>
+            <li>Workplace rich in connection</li>
+            <li>Beautiful campus</li>
+          </ul>
+        </a>
+        <a href="#domain-05-en" class="vis-overview-card">
+          <span class="vis-overview-card-num">05</span>
+          <h3 class="vis-overview-card-title">Internationalization</h3>
+          <div class="vis-overview-card-stat">
+            <span class="vis-overview-card-big" data-count="20">0</span><span class="vis-overview-card-unit">students</span>
+            <span class="vis-overview-card-stat-label">Top international talent annually</span>
+          </div>
+          <ul class="vis-overview-card-list">
+            <li>Top international talent recruitment</li>
+            <li>Graduate &amp; supervisor support</li>
+            <li>Sabbatical overseas support</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="vis-dark-domain" data-reveal id="domain-01-en">
+    <span class="vis-dark-label">01</span>
+    <h2 class="vis-dark-domain-title">Education &middot; Faculty</h2>
+    <div class="vis-dark-items">
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">1-1</span>
+        <h3 class="vis-dark-item-title">Establishment of the EXCEL Innovative Talent Development Program to Change the World</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>The EXCEL Innovative Talent Development Program selected 40 undergraduate students in 2026.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will address shortcomings in this year's inaugural implementation and seek selection for a new Ministry of Education initiative (KRW 8.5 billion annually) to relieve the budget burden.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">1-2</span>
+        <h3 class="vis-dark-item-title">Leading Engineering Education Policy in the AI Era</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>While AI is disrupting the paradigm of engineering education, there has been no internal discussion on this matter.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>Building on internal policy research, we will cultivate interest and gather input, and through engagement with world-leading universities, lead the transformation toward future-oriented engineering education.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">1-3</span>
+        <h3 class="vis-dark-item-title">Realizing an Actual Annual Teaching Load of 9 Credits</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>Over the past year, partial progress was achieved in reducing the teaching load; however, the full realization of 9 credits per year has not yet been achieved.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will continue closer consultation with the central administration to realize improvement proposals including delegating teaching load decisions to individual colleges.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vis-dark-domain" data-reveal id="domain-02-en">
+    <span class="vis-dark-label">02</span>
+    <h2 class="vis-dark-domain-title">Startups &middot; Research</h2>
+    <div class="vis-dark-items">
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">2-1</span>
+        <h3 class="vis-dark-item-title">Doubling Student Startup Outcomes</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>The emergence of star entrepreneurs is the breakthrough needed, yet the domestic startup ecosystem has been perceived as centered around KAIST.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will systematically manage startup outcomes through the Engineering Consulting Center, strengthen the "Entrepreneurial Innovative Talent Course," and build startup networks with domestic and international alumni.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">2-2</span>
+        <h3 class="vis-dark-item-title">Sustaining SNU Engineering as "a Go-To Resource for Government"</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>SNU Engineering's contributions to national science and technology policymaking have been largely driven by individual faculty, limiting effectiveness.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will continue the Issue &amp; Voice Forum, operate a Research Strategy Committee, and explore a senior executive program in science and technology policy in Sejong City.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">2-3</span>
+        <h3 class="vis-dark-item-title">Planning Large-Scale Government-Industry-Academia Research Projects Exceeding KRW 50 Billion Annually</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>In 2025, the Defense Engineering Center and Industrial AI Center were launched, and the Space Convergence Technology Center design commenced.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will plan government-industry-academia projects at the college level (defense engineering, industrial AX, etc.) exceeding KRW 50 billion every year.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vis-dark-domain" data-reveal id="domain-03-en">
+    <span class="vis-dark-label">03</span>
+    <h2 class="vis-dark-domain-title">Fundraising &middot; PR &middot; Alumni</h2>
+    <div class="vis-dark-items">
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">3-1</span>
+        <h3 class="vis-dark-item-title">Sustaining the Annual KRW 36.5 Billion Development Fund and Proactive Outreach</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>The 32nd dean's office set targets of doubling development funds and tenfold growth in outreach, reaching approximately 70% of those goals.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>Through new development fund initiatives and proactive outreach, the 33rd dean's office will make every effort to surpass these targets.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">3-2</span>
+        <h3 class="vis-dark-item-title">Successful Completion of the SNU Engineering 80th Anniversary Legacy (工遺, Legacy of Innovation) Project</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>Various projects commemorating SNU Engineering's 80th anniversary have been in preparation under the slogan "80 Years of Challenge, Future of Innovation."</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will bring these efforts to a successful close through the opening of a history museum, commemorative forums and exhibitions, publication of a commemorative volume, and special invited lectures by "Innovative Alumni of Gwanak," sharing the legacy of SNU Engineering's innovation with society at large.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">3-3</span>
+        <h3 class="vis-dark-item-title">Transforming into an Alma Mater with Twice the Alumni Engagement</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>Notable achievements in 2025 included holding 30th, 40th, and 50th reunion events, surpassing 400 alumni and family participants on Homecoming Day, and launching the SNU Engineering Business Forum.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will increase the effective contact rate within the alumni directory and launch initiatives such as the "SNU Engineering Business Forum: Under 45."</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vis-dark-domain" data-reveal id="domain-04-en">
+    <span class="vis-dark-label">04</span>
+    <h2 class="vis-dark-domain-title">Admin &middot; Welfare &middot; Campus</h2>
+    <div class="vis-dark-items">
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">4-1</span>
+        <h3 class="vis-dark-item-title">Improving Outdated and Irrational Administrative Practices by 20% Each Year</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>The introduction of RPA led to selection as best college in 2025, yet many outdated systems and regulations remain.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>Through open.eng@snu.ac.kr and the chatbot "EngiOne," we will continuously identify and reform administrative practices, implementing changes within the college first, and consistently advocate for broader improvements to the central administration.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">4-2</span>
+        <h3 class="vis-dark-item-title">Sustaining a Workplace Rich in Connection and Well-Being</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>The 32nd dean's office launched new programs under the pledge of tripling welfare and fivefold increase in faculty exchanges.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will continue welfare programs — health checkup support, airport/train station pickup, baseball outings — and further activate open forums, roundtables, and faculty interest groups.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">4-3</span>
+        <h3 class="vis-dark-item-title">Continuing Efforts Toward a More Beautiful Campus</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>Recent efforts — including odor-free restrooms, improved parcel management, and upgraded pedestrian walkways — have been encouraging, but much remains to be done.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will address parking shortages and work toward a convenient, art-enriched campus through forest walking paths and cultural events.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vis-dark-domain" data-reveal id="domain-05-en">
+    <span class="vis-dark-label">05</span>
+    <h2 class="vis-dark-domain-title">Internationalization</h2>
+    <div class="vis-dark-items">
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">5-1</span>
+        <h3 class="vis-dark-item-title">Continued Recruitment of Top-Tier International Undergraduate Students</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>In 2025, over KRW 1 billion annually was secured in scholarship funds for outstanding international students, primarily from Vietnam and Yanji, China.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>Using these funds, we will realize the annual recruitment of 20 top-tier international undergraduate students.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">5-2</span>
+        <h3 class="vis-dark-item-title">Expanding Support for Outstanding International Graduate Students and Their Supervisors</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>Support for graduate students and their supervising professors has remained insufficient.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will provide dedicated support services (visa, housing, banking, medical) to outstanding international graduate students and dual-degree students, and offer financial incentives to their supervisors, advancing the internationalization of SNU Engineering to the next level.</p></div>
+        </div>
+      </div>
+      <div class="vis-dark-item">
+        <span class="vis-dark-item-num">5-3</span>
+        <h3 class="vis-dark-item-title">Establishing a Support Program for Overseas Sabbatical Leave</h3>
+        <div class="vis-dark-item-body">
+          <div class="vis-dark-dx"><span class="vis-dark-dx-label">Current Diagnosis</span><p>Overseas sabbatical leave has become a considerable financial burden due to global inflation and exchange rates.</p></div>
+          <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>In partnership with external foundations, we will establish a sabbatical support program (KRW 25 million per semester) to lay the groundwork for collaborative research with leading overseas scholars and to create pathways for securing international joint research projects.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /en -->
+
   {% include components/page-nav.html current="/vision/" %}
 
 </div>
@@ -409,6 +654,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }, { threshold: 0.5 });
   counters.forEach(function (c) { counterObs.observe(c); });
+
+  // Language toggle with URL persistence
+  var params = new URLSearchParams(window.location.search);
+  var initialLang = params.get('lang') || localStorage.getItem('siteLang') || 'ko';
+
+  function setVisLang(lang, updateUrl) {
+    document.querySelectorAll('.vis-lang-btn').forEach(function (b) {
+      b.classList.toggle('is-active', b.getAttribute('data-lang') === lang);
+    });
+    document.querySelectorAll('.vis-lang-content').forEach(function (c) {
+      c.style.display = c.getAttribute('data-lang-content') === lang ? '' : 'none';
+    });
+    localStorage.setItem('siteLang', lang);
+    if (updateUrl) {
+      var url = new URL(window.location);
+      if (lang === 'ko') { url.searchParams.delete('lang'); } else { url.searchParams.set('lang', lang); }
+      history.replaceState(null, '', url);
+    }
+  }
+
+  setVisLang(initialLang, true);
+
+  document.querySelectorAll('.vis-lang-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      setVisLang(btn.getAttribute('data-lang'), true);
+    });
+  });
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
