@@ -1328,6 +1328,53 @@ $vis-rule: rgba(255, 255, 255, 0.07);
     background: rgba($vis-accent, 0.08);
   }
 
+  // ─── Inline PDF pages ───
+  .vis-pdf-pages {
+    border-top: 1px solid $vis-rule;
+    padding: 80px 24px;
+    text-align: center;
+  }
+  .vis-pdf-pages-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .vis-pdf-lang-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .vis-pdf-tab {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.5);
+    padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    &.is-active {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.4);
+      color: #fff;
+    }
+    &:hover {
+      border-color: rgba(255,255,255,0.4);
+      color: #fff;
+    }
+  }
+  .vis-pdf-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+    }
+  }
+
   // ─── At-a-glance overview ───
   .vis-overview {
     border-top: 1px solid $vis-rule;

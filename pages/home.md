@@ -96,7 +96,7 @@ posts:
       </a>
       <a href="/vision/" class="home-nav-card">
         <span class="home-nav-card-num">02</span>
-        <h3 class="home-nav-card-title">발전계획서</h3>
+        <h3 class="home-nav-card-title">33대 발전계획서</h3>
         <p class="home-nav-card-desc">교육·연구·기금·행정·국제화 5대 영역 15개 과제</p>
         <span class="home-nav-card-arrow">&rarr;</span>
       </a>

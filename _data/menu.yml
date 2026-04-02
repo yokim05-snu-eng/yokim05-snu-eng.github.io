@@ -2,7 +2,7 @@ main:
   - name: 33대 학장에 출마하며
     url: /statement/
     weight: 1
-  - name: 발전계획서
+  - name: 33대 발전계획서
     url: /vision/
     weight: 2
   - name: 32대 학장단 실적
@@ -22,7 +22,7 @@ footer_primary:
   - name: 33대 학장에 출마하며
     url: /statement/
     weight: 1
-  - name: 발전계획서
+  - name: 33대 발전계획서
     url: /vision/
     weight: 2
   - name: 32대 학장단 실적
