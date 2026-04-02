@@ -11,3 +11,13 @@ description: "서울공대 33대 학장 발전계획서"
 </div>
 
 {% include components/page-nav.html current="/vision/" %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var els = document.querySelectorAll('[data-reveal]');
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { obs.observe(el); });
+});
+</script>
