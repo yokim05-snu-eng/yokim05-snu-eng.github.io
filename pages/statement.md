@@ -100,7 +100,7 @@ hero:
         </blockquote>
 
         <p style="text-align:right; margin-top:2em;">
-          March 31, 2025<br>
+          March 31, 2026<br>
           Young-Oh Kim<br>
           Candidate for the 33rd Dean, SNU College of Engineering
         </p>

@@ -35,21 +35,21 @@ hero:
       <span class="ach-dark-big counter" data-target="220">0</span>
       <span class="ach-dark-big-unit">억 원</span>
     </div>
-    <p class="ach-dark-hero-desc">재임기 중 발전기금 유치<span class="ach-dark-hero-detail">교대 150억 원 + 외부 70억 원</span></p>
+    <p class="ach-dark-hero-desc">재임기 중 발전기금 유치<span class="ach-dark-hero-detail">교대 150억 원 + 본부 70억 원</span></p>
     <div class="ach-dark-row">
       <div class="ach-dark-cell">
         <span class="ach-dark-cell-num counter" data-target="1000" data-comma="true">0</span>
         <span class="ach-dark-cell-unit">억 원</span>
-        <span class="ach-dark-cell-desc">시설 인프라 확충<br><small>무중력공학관 500억 + 로봇기술관 500억</small></span>
+        <span class="ach-dark-cell-desc">시설 인프라<br><small>우주융합기술관 500억 건립 확정<br/>+ 로봇기술관 500억 건립 심의 중</small></span>
       </div>
       <div class="ach-dark-cell">
         <span class="ach-dark-cell-num counter" data-target="115">0</span>
-        <span class="ach-dark-cell-unit">건 · 40억 원</span>
-        <span class="ach-dark-cell-desc">PRIDE 연구지원</span>
+        <span class="ach-dark-cell-unit">건</span>
+        <span class="ach-dark-cell-desc">모금 프로그램 PRYDE 시작<br/><small>현재 40억 원 모금</small></span>
       </div>
       <div class="ach-dark-cell ach-dark-cell--badge">
-        <span class="ach-dark-badge-text">2025 최우수<br>행정기관</span>
-        <span class="ach-dark-cell-desc"><small>RPA 도입 · EngiOne 챗봇 운영</small></span>
+        <span class="ach-dark-badge-text">2025년 서울대학교<br/>최우수 행정기관</span>
+        <span class="ach-dark-cell-desc"><small>Robot Process Automation 도입, EngiOne 민원 챗봇 론칭</small></span>
       </div>
     </div>
   </section>
@@ -62,6 +62,7 @@ hero:
         <span class="ach-dark-trio-num counter" data-target="400">0</span>
         <span class="ach-dark-trio-plus">+</span>
         <span class="ach-dark-trio-desc">국내 언론 보도</span>
+
       </div>
       <div class="ach-dark-trio-div"></div>
       <div class="ach-dark-trio-item">
@@ -78,7 +79,8 @@ hero:
     </div>
     <div class="ach-dark-checks" style="margin-top:1.5rem;">
       <div class="ach-dark-check">단독 언론 인터뷰 10건 포함</div>
-      <div class="ach-dark-check">산업통상자원부 등 MOU 20여 건</div>
+      <div class="ach-dark-check">산업통상자원부 등 서울대 총장 MOU 3건 기획</div>
+      <div class="ach-dark-check">학장 MOU 20여 건</div>
     </div>
   </section>
 
@@ -97,7 +99,7 @@ hero:
           <div class="ach-dark-check">실질 강의시수 9학점 기반조성 (규정 개정 등) 지원</div>
           <div class="ach-dark-check">연구기반 다짐사업: 조교수 48명 지원</div>
           <div class="ach-dark-check">연구매칭 지원사업: 정년교수 18명 지원</div>
-          <div class="ach-dark-check">지속도전 연구사업: 8명 지원</div>
+          <div class="ach-dark-check">지속도전 연구사업: 6명 지원</div>
         </div>
       </div>
 
@@ -121,17 +123,43 @@ hero:
   <section class="ach-dark-domain" data-reveal>
     <span class="ach-dark-label">04</span>
     <h2 class="ach-dark-domain-title">관산학 얼라이언스</h2>
-    <div class="ach-dark-checks">
-      <div class="ach-dark-check">연구자매칭 Xpert System 오픈</div>
-      <div class="ach-dark-check">시흥시 라이즈 사업 (5년 46억 원) 수주 초기 기획</div>
-      <div class="ach-dark-check">국방공학센터 · 산업AI센터 설립</div>
-      <div class="ach-dark-check">수서동 서울AI허브 (연간 118억 원, 28,514㎡ 위탁 운영)</div>
-      <div class="ach-dark-check">공학전문대학원 자율선택제 신설</div>
-      <div class="ach-dark-check">새내기 공학캠프 신설</div>
-      <div class="ach-dark-check">혁신인재 쉐어하우스 확보 (12명 입주)</div>
-      <div class="ach-dark-check">도전혁신(CGE) 특강 · 공휴 콘서트 론칭</div>
-      <div class="ach-dark-check">박사 졸업생 대상 진대제상 · 관악차세대공학상 신설</div>
-      <div class="ach-dark-check">관악이 배출한 혁신동문 50인 선정 · 서울공대 역사관 추진</div>
+    <div class="ach-card-list">
+      <div class="ach-card">
+        <span class="ach-card-label">연구자 지원</span>
+        <div class="ach-dark-checks">
+          <div class="ach-dark-check">연구자매칭 Xpert System 오픈</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-card-label">연구환경</span>
+        <div class="ach-dark-checks">
+          <div class="ach-dark-check">서울시 라이즈 사업 (5년 45억 원) 수주 초기 기획</div>
+          <div class="ach-dark-check">국방공학센터 · 산업AI센터 설립</div>
+          <div class="ach-dark-check">양재동 서울시 AI허브 (연간 118억 원, 28,514㎡ 위탁 운영)</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-card-label">학생 인프라</span>
+        <div class="ach-dark-checks">
+          <div class="ach-dark-check">공학인재역량(공인) 센터 개소</div>
+          <div class="ach-dark-check">새내기 공학캠프 신설</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-card-label">혁신 인재</span>
+        <div class="ach-dark-checks">
+          <div class="ach-dark-check">혁신인재 쉐어하우스 확보 (12명 입주)</div>
+          <div class="ach-dark-check">도전혁신(CGE) 특강 · 공휴 콘서트 론칭</div>
+          <div class="ach-dark-check">진대제상 · 관악차세대공학상 신설</div>
+        </div>
+      </div>
+      <div class="ach-card">
+        <span class="ach-card-label">80주년</span>
+        <div class="ach-dark-checks">
+          <div class="ach-dark-check">관악이 배출한 혁신동문 50인 선정</div>
+          <div class="ach-dark-check">서울공대 역사관 추진</div>
+        </div>
+      </div>
     </div>
   </section>
 

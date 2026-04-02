@@ -62,7 +62,7 @@ posts:
       <div class="home-num-card">
         <span class="home-num counter" data-target="220">0</span>
         <span class="home-num-unit">억 원</span>
-        <span class="home-num-desc">역대 최고 예산안</span>
+        <span class="home-num-desc">발전기금 유치</span>
       </div>
       <div class="home-num-card">
         <span class="home-num counter" data-target="1000" data-comma="true">0</span>
