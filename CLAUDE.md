@@ -16,10 +16,10 @@ Campaign website for **Kim Young-Oh (김영오)**, candidate for **33대 Dean of
 - **Framework:** Jekyll static site generator (do not change)
 - **Theme:** Jekyll Advance Pro (keep as-is, minimal modifications only)
 - **CSS:** SCSS with Bootstrap 4
-- **Deployment:** Two Netlify sites:
-  - **2026 campaign:** `yokim05-2026` site (https://yokim05-2026.netlify.app/), deploys from `2026` branch
-  - **2024 campaign (archive):** original Netlify site, deploys from `main` branch
-- **Branch:** `main` is the 2024 campaign (frozen); `2026` is the 2026 working branch
+- **Deployment:**
+  - **2026 campaign (active):** GitHub Pages at `yokim05-snu-eng.github.io`, deploys from `main` branch
+  - **2024 campaign (archive):** Netlify at `yokim05-2024.netlify.app`, deploys from `2024` branch
+- **Branch:** `main` is the 2026 campaign (active); `2024` is the 2024 campaign (frozen)
 
 ## Site Structure
 
