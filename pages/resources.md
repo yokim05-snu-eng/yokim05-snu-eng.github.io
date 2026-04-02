@@ -5,8 +5,8 @@ permalink: "/resources/"
 header_transparent: true
 meta_og_title: "김영오 홈페이지 — 자료실"
 meta_og_description: "서울공대 33대 학장 후보 김영오의 주요 자료를 다운로드하세요."
-meta_og_image: "https://yokim05-2026.netlify.app/assets/2026/images/preview-2026.png"
-meta_og_url: "https://yokim05-2026.netlify.app/resources/"
+meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026.png"
+meta_og_url: "https://yokim05-snu-eng.github.io/resources/"
 hero:
   enabled: false
 ---
@@ -73,7 +73,7 @@ hero:
           <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
         </span>
       </a>
-      <a href="https://yokim05-snu-eng.github.io/" target="_blank" rel="noopener noreferrer" class="page-bottom-nav-next page-bottom-nav-right">
+      <a href="https://yokim05-2024.netlify.app/" target="_blank" rel="noopener noreferrer" class="page-bottom-nav-next page-bottom-nav-right">
         <span class="page-bottom-nav-next-label">32대 선거 캠페인 사이트</span>
         <span class="page-bottom-nav-next-title">2년 전의 초심 확인 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-left: 4px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
         <span class="page-bottom-nav-next-arrow">

@@ -15,7 +15,7 @@ main:
     url: /resources/
     weight: 5
   - name: 2년 전의 초심 확인
-    url: https://yokim05-snu-eng.github.io/
+    url: https://yokim05-2024.netlify.app/
     weight: 6
 
 footer_primary:
@@ -35,7 +35,7 @@ footer_primary:
     url: /resources/
     weight: 5
   - name: 2년 전의 초심 확인
-    url: https://yokim05-snu-eng.github.io/
+    url: https://yokim05-2024.netlify.app/
     weight: 6
 
 footer_tertiary:
