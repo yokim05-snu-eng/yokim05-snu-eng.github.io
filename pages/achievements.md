@@ -19,7 +19,7 @@ hero:
     <span class="ach-dark-period">2024. 06 — 2026. 03</span>
     <h1 class="ach-dark-title">32대 학장단 실적</h1>
     <span class="ach-dark-sub">KEY ACHIEVEMENTS</span>
-    <a href="/assets/2026/images/last-term-highlight.jpeg" class="ach-image-link" target="_blank">
+    <a href="/achievements-img/" class="ach-image-link" target="_blank">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
       이미지로 보기
     </a>
