@@ -23,8 +23,9 @@ hero:
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
       이미지로 보기
     </a>
-    <div class="ach-dark-scroll-hint">
-      <svg width="20" height="28" viewBox="0 0 20 28" fill="none"><rect x="1" y="1" width="18" height="26" rx="9" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><circle class="ach-scroll-dot" cx="10" cy="8" r="2" fill="rgba(255,255,255,0.5)"/></svg>
+    <div class="ach-dark-scroll-hint" onclick="window.scrollBy({top: window.innerHeight * 0.8, behavior: 'smooth'})" role="button" tabindex="0" aria-label="아래로 스크롤">
+      <span class="scroll-hint-text">아래로 스크롤</span>
+      <svg class="scroll-hint-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
   </section>
 

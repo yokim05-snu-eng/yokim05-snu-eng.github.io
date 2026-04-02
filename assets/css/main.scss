@@ -264,21 +264,40 @@ $home-rule: rgba(255, 255, 255, 0.07);
   }
   .home-hero-scroll {
     position: absolute;
-    bottom: 40px;
-    animation: home-float 2.5s ease-in-out infinite;
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    animation: home-bounce 1.6s ease-in-out infinite;
+    color: rgba(255,255,255,0.9);
+    &:hover { color: #fff; }
   }
-  .home-scroll-dot {
-    animation: home-scroll-dot 2.5s ease-in-out infinite;
+  .home-scroll-text {
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    font-weight: 500;
   }
-  @keyframes home-float {
+  .home-scroll-arrow {
+    width: 28px;
+    height: 28px;
+  }
+  @keyframes home-bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
+    50% { transform: translateY(14px); }
   }
-  @keyframes home-scroll-dot {
-    0% { cy: 8; opacity: 1; }
-    50% { cy: 18; opacity: 0.3; }
-    100% { cy: 8; opacity: 1; }
-  }
+
+// ── Shared scroll-hint text & arrow (used across all pages) ──
+.scroll-hint-text {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+.scroll-hint-arrow {
+  width: 28px;
+  height: 28px;
+}
 
   // ── Key Numbers ──
   .home-numbers {
@@ -628,20 +647,15 @@ $ach-rule: rgba(255, 255, 255, 0.07);
   }
   .ach-dark-scroll-hint {
     position: absolute;
-    bottom: 40px;
-    animation: ach-float 2.5s ease-in-out infinite;
-  }
-  .ach-scroll-dot {
-    animation: ach-scroll-dot 2.5s ease-in-out infinite;
-  }
-  @keyframes ach-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
-  }
-  @keyframes ach-scroll-dot {
-    0% { cy: 8; opacity: 1; }
-    50% { cy: 18; opacity: 0.3; }
-    100% { cy: 8; opacity: 1; }
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    animation: home-bounce 1.6s ease-in-out infinite;
+    color: rgba(255,255,255,0.9);
+    &:hover { color: #fff; }
   }
 
   // Domain sections
@@ -1244,20 +1258,15 @@ $vis-rule: rgba(255, 255, 255, 0.07);
   }
   .vis-dark-scroll-hint {
     position: absolute;
-    bottom: 40px;
-    animation: vis-float 2.5s ease-in-out infinite;
-  }
-  .vis-scroll-dot {
-    animation: vis-scroll-dot 2.5s ease-in-out infinite;
-  }
-  @keyframes vis-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
-  }
-  @keyframes vis-scroll-dot {
-    0% { cy: 8; opacity: 1; }
-    50% { cy: 18; opacity: 0.3; }
-    100% { cy: 8; opacity: 1; }
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    animation: home-bounce 1.6s ease-in-out infinite;
+    color: rgba(255,255,255,0.9);
+    &:hover { color: #fff; }
   }
 
   // Intro narrative section
@@ -1745,20 +1754,15 @@ $stmt-rule: rgba(255, 255, 255, 0.07);
   }
   .stmt-dark-scroll-hint {
     position: absolute;
-    bottom: 40px;
-    animation: stmt-float 2.5s ease-in-out infinite;
-  }
-  .stmt-scroll-dot {
-    animation: stmt-scroll-dot 2.5s ease-in-out infinite;
-  }
-  @keyframes stmt-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
-  }
-  @keyframes stmt-scroll-dot {
-    0% { cy: 8; opacity: 1; }
-    50% { cy: 18; opacity: 0.3; }
-    100% { cy: 8; opacity: 1; }
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    animation: home-bounce 1.6s ease-in-out infinite;
+    color: rgba(255,255,255,0.9);
+    &:hover { color: #fff; }
   }
 
   // Letter body
@@ -1999,22 +2003,52 @@ $abt-rule: rgba(255, 255, 255, 0.07);
     color: $abt-muted;
     font-weight: 500;
   }
+  .abt-dark-hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .stmt-btn {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    border-radius: 100px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    &:hover {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+    }
+    &--outline {
+      color: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.4);
+      &:hover {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
   .abt-dark-scroll-hint {
     position: absolute;
-    bottom: 40px;
-    animation: abt-float 2.5s ease-in-out infinite;
-  }
-  .abt-scroll-dot {
-    animation: abt-scroll-dot 2.5s ease-in-out infinite;
-  }
-  @keyframes abt-float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
-  }
-  @keyframes abt-scroll-dot {
-    0% { cy: 8; opacity: 1; }
-    50% { cy: 18; opacity: 0.3; }
-    100% { cy: 8; opacity: 1; }
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    animation: home-bounce 1.6s ease-in-out infinite;
+    color: rgba(255,255,255,0.9);
+    &:hover { color: #fff; }
   }
 
   // Photo section

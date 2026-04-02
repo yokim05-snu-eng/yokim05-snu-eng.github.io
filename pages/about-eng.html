@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Curriculum Vitae (English)"
+permalink: "/about-eng/"
+description: "Professor Kim Young-Oh Curriculum Vitae"
+---
+
+<div style="display:flex; flex-direction:column; align-items:center; padding:0 16px 24px; margin-top:80px; gap:16px;">
+  <img src="/assets/2026/images/resume-eng/page-1.png" alt="Curriculum Vitae page 1" style="width:100%; max-width:1200px; height:auto; display:block;">
+  <img src="/assets/2026/images/resume-eng/page-2.png" alt="Curriculum Vitae page 2" style="width:100%; max-width:1200px; height:auto; display:block;">
+</div>
+
+{% include components/page-nav.html current="/about/" %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var els = document.querySelectorAll('[data-reveal]');
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { obs.observe(el); });
+});
+</script>

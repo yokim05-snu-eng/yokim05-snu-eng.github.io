@@ -17,8 +17,13 @@ hero:
     <span class="abt-dark-period">서울공대 건설환경공학부 교수</span>
     <h1 class="abt-dark-title">김영오</h1>
     <span class="abt-dark-sub">PROFILE</span>
-    <div class="abt-dark-scroll-hint">
-      <svg width="20" height="28" viewBox="0 0 20 28" fill="none"><rect x="1" y="1" width="18" height="26" rx="9" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><circle class="abt-scroll-dot" cx="10" cy="8" r="2" fill="rgba(255,255,255,0.5)"/></svg>
+    <div class="abt-dark-hero-buttons">
+      <a href="/about-kor/" class="stmt-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>이미지로 보기 (한국어)</a>
+      <a href="/about-eng/" class="stmt-btn stmt-btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px; margin-right: 6px;"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>View as Images (English)</a>
+    </div>
+    <div class="abt-dark-scroll-hint" onclick="window.scrollBy({top: window.innerHeight * 0.8, behavior: 'smooth'})" role="button" tabindex="0" aria-label="아래로 스크롤">
+      <span class="scroll-hint-text">아래로 스크롤</span>
+      <svg class="scroll-hint-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
   </section>
 

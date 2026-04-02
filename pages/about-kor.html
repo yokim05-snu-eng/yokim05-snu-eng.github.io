@@ -1,0 +1,23 @@
+---
+layout: default
+title: "약력서 (한국어)"
+permalink: "/about-kor/"
+description: "김영오 교수 약력서"
+---
+
+<div style="display:flex; flex-direction:column; align-items:center; padding:0 16px 24px; margin-top:80px; gap:16px;">
+  <img src="/assets/2026/images/resume-kor/page-1.png" alt="약력서 1페이지" style="width:100%; max-width:1200px; height:auto; display:block;">
+  <img src="/assets/2026/images/resume-kor/page-2.png" alt="약력서 2페이지" style="width:100%; max-width:1200px; height:auto; display:block;">
+</div>
+
+{% include components/page-nav.html current="/about/" %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var els = document.querySelectorAll('[data-reveal]');
+  var obs = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  els.forEach(function (el) { obs.observe(el); });
+});
+</script>

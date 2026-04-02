@@ -49,8 +49,9 @@ posts:
         <span class="home-hero-election-label">투표일</span>
       </div>
     </div>
-    <div class="home-hero-scroll">
-      <svg width="20" height="28" viewBox="0 0 20 28" fill="none"><rect x="1" y="1" width="18" height="26" rx="9" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/><circle class="home-scroll-dot" cx="10" cy="8" r="2" fill="rgba(255,255,255,0.5)"/></svg>
+    <div class="home-hero-scroll" onclick="window.scrollBy({top: window.innerHeight * 0.8, behavior: 'smooth'})" role="button" tabindex="0" aria-label="아래로 스크롤">
+      <span class="home-scroll-text">아래로 스크롤</span>
+      <svg class="home-scroll-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
   </section>
 
