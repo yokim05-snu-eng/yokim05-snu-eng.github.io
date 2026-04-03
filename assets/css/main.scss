@@ -278,6 +278,17 @@ $home-rule: rgba(255, 255, 255, 0.07);
     color: rgba(255,255,255,0.9);
     &:hover { color: #fff; }
   }
+  .home-numbers-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    animation: home-bounce 1.6s ease-in-out infinite;
+    color: rgba(255,255,255,0.9);
+    margin-top: 40px;
+    &:hover { color: #fff; }
+  }
   .home-scroll-text {
     font-size: 0.85rem;
     letter-spacing: 0.15em;
@@ -464,7 +475,7 @@ $home-rule: rgba(255, 255, 255, 0.07);
     text-align: center;
     padding: 100px 24px 120px;
     border-top: 1px solid $home-rule;
-    background: $home-surface;
+    background: $home-bg;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
@@ -490,6 +501,10 @@ $home-rule: rgba(255, 255, 255, 0.07);
     font-weight: 600;
     letter-spacing: 0.08em;
     margin: 0;
+  }
+
+  .page-bottom-nav {
+    background: $home-surface;
   }
 
   // ── Dark footer override (match vision/achievements) ──
@@ -2426,7 +2441,13 @@ $abt-rule: rgba(255, 255, 255, 0.07);
     text-decoration: none;
   }
   &.is-next {
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.4);
+  }
+  &.is-current {
+    color: rgba(255, 255, 255, 0.7);
+    cursor: default;
+    text-decoration: underline;
+    text-underline-offset: 3px;
   }
 }
 

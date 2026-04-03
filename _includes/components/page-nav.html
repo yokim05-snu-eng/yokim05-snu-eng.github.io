@@ -46,7 +46,9 @@
       <span class="page-bottom-nav-all-label">바로가기</span>
       <div class="page-bottom-nav-all-links">
         {% for url in p_urls %}
-          {% if url != include.current %}
+          {% if url == include.current %}
+            <span class="page-bottom-nav-link is-current">{{ p_titles[forloop.index0] }}</span>
+          {% else %}
             <a href="{{ url }}" class="page-bottom-nav-link{% if url == next_url %} is-next{% endif %}">{{ p_titles[forloop.index0] }}</a>
           {% endif %}
         {% endfor %}

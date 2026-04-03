@@ -62,57 +62,31 @@ posts:
     <div class="home-numbers-grid">
       <div class="home-num-card">
         <span class="home-num counter" data-target="220">0</span>
-        <span class="home-num-unit">억 원</span>
+        <span class="home-num-unit">억원</span>
         <span class="home-num-desc">발전기금 유치</span>
       </div>
       <div class="home-num-card">
         <span class="home-num counter" data-target="1000" data-comma="true">0</span>
-        <span class="home-num-unit">억 원</span>
-        <span class="home-num-desc">AI·첨단분야 시설투자</span>
+        <span class="home-num-unit">억원</span>
+        <span class="home-num-desc">시설 인프라 추진</span>
       </div>
       <div class="home-num-card">
-        <span class="home-num counter" data-target="570">0</span>
-        <span class="home-num-unit-inline">+</span>
-        <span class="home-num-desc">해외 매체 노출</span>
+        <span class="home-num counter" data-target="1000" data-comma="true">0</span>
+        <span class="home-num-unit">여건</span>
+        <span class="home-num-desc">언론 보도</span>
       </div>
       <div class="home-num-card">
-        <span class="home-num counter" data-target="8">0</span>
-        <span class="home-num-unit">억 원</span>
-        <span class="home-num-desc">연구기반 조성</span>
+        <span class="home-num counter" data-target="14" data-decimal="true">0</span>
+        <span class="home-num-unit">억원</span>
+        <span class="home-num-desc">복지 확대</span>
       </div>
     </div>
     <div class="home-numbers-badge">
       <span>2025 서울대학교 최우수 행정기관<br>한국이공학진흥원 최고학장상</span>
     </div>
-  </section>
-
-  <!-- ── NAVIGATION CARDS ── -->
-  <section class="home-nav" data-reveal>
-    <div class="home-nav-grid">
-      <a href="/statement/" class="home-nav-card">
-        <span class="home-nav-card-num">01</span>
-        <h3 class="home-nav-card-title">33대 학장에 출마하며</h3>
-        <p class="home-nav-card-desc">교수님들께 드리는 출마의 변</p>
-        <span class="home-nav-card-arrow">&rarr;</span>
-      </a>
-      <a href="/vision/" class="home-nav-card">
-        <span class="home-nav-card-num">02</span>
-        <h3 class="home-nav-card-title">33대 발전계획서</h3>
-        <p class="home-nav-card-desc">교육·연구·기금·행정·국제화 5대 영역 15개 과제</p>
-        <span class="home-nav-card-arrow">&rarr;</span>
-      </a>
-      <a href="/achievements/" class="home-nav-card">
-        <span class="home-nav-card-num">03</span>
-        <h3 class="home-nav-card-title">32대 학장단 실적</h3>
-        <p class="home-nav-card-desc">2024–2026 핵심 성과와 월별 실적</p>
-        <span class="home-nav-card-arrow">&rarr;</span>
-      </a>
-      <a href="/about/" class="home-nav-card">
-        <span class="home-nav-card-num">04</span>
-        <h3 class="home-nav-card-title">프로필</h3>
-        <p class="home-nav-card-desc">학력·경력·연구업적</p>
-        <span class="home-nav-card-arrow">&rarr;</span>
-      </a>
+    <div class="home-numbers-scroll" onclick="window.scrollBy({top: window.innerHeight * 0.8, behavior: 'smooth'})" role="button" tabindex="0" aria-label="아래로 스크롤">
+      <span class="home-scroll-text">아래로 스크롤</span>
+      <svg class="home-scroll-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
     </div>
   </section>
 
@@ -157,13 +131,18 @@ document.addEventListener('DOMContentLoaded', function () {
   function animateCounter(el) {
     var target = parseInt(el.getAttribute('data-target'), 10);
     var useComma = el.getAttribute('data-comma') === 'true';
+    var useDecimal = el.getAttribute('data-decimal') === 'true';
     var duration = 1800;
     var start = performance.now();
     function step(now) {
       var t = Math.min((now - start) / duration, 1);
       var ease = 1 - Math.pow(1 - t, 3);
       var val = Math.round(ease * target);
-      el.textContent = useComma ? val.toLocaleString() : val;
+      if (useDecimal) {
+        el.textContent = (val / 10).toFixed(1);
+      } else {
+        el.textContent = useComma ? val.toLocaleString() : val;
+      }
       if (t < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
