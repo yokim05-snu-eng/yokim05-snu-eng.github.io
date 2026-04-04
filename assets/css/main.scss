@@ -708,10 +708,10 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     will-change: transform;
   }
   .ach-marquee-row--left .ach-marquee-track {
-    animation: ach-marquee-left 80s linear infinite;
+    animation: ach-marquee-scroll 60s linear infinite;
   }
   .ach-marquee-row--right .ach-marquee-track {
-    animation: ach-marquee-right 80s linear infinite;
+    animation: ach-marquee-scroll 60s linear infinite reverse;
   }
   .ach-marquee-item {
     flex-shrink: 0;
@@ -736,13 +736,9 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     bottom: auto;
     margin-top: 40px;
   }
-  @keyframes ach-marquee-left {
+  @keyframes ach-marquee-scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
-  }
-  @keyframes ach-marquee-right {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
   }
 
   @media (max-width: 767px) {
@@ -751,6 +747,12 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     }
     .ach-marquee-item {
       height: 110px;
+    }
+    .ach-marquee-row--left .ach-marquee-track {
+      animation-duration: 30s;
+    }
+    .ach-marquee-row--right .ach-marquee-track {
+      animation-duration: 35s;
     }
   }
 
