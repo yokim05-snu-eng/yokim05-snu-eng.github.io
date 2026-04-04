@@ -29,6 +29,38 @@ hero:
     </div>
   </section>
 
+  <!-- Photo marquee -->
+  <section class="ach-marquee" data-reveal>
+    <span class="ach-dark-label">HIGHLIGHTS</span>
+    <h2 class="ach-dark-domain-title">현장의 기록</h2>
+
+    <div class="ach-marquee-row ach-marquee-row--left">
+      <div class="ach-marquee-track">
+        {% for i in (1..13) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt="" loading="lazy"></div>{% endfor %}
+        {% for i in (1..13) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt="" loading="lazy"></div>{% endfor %}
+      </div>
+    </div>
+
+    <div class="ach-marquee-row ach-marquee-row--right">
+      <div class="ach-marquee-track">
+        {% for i in (14..25) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt="" loading="lazy"></div>{% endfor %}
+        {% for i in (14..25) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt="" loading="lazy"></div>{% endfor %}
+      </div>
+    </div>
+
+    <div class="ach-marquee-row ach-marquee-row--left">
+      <div class="ach-marquee-track">
+        {% for i in (26..37) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt="" loading="lazy"></div>{% endfor %}
+        {% for i in (26..37) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt="" loading="lazy"></div>{% endfor %}
+      </div>
+    </div>
+
+    <div class="ach-dark-scroll-hint" onclick="window.scrollBy({top: window.innerHeight * 0.8, behavior: 'smooth'})" role="button" tabindex="0" aria-label="아래로 스크롤">
+      <span class="scroll-hint-text">아래로 스크롤</span>
+      <svg class="scroll-hint-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
   <section class="ach-dark-domain" data-reveal>
     <span class="ach-dark-label">01</span>
     <h2 class="ach-dark-domain-title">재정&행정 기반 업그레이드</h2>

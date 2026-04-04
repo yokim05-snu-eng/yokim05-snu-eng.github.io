@@ -677,6 +677,83 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     &:hover { color: #fff; }
   }
 
+  // ─── Photo marquee ──────────────────────────────────
+  .ach-marquee {
+    padding: 80px 0 64px;
+    border-top: 1px solid $ach-rule;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .ach-dark-label { margin-bottom: 16px; }
+    .ach-dark-domain-title { margin-bottom: 40px; }
+  }
+  .ach-marquee-row {
+    overflow: hidden;
+    margin-bottom: 10px;
+    // fade edges
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+  .ach-marquee-track {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    will-change: transform;
+  }
+  .ach-marquee-row--left .ach-marquee-track {
+    animation: ach-marquee-left 80s linear infinite;
+  }
+  .ach-marquee-row--right .ach-marquee-track {
+    animation: ach-marquee-right 80s linear infinite;
+  }
+  .ach-marquee-item {
+    flex-shrink: 0;
+    height: 160px;
+    border-radius: 6px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.85);
+      transition: filter 0.3s ease, transform 0.3s ease;
+    }
+    &:hover img {
+      filter: brightness(1);
+      transform: scale(1.04);
+    }
+  }
+  .ach-marquee .ach-dark-scroll-hint {
+    position: relative;
+    bottom: auto;
+    margin-top: 40px;
+  }
+  @keyframes ach-marquee-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes ach-marquee-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  @media (max-width: 767px) {
+    .ach-marquee {
+      padding: 56px 0 48px;
+    }
+    .ach-marquee-item {
+      height: 110px;
+    }
+  }
+
   // Domain sections
   .ach-dark-domain {
     text-align: center;
