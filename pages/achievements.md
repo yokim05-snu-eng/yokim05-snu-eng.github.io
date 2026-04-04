@@ -31,8 +31,8 @@ hero:
 
   <!-- Photo marquee -->
   <section class="ach-marquee" data-reveal>
-    <span class="ach-dark-label">HIGHLIGHTS</span>
-    <h2 class="ach-dark-domain-title">현장의 기록</h2>
+    <span class="ach-dark-label">MOMENTS</span>
+    <h2 class="ach-dark-domain-title">주요 순간</h2>
 
     <div class="ach-marquee-row ach-marquee-row--left">
       <div class="ach-marquee-track">
@@ -400,6 +400,7 @@ hero:
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  // ─── Scroll reveal ───
   var domains = document.querySelectorAll('[data-reveal]');
   var revealObs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
@@ -411,6 +412,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { threshold: 0.2 });
   domains.forEach(function (d) { revealObs.observe(d); });
 
+  // ─── Animated counters ───
   var counters = document.querySelectorAll('.counter');
   var counterObs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
@@ -436,5 +438,84 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     requestAnimationFrame(step);
   }
+
+  // ─── Photo marquee (JS-driven scroll) ───
+  document.querySelectorAll('.ach-marquee-row').forEach(function (row, idx) {
+    var track = row.querySelector('.ach-marquee-track');
+    if (!track) return;
+
+    var isRight = row.classList.contains('ach-marquee-row--right');
+    var speed = [0.5, 0.4, 0.45][idx] || 0.5;
+    var paused = false;
+    var resumeTimer = null;
+    var halfWidth = 0;
+
+    function calcHalf() { halfWidth = track.scrollWidth / 2; }
+
+    function initScroll() {
+      calcHalf();
+      if (isRight) row.scrollLeft = halfWidth;
+      requestAnimationFrame(tick);
+    }
+
+    function tick() {
+      if (!paused && halfWidth > 0) {
+        if (isRight) {
+          row.scrollLeft -= speed;
+          if (row.scrollLeft <= 0) row.scrollLeft += halfWidth;
+        } else {
+          row.scrollLeft += speed;
+          if (row.scrollLeft >= halfWidth) row.scrollLeft -= halfWidth;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+
+    function pause() {
+      paused = true;
+      clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function () { paused = false; }, 2500);
+    }
+
+    // Pause on any user interaction
+    row.addEventListener('pointerdown', pause);
+    row.addEventListener('wheel', pause, { passive: true });
+    row.addEventListener('touchstart', pause, { passive: true });
+
+    // Mouse drag support
+    var dragStartX = 0, dragStartScroll = 0;
+    row.addEventListener('mousedown', function (e) {
+      e.preventDefault();
+      dragStartX = e.clientX;
+      dragStartScroll = row.scrollLeft;
+      function onMove(ev) {
+        row.scrollLeft = dragStartScroll - (ev.clientX - dragStartX);
+      }
+      function onUp() {
+        window.removeEventListener('mousemove', onMove);
+        window.removeEventListener('mouseup', onUp);
+      }
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('mouseup', onUp);
+    });
+
+    // Recalculate on resize
+    window.addEventListener('resize', calcHalf);
+
+    // Wait for images to load for accurate width, then start
+    var imgs = track.querySelectorAll('img');
+    var loaded = 0;
+    var total = imgs.length;
+    function onImgReady() {
+      loaded++;
+      if (loaded >= total) initScroll();
+    }
+    imgs.forEach(function (img) {
+      if (img.complete) { onImgReady(); }
+      else { img.addEventListener('load', onImgReady); img.addEventListener('error', onImgReady); }
+    });
+    // Fallback: start after 3s even if some images haven't loaded
+    setTimeout(function () { if (loaded < total) initScroll(); }, 3000);
+  });
 });
 </script>
