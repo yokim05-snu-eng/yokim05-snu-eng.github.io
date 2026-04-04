@@ -739,6 +739,50 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     margin-top: 40px;
   }
 
+  // ─── Lightbox ───
+  .ach-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    &.is-open { display: flex; }
+  }
+  .ach-lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    cursor: pointer;
+  }
+  .ach-lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: ach-lb-in 0.25s ease;
+  }
+  .ach-lightbox-img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 6px;
+    object-fit: contain;
+  }
+  .ach-lightbox-caption {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-top: 14px;
+    text-align: center;
+    line-height: 1.5;
+    word-break: keep-all;
+  }
+  @keyframes ach-lb-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
   @media (max-width: 767px) {
     .ach-marquee {
       padding: 56px 0 48px;

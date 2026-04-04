@@ -36,22 +36,31 @@ hero:
 
     <div class="ach-marquee-row ach-marquee-row--left">
       <div class="ach-marquee-track">
-        {% for i in (1..13) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt=""></div>{% endfor %}
-        {% for i in (1..13) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (1..13) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (1..13) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt=""></div>{% endfor %}
       </div>
     </div>
 
     <div class="ach-marquee-row ach-marquee-row--right">
       <div class="ach-marquee-track">
-        {% for i in (14..25) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
-        {% for i in (14..25) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (14..25) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (14..25) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
       </div>
     </div>
 
     <div class="ach-marquee-row ach-marquee-row--left">
       <div class="ach-marquee-track">
-        {% for i in (26..37) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
-        {% for i in (26..37) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (26..37) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (26..37) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="ach-lightbox" id="achLightbox">
+      <div class="ach-lightbox-backdrop"></div>
+      <div class="ach-lightbox-content">
+        <img class="ach-lightbox-img" id="achLightboxImg" src="" alt="">
+        <p class="ach-lightbox-caption" id="achLightboxCaption"></p>
       </div>
     </div>
 
@@ -501,5 +510,70 @@ document.addEventListener('DOMContentLoaded', function () {
   // Start after all images have loaded for accurate scrollWidth
   if (document.readyState === 'complete') { initMarquee(); }
   else { window.addEventListener('load', initMarquee); }
+
+  // ─── Lightbox ───
+  var captions = [
+    '',
+    '전기정보공학부 및 화학생물공학부 해동학술정보실 리뉴얼 협약 체결 (2024.06.26.)',
+    '미국 로렌스 리버모어 국립 연구소간 심포지엄 (2024.06.13.)',
+    '태국 공대 학장 협의회 대표단 (2024.06.13.)',
+    '태국 치앙마이대학교 공과대학 대표단 (2024.06.17.)',
+    '홍콩과기대 광저우 캠퍼스 대표단 (2024.06.19.)',
+    '네덜란드 델프트공과대학 랩투어 및 방문 (2025.11.20.)',
+    '서울대 출입기자 간담회 (2024.07.09.)',
+    '산업통상자원부 장관님 접견 (2024.09.10)',
+    '한화에어로스페이스 허브 개소식 (2025.01.07)',
+    '네이버 본사 방문 (2025.02.25)',
+    '교수교류회 – 건설환경종합연구소',
+    '해동과학문화재단 감사패 전달식 (2024.10.16)',
+    '공과대학 교류회 (2024.12.12.)',
+    '공과대학 열린토론회 (2025.09.24.)',
+    '서울대학교 – RWTH Aachen 공동협력 강화 교류행사 (2025.05.15.)',
+    '홍콩 The Hong Kong Polytechnic University (PolyU) – 공우 학생 대표단 연구 행사 (2026.03.23.)',
+    '미국 WashU McKelvey Engineering 대표단 (2024.11.05.)',
+    '서울대학교-LG전자 어나더캠퍼스 오픈행사 (2024.10.30.)',
+    '제1회 열린 토론회 (2024.07.17.)',
+    '17th International Students and Scholars\u2019 Night',
+    '제2회 열린 토론회 (2024.08.28.)',
+    '2024년 상반기 명예퇴직 및 공로 연수자 감사패 수여식',
+    '2024년도 창의설계축전 홍보 동영상 공모전 시상식',
+    '2024 서울공대동창회 동문의 날 행사 (10.26)',
+    '2024 서울공대동창회 동문의 날 행사 (10.26)',
+    '2024년도 제12회 공대-의대-병원 의료기기 포럼 (2024.12.13.)',
+    '2024년도 2차 공과대학 신임교원 워크샵 행사 개최 (2024.08.28.)',
+    '2024 International Students and Scholars\u2019 Night (2024.12.06.)',
+    '2025년 첨단·미래산업 외국인 인재 유치 설명회 (베트남)',
+    '2026년 교수 신년교례회 (2026.01.05.)',
+    '2026학년도 1학기 외국인 학생 오리엔테이션 (2026.03.03)',
+    '제3회 열린 토론회 (2024.09.25.)',
+    '제4회 열린 토론회 (2024.11.20.)',
+    'CT Group 회장 방문',
+    'Hanoi University of Science and Technology MOU',
+    'K-문화데이 김장 담그기 행사 (2024.11.26.)',
+    'SNU아산유니버시티 차담회 (2025.02.18)'
+  ];
+
+  var lb = document.getElementById('achLightbox');
+  var lbImg = document.getElementById('achLightboxImg');
+  var lbCap = document.getElementById('achLightboxCaption');
+
+  document.querySelectorAll('.ach-marquee-item[data-ev]').forEach(function (item) {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', function () {
+      var idx = parseInt(item.getAttribute('data-ev'), 10);
+      var img = item.querySelector('img');
+      if (!img) return;
+      lbImg.src = img.src;
+      lbCap.textContent = captions[idx] || '';
+      lb.classList.add('is-open');
+    });
+  });
+
+  lb.querySelector('.ach-lightbox-backdrop').addEventListener('click', function () {
+    lb.classList.remove('is-open');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lb.classList.remove('is-open');
+  });
 });
 </script>
