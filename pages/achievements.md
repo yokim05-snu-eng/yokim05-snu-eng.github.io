@@ -36,22 +36,22 @@ hero:
 
     <div class="ach-marquee-row ach-marquee-row--left">
       <div class="ach-marquee-track">
-        {% for i in (1..13) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt="" loading="lazy"></div>{% endfor %}
-        {% for i in (1..13) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt="" loading="lazy"></div>{% endfor %}
+        {% for i in (1..13) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (1..13) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt=""></div>{% endfor %}
       </div>
     </div>
 
     <div class="ach-marquee-row ach-marquee-row--right">
       <div class="ach-marquee-track">
-        {% for i in (14..25) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt="" loading="lazy"></div>{% endfor %}
-        {% for i in (14..25) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt="" loading="lazy"></div>{% endfor %}
+        {% for i in (14..25) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (14..25) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
       </div>
     </div>
 
     <div class="ach-marquee-row ach-marquee-row--left">
       <div class="ach-marquee-track">
-        {% for i in (26..37) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt="" loading="lazy"></div>{% endfor %}
-        {% for i in (26..37) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt="" loading="lazy"></div>{% endfor %}
+        {% for i in (26..37) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (26..37) %}<div class="ach-marquee-item"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
       </div>
     </div>
 
@@ -440,82 +440,66 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ─── Photo marquee (JS-driven scroll) ───
-  document.querySelectorAll('.ach-marquee-row').forEach(function (row, idx) {
-    var track = row.querySelector('.ach-marquee-track');
-    if (!track) return;
+  function initMarquee() {
+    document.querySelectorAll('.ach-marquee-row').forEach(function (row, idx) {
+      var track = row.querySelector('.ach-marquee-track');
+      if (!track) return;
 
-    var isRight = row.classList.contains('ach-marquee-row--right');
-    var speed = [0.5, 0.4, 0.45][idx] || 0.5;
-    var paused = false;
-    var resumeTimer = null;
-    var halfWidth = 0;
+      var isRight = row.classList.contains('ach-marquee-row--right');
+      var speed = [0.5, 0.4, 0.45][idx] || 0.5;
+      var paused = false;
+      var resumeTimer = null;
+      var halfWidth = track.scrollWidth / 2;
 
-    function calcHalf() { halfWidth = track.scrollWidth / 2; }
-
-    function initScroll() {
-      calcHalf();
       if (isRight) row.scrollLeft = halfWidth;
-      requestAnimationFrame(tick);
-    }
 
-    function tick() {
-      if (!paused && halfWidth > 0) {
-        if (isRight) {
-          row.scrollLeft -= speed;
-          if (row.scrollLeft <= 0) row.scrollLeft += halfWidth;
-        } else {
-          row.scrollLeft += speed;
-          if (row.scrollLeft >= halfWidth) row.scrollLeft -= halfWidth;
+      window.addEventListener('resize', function () { halfWidth = track.scrollWidth / 2; });
+
+      function tick() {
+        if (!paused && halfWidth > 0) {
+          if (isRight) {
+            row.scrollLeft -= speed;
+            if (row.scrollLeft <= 0) row.scrollLeft += halfWidth;
+          } else {
+            row.scrollLeft += speed;
+            if (row.scrollLeft >= halfWidth) row.scrollLeft -= halfWidth;
+          }
         }
+        requestAnimationFrame(tick);
       }
-      requestAnimationFrame(tick);
-    }
 
-    function pause() {
-      paused = true;
-      clearTimeout(resumeTimer);
-      resumeTimer = setTimeout(function () { paused = false; }, 2500);
-    }
-
-    // Pause on any user interaction
-    row.addEventListener('pointerdown', pause);
-    row.addEventListener('wheel', pause, { passive: true });
-    row.addEventListener('touchstart', pause, { passive: true });
-
-    // Mouse drag support
-    var dragStartX = 0, dragStartScroll = 0;
-    row.addEventListener('mousedown', function (e) {
-      e.preventDefault();
-      dragStartX = e.clientX;
-      dragStartScroll = row.scrollLeft;
-      function onMove(ev) {
-        row.scrollLeft = dragStartScroll - (ev.clientX - dragStartX);
+      // Pause on pointer/touch down, resume 2s after release
+      function onDown() {
+        paused = true;
+        clearTimeout(resumeTimer);
       }
       function onUp() {
-        window.removeEventListener('mousemove', onMove);
-        window.removeEventListener('mouseup', onUp);
+        clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(function () { paused = false; }, 2000);
       }
-      window.addEventListener('mousemove', onMove);
-      window.addEventListener('mouseup', onUp);
-    });
+      row.addEventListener('pointerdown', onDown);
+      row.addEventListener('pointerup', onUp);
+      row.addEventListener('pointercancel', onUp);
+      row.addEventListener('wheel', function () { onDown(); onUp(); }, { passive: true });
 
-    // Recalculate on resize
-    window.addEventListener('resize', calcHalf);
+      // Mouse drag
+      row.addEventListener('mousedown', function (e) {
+        e.preventDefault();
+        var startX = e.clientX, startScroll = row.scrollLeft;
+        function onMove(ev) { row.scrollLeft = startScroll - (ev.clientX - startX); }
+        function onEnd() {
+          window.removeEventListener('mousemove', onMove);
+          window.removeEventListener('mouseup', onEnd);
+        }
+        window.addEventListener('mousemove', onMove);
+        window.addEventListener('mouseup', onEnd);
+      });
 
-    // Wait for images to load for accurate width, then start
-    var imgs = track.querySelectorAll('img');
-    var loaded = 0;
-    var total = imgs.length;
-    function onImgReady() {
-      loaded++;
-      if (loaded >= total) initScroll();
-    }
-    imgs.forEach(function (img) {
-      if (img.complete) { onImgReady(); }
-      else { img.addEventListener('load', onImgReady); img.addEventListener('error', onImgReady); }
+      requestAnimationFrame(tick);
     });
-    // Fallback: start after 3s even if some images haven't loaded
-    setTimeout(function () { if (loaded < total) initScroll(); }, 3000);
-  });
+  }
+  // Start after all images have loaded for accurate scrollWidth
+  if (document.readyState === 'complete') { initMarquee(); }
+  else { window.addEventListener('load', initMarquee); }
 });
 </script>
