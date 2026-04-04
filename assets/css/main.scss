@@ -695,15 +695,10 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     .ach-dark-domain-title { margin-bottom: 40px; }
   }
   .ach-marquee-row {
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     margin-bottom: 10px;
     cursor: grab;
     &:active { cursor: grabbing; }
-    // hide scrollbar
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar { display: none; }
     // fade edges
     mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
@@ -712,6 +707,7 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     display: flex;
     gap: 10px;
     width: max-content;
+    will-change: transform;
   }
   .ach-marquee-item {
     flex-shrink: 0;
@@ -777,6 +773,24 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     text-align: center;
     line-height: 1.5;
     word-break: keep-all;
+  }
+  .ach-lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 1;
+    &:hover { background: rgba(255, 255, 255, 0.3); }
+    svg { stroke: #fff; }
   }
   @keyframes ach-lb-in {
     from { opacity: 0; transform: scale(0.95); }

@@ -58,6 +58,9 @@ hero:
     <!-- Lightbox -->
     <div class="ach-lightbox" id="achLightbox">
       <div class="ach-lightbox-backdrop"></div>
+      <button class="ach-lightbox-close" aria-label="닫기">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
       <div class="ach-lightbox-content">
         <img class="ach-lightbox-img" id="achLightboxImg" src="" alt="">
         <p class="ach-lightbox-caption" id="achLightboxCaption"></p>
@@ -448,7 +451,7 @@ document.addEventListener('DOMContentLoaded', function () {
     requestAnimationFrame(step);
   }
 
-  // ─── Photo marquee (JS-driven scroll) ───
+  // ─── Photo marquee (transform-based) ───
   function initMarquee() {
     document.querySelectorAll('.ach-marquee-row').forEach(function (row, idx) {
       var track = row.querySelector('.ach-marquee-track');
@@ -456,58 +459,69 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var isRight = row.classList.contains('ach-marquee-row--right');
       var speed = [0.5, 0.4, 0.45][idx] || 0.5;
+      var halfWidth = track.scrollWidth / 2;
+      var pos = isRight ? -halfWidth : 0;
       var paused = false;
       var resumeTimer = null;
-      var halfWidth = track.scrollWidth / 2;
+      var dragging = false;
+      var dragStartX = 0;
+      var dragStartPos = 0;
+      var didDrag = false;
 
-      if (isRight) row.scrollLeft = halfWidth;
+      window.addEventListener('resize', function () {
+        halfWidth = track.scrollWidth / 2;
+      });
 
-      window.addEventListener('resize', function () { halfWidth = track.scrollWidth / 2; });
+      function wrap() {
+        if (pos <= -halfWidth) pos += halfWidth;
+        if (pos > 0) pos -= halfWidth;
+      }
 
       function tick() {
-        if (!paused && halfWidth > 0) {
-          if (isRight) {
-            row.scrollLeft -= speed;
-            if (row.scrollLeft <= 0) row.scrollLeft += halfWidth;
-          } else {
-            row.scrollLeft += speed;
-            if (row.scrollLeft >= halfWidth) row.scrollLeft -= halfWidth;
-          }
+        if (!paused && !dragging && halfWidth > 0) {
+          pos += isRight ? speed : -speed;
+          wrap();
         }
+        track.style.transform = 'translate3d(' + pos + 'px,0,0)';
         requestAnimationFrame(tick);
       }
 
-      // Pause on pointer/touch down, resume 2s after release
-      function onDown() {
+      // Pause/resume on tap (not drag)
+      function onDown(e) {
+        dragging = true;
+        didDrag = false;
+        dragStartX = e.touches ? e.touches[0].clientX : e.clientX;
+        dragStartPos = pos;
         paused = true;
         clearTimeout(resumeTimer);
       }
+      function onMove(e) {
+        if (!dragging) return;
+        var x = e.touches ? e.touches[0].clientX : e.clientX;
+        var delta = x - dragStartX;
+        if (Math.abs(delta) > 3) didDrag = true;
+        pos = dragStartPos + delta;
+        wrap();
+      }
       function onUp() {
+        dragging = false;
         clearTimeout(resumeTimer);
         resumeTimer = setTimeout(function () { paused = false; }, 2000);
       }
-      row.addEventListener('pointerdown', onDown);
-      row.addEventListener('pointerup', onUp);
-      row.addEventListener('pointercancel', onUp);
-      row.addEventListener('wheel', function () { onDown(); onUp(); }, { passive: true });
 
-      // Mouse drag
-      row.addEventListener('mousedown', function (e) {
-        e.preventDefault();
-        var startX = e.clientX, startScroll = row.scrollLeft;
-        function onMove(ev) { row.scrollLeft = startScroll - (ev.clientX - startX); }
-        function onEnd() {
-          window.removeEventListener('mousemove', onMove);
-          window.removeEventListener('mouseup', onEnd);
-        }
-        window.addEventListener('mousemove', onMove);
-        window.addEventListener('mouseup', onEnd);
-      });
+      row.addEventListener('mousedown', function (e) { e.preventDefault(); onDown(e); });
+      row.addEventListener('touchstart', onDown, { passive: true });
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('touchmove', onMove, { passive: true });
+      window.addEventListener('mouseup', onUp);
+      window.addEventListener('touchend', onUp);
+
+      // Expose didDrag check for lightbox click
+      row._didDrag = function () { return didDrag; };
 
       requestAnimationFrame(tick);
     });
   }
-  // Start after all images have loaded for accurate scrollWidth
   if (document.readyState === 'complete') { initMarquee(); }
   else { window.addEventListener('load', initMarquee); }
 
@@ -557,9 +571,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var lbImg = document.getElementById('achLightboxImg');
   var lbCap = document.getElementById('achLightboxCaption');
 
+  function closeLightbox() { lb.classList.remove('is-open'); }
+
   document.querySelectorAll('.ach-marquee-item[data-ev]').forEach(function (item) {
     item.style.cursor = 'pointer';
     item.addEventListener('click', function () {
+      // Don't open lightbox if user was dragging
+      var row = item.closest('.ach-marquee-row');
+      if (row && row._didDrag && row._didDrag()) return;
       var idx = parseInt(item.getAttribute('data-ev'), 10);
       var img = item.querySelector('img');
       if (!img) return;
@@ -569,11 +588,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  lb.querySelector('.ach-lightbox-backdrop').addEventListener('click', function () {
-    lb.classList.remove('is-open');
-  });
+  lb.querySelector('.ach-lightbox-backdrop').addEventListener('click', closeLightbox);
+  lb.querySelector('.ach-lightbox-close').addEventListener('click', closeLightbox);
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') lb.classList.remove('is-open');
+    if (e.key === 'Escape') closeLightbox();
   });
 });
 </script>
