@@ -677,6 +677,135 @@ $ach-rule: rgba(255, 255, 255, 0.07);
     &:hover { color: #fff; }
   }
 
+  // ─── Photo marquee ──────────────────────────────────
+  .ach-marquee {
+    padding: 80px 0 64px;
+    border-top: 1px solid $ach-rule;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .ach-dark-label { margin-bottom: 16px; }
+    .ach-dark-domain-title { margin-bottom: 40px; }
+  }
+  .ach-marquee-row {
+    overflow: hidden;
+    margin-bottom: 10px;
+    cursor: grab;
+    &:active { cursor: grabbing; }
+    // fade edges
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+  .ach-marquee-track {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    will-change: transform;
+  }
+  .ach-marquee-item {
+    flex-shrink: 0;
+    height: 160px;
+    border-radius: 6px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.85);
+      transition: filter 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+    &:hover img {
+      filter: brightness(1);
+      transform: scale(1.04);
+    }
+  }
+  .ach-marquee .ach-dark-scroll-hint {
+    position: relative;
+    bottom: auto;
+    margin-top: 40px;
+  }
+
+  // ─── Lightbox ───
+  .ach-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    &.is-open { display: flex; }
+  }
+  .ach-lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    cursor: pointer;
+  }
+  .ach-lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: ach-lb-in 0.25s ease;
+  }
+  .ach-lightbox-img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 6px;
+    object-fit: contain;
+  }
+  .ach-lightbox-caption {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-top: 14px;
+    text-align: center;
+    line-height: 1.5;
+    word-break: keep-all;
+  }
+  .ach-lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+    z-index: 1;
+    &:hover { background: rgba(255, 255, 255, 0.3); }
+    svg { stroke: #fff; }
+  }
+  @keyframes ach-lb-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @media (max-width: 767px) {
+    .ach-marquee {
+      padding: 56px 0 48px;
+    }
+    .ach-marquee-item {
+      height: 110px;
+    }
+  }
+
   // Domain sections
   .ach-dark-domain {
     text-align: center;

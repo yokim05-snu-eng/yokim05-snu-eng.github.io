@@ -29,6 +29,50 @@ hero:
     </div>
   </section>
 
+  <!-- Photo marquee -->
+  <section class="ach-marquee" data-reveal>
+    <span class="ach-dark-label">MOMENTS</span>
+    <h2 class="ach-dark-domain-title">주요 순간</h2>
+
+    <div class="ach-marquee-row ach-marquee-row--left">
+      <div class="ach-marquee-track">
+        {% for i in (1..13) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (1..13) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i | prepend: '00' | slice: -2, 2 }}.jpg" alt=""></div>{% endfor %}
+      </div>
+    </div>
+
+    <div class="ach-marquee-row ach-marquee-row--right">
+      <div class="ach-marquee-track">
+        {% for i in (14..25) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (14..25) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+      </div>
+    </div>
+
+    <div class="ach-marquee-row ach-marquee-row--left">
+      <div class="ach-marquee-track">
+        {% for i in (26..37) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+        {% for i in (26..37) %}<div class="ach-marquee-item" data-ev="{{ i }}"><img src="/assets/2026/images/last-term-events-web/event-{{ i }}.jpg" alt=""></div>{% endfor %}
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="ach-lightbox" id="achLightbox">
+      <div class="ach-lightbox-backdrop"></div>
+      <button class="ach-lightbox-close" aria-label="닫기">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="ach-lightbox-content">
+        <img class="ach-lightbox-img" id="achLightboxImg" src="" alt="">
+        <p class="ach-lightbox-caption" id="achLightboxCaption"></p>
+      </div>
+    </div>
+
+    <div class="ach-dark-scroll-hint" onclick="window.scrollBy({top: window.innerHeight * 0.8, behavior: 'smooth'})" role="button" tabindex="0" aria-label="아래로 스크롤">
+      <span class="scroll-hint-text">아래로 스크롤</span>
+      <svg class="scroll-hint-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
   <section class="ach-dark-domain" data-reveal>
     <span class="ach-dark-label">01</span>
     <h2 class="ach-dark-domain-title">재정&행정 기반 업그레이드</h2>
@@ -368,6 +412,7 @@ hero:
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  // ─── Scroll reveal ───
   var domains = document.querySelectorAll('[data-reveal]');
   var revealObs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
@@ -379,6 +424,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { threshold: 0.2 });
   domains.forEach(function (d) { revealObs.observe(d); });
 
+  // ─── Animated counters ───
   var counters = document.querySelectorAll('.counter');
   var counterObs = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
@@ -404,5 +450,148 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     requestAnimationFrame(step);
   }
+
+  // ─── Photo marquee (transform-based) ───
+  function initMarquee() {
+    document.querySelectorAll('.ach-marquee-row').forEach(function (row, idx) {
+      var track = row.querySelector('.ach-marquee-track');
+      if (!track) return;
+
+      var isRight = row.classList.contains('ach-marquee-row--right');
+      var speed = [0.5, 0.4, 0.45][idx] || 0.5;
+      var halfWidth = track.scrollWidth / 2;
+      var pos = isRight ? -halfWidth : 0;
+      var paused = false;
+      var resumeTimer = null;
+      var dragging = false;
+      var dragStartX = 0;
+      var dragStartPos = 0;
+      var didDrag = false;
+
+      window.addEventListener('resize', function () {
+        halfWidth = track.scrollWidth / 2;
+      });
+
+      function wrap() {
+        if (pos <= -halfWidth) pos += halfWidth;
+        if (pos > 0) pos -= halfWidth;
+      }
+
+      function tick() {
+        if (!paused && !dragging && halfWidth > 0) {
+          pos += isRight ? speed : -speed;
+          wrap();
+        }
+        track.style.transform = 'translate3d(' + pos + 'px,0,0)';
+        requestAnimationFrame(tick);
+      }
+
+      // Pause/resume on tap (not drag)
+      function onDown(e) {
+        dragging = true;
+        didDrag = false;
+        dragStartX = e.touches ? e.touches[0].clientX : e.clientX;
+        dragStartPos = pos;
+        paused = true;
+        clearTimeout(resumeTimer);
+      }
+      function onMove(e) {
+        if (!dragging) return;
+        var x = e.touches ? e.touches[0].clientX : e.clientX;
+        var delta = x - dragStartX;
+        if (Math.abs(delta) > 3) didDrag = true;
+        pos = dragStartPos + delta;
+        wrap();
+      }
+      function onUp() {
+        dragging = false;
+        clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(function () { paused = false; }, 2000);
+      }
+
+      row.addEventListener('mousedown', function (e) { e.preventDefault(); onDown(e); });
+      row.addEventListener('touchstart', onDown, { passive: true });
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('touchmove', onMove, { passive: true });
+      window.addEventListener('mouseup', onUp);
+      window.addEventListener('touchend', onUp);
+
+      // Expose didDrag check for lightbox click
+      row._didDrag = function () { return didDrag; };
+
+      requestAnimationFrame(tick);
+    });
+  }
+  if (document.readyState === 'complete') { initMarquee(); }
+  else { window.addEventListener('load', initMarquee); }
+
+  // ─── Lightbox ───
+  var captions = [
+    '',
+    '전기정보공학부 및 화학생물공학부 해동학술정보실 리뉴얼 협약 체결 (2024.06.26.)',
+    '미국 로렌스 리버모어 국립 연구소간 심포지엄 (2024.06.13.)',
+    '태국 공대 학장 협의회 대표단 (2024.06.13.)',
+    '태국 치앙마이대학교 공과대학 대표단 (2024.06.17.)',
+    '홍콩과기대 광저우 캠퍼스 대표단 (2024.06.19.)',
+    '네덜란드 델프트공과대학 랩투어 및 방문 (2025.11.20.)',
+    '서울대 출입기자 간담회 (2024.07.09.)',
+    '산업통상자원부 장관님 접견 (2024.09.10)',
+    '한화에어로스페이스 허브 개소식 (2025.01.07)',
+    '네이버 본사 방문 (2025.02.25)',
+    '교수교류회 – 건설환경종합연구소',
+    '해동과학문화재단 감사패 전달식 (2024.10.16)',
+    '공과대학 교류회 (2024.12.12.)',
+    '공과대학 열린토론회 (2025.09.24.)',
+    '서울대학교 – RWTH Aachen 공동협력 강화 교류행사 (2025.05.15.)',
+    '홍콩 The Hong Kong Polytechnic University (PolyU) – 공우 학생 대표단 연구 행사 (2026.03.23.)',
+    '미국 WashU McKelvey Engineering 대표단 (2024.11.05.)',
+    '서울대학교-LG전자 어나더캠퍼스 오픈행사 (2024.10.30.)',
+    '제1회 열린 토론회 (2024.07.17.)',
+    '17th International Students and Scholars\u2019 Night',
+    '제2회 열린 토론회 (2024.08.28.)',
+    '2024년 상반기 명예퇴직 및 공로 연수자 감사패 수여식',
+    '2024년도 창의설계축전 홍보 동영상 공모전 시상식',
+    '2024 서울공대동창회 동문의 날 행사 (10.26)',
+    '2024 서울공대동창회 동문의 날 행사 (10.26)',
+    '2024년도 제12회 공대-의대-병원 의료기기 포럼 (2024.12.13.)',
+    '2024년도 2차 공과대학 신임교원 워크샵 행사 개최 (2024.08.28.)',
+    '2024 International Students and Scholars\u2019 Night (2024.12.06.)',
+    '2025년 첨단·미래산업 외국인 인재 유치 설명회 (베트남)',
+    '2026년 교수 신년교례회 (2026.01.05.)',
+    '2026학년도 1학기 외국인 학생 오리엔테이션 (2026.03.03)',
+    '제3회 열린 토론회 (2024.09.25.)',
+    '제4회 열린 토론회 (2024.11.20.)',
+    'CT Group 회장 방문',
+    'Hanoi University of Science and Technology MOU',
+    'K-문화데이 김장 담그기 행사 (2024.11.26.)',
+    'SNU아산유니버시티 차담회 (2025.02.18)'
+  ];
+
+  var lb = document.getElementById('achLightbox');
+  var lbImg = document.getElementById('achLightboxImg');
+  var lbCap = document.getElementById('achLightboxCaption');
+
+  function closeLightbox() { lb.classList.remove('is-open'); }
+
+  document.querySelectorAll('.ach-marquee-item[data-ev]').forEach(function (item) {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', function () {
+      // Don't open lightbox if user was dragging
+      var row = item.closest('.ach-marquee-row');
+      if (row && row._didDrag && row._didDrag()) return;
+      var idx = parseInt(item.getAttribute('data-ev'), 10);
+      var img = item.querySelector('img');
+      if (!img) return;
+      lbImg.src = img.src;
+      lbCap.textContent = captions[idx] || '';
+      lb.classList.add('is-open');
+    });
+  });
+
+  lb.querySelector('.ach-lightbox-backdrop').addEventListener('click', closeLightbox);
+  lb.querySelector('.ach-lightbox-close').addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
 });
 </script>
