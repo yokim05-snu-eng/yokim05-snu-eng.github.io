@@ -397,7 +397,7 @@ hero:
             <div class="tl-item">도전혁신(CGE) 특강 · 공휴 콘서트 론칭</div>
             <div class="tl-item">'창업가형 혁신인재' 교과목 개설</div>
             <div class="tl-item">공대 공통교과목 'AI 개론' 교안 개발 시작</div>
-            <div class="tl-item">이공계 지원 국가 정책 제언 — 출입국심사시 이공계인력 우대 제도법 통과</div>
+            <div class="tl-item">이공계 지원 국가 정책 제언 (예: 출입국심사시 이공계인력 우대 제도법 통과)</div>
             <div class="tl-item">열린토론회 10차 개최 · 학장 서신 33호 발송</div>
           </div>
         </div>
@@ -506,7 +506,7 @@ document.addEventListener('DOMContentLoaded', function () {
       function onUp() {
         dragging = false;
         clearTimeout(resumeTimer);
-        resumeTimer = setTimeout(function () { paused = false; }, 2000);
+        resumeTimer = setTimeout(function () { paused = false; }, 1200);
       }
 
       row.addEventListener('mousedown', function (e) { e.preventDefault(); onDown(e); });
