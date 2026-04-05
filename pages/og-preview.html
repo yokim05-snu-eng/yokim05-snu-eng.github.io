@@ -1,0 +1,95 @@
+---
+layout: null
+title: "OG Preview"
+permalink: "/og-preview/"
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200">
+  <meta name="robots" content="noindex, nofollow">
+  <title>OG Preview — Screenshot This</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .og-card {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .og-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('/assets/2026/images/last-term-pic-2.jpeg');
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .og-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .og-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+    }
+
+    .og-line1 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+
+    .og-line2 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+      margin-top: 4px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+
+    .og-sub {
+      font-size: 22px;
+      font-weight: 400;
+      margin-top: 28px;
+      letter-spacing: 2px;
+      opacity: 0.85;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="og-card">
+    <div class="og-bg"></div>
+    <div class="og-content">
+      <div class="og-line1">서울공대 '변화의 속도'를 높이겠습니다</div>
+      <div class="og-line2">교수님의 지지를 부탁드립니다</div>
+      <div class="og-sub">SNU College of Engineering</div>
+    </div>
+  </div>
+</body>
+</html>
