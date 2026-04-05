@@ -66,7 +66,7 @@ footer:
   enable_bottom_menu: false
 
   enable_copyright: true
-  copyright: "© 2026 김영오 with Claude Code. v2.3.5"
+  copyright: "© 2026 김영오 with Claude Code. v2.3.6"
 
 contact:
   show_contact_details: true

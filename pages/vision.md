@@ -6,7 +6,7 @@ description: "서울공대 33대 학장 발전계획서"
 header_transparent: true
 meta_og_title: "김영오 홈페이지"
 meta_og_description: "서울공대 33대 학장에 출마합니다."
-meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026-2.jpg"
+meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026-3.jpg"
 meta_og_url: "https://yokim05-snu-eng.github.io/vision/"
 hero:
   enabled: false
@@ -168,7 +168,7 @@ hero:
       </div>
     </div>
     <div class="vis-domain-photo">
-      <img src="/assets/2026/images/graduation-2026.jpeg" alt="2026 서울대학교 공과대학 최우수 졸업생 시상식">
+      <img src="/assets/2026/images/vision/vision-1.png" alt="교육·교원 분야 발전계획">
     </div>
   </section>
 
@@ -219,6 +219,9 @@ hero:
           </div>
         </div>
       </div>
+    </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/vision/vision-2.png" alt="창업·연구 분야 발전계획">
     </div>
   </section>
 
@@ -271,7 +274,7 @@ hero:
       </div>
     </div>
     <div class="vis-domain-photo">
-      <img src="/assets/2026/images/last-term-pic-3.png" alt="연구시설 방문">
+      <img src="/assets/2026/images/vision/vision-3.png" alt="기금·홍보·동문 분야 발전계획">
     </div>
   </section>
 
@@ -323,6 +326,9 @@ hero:
         </div>
       </div>
     </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/vision/vision-4.jpeg" alt="행정·복지·캠퍼스 분야 발전계획">
+    </div>
   </section>
 
   <section class="vis-dark-domain" data-reveal id="domain-05">
@@ -372,6 +378,9 @@ hero:
           </div>
         </div>
       </div>
+    </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/vision/vision-5.png" alt="국제화 분야 발전계획">
     </div>
 
   </section>
@@ -488,6 +497,9 @@ hero:
         </div>
       </div>
     </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/vision/vision-1.png" alt="Education & Faculty development plan">
+    </div>
   </section>
 
   <section class="vis-dark-domain" data-reveal id="domain-02-en">
@@ -518,6 +530,9 @@ hero:
           <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>We will plan government-industry-academia projects at the college level (defense engineering, industrial AX, etc.) exceeding KRW 50 billion every year.</p></div>
         </div>
       </div>
+    </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/vision/vision-2.png" alt="Startups & Research development plan">
     </div>
   </section>
 
@@ -550,6 +565,9 @@ hero:
         </div>
       </div>
     </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/vision/vision-3.png" alt="Fundraising, PR & Alumni development plan">
+    </div>
   </section>
 
   <section class="vis-dark-domain" data-reveal id="domain-04-en">
@@ -581,6 +599,9 @@ hero:
         </div>
       </div>
     </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/vision/vision-4.jpeg" alt="Admin, Welfare & Campus development plan">
+    </div>
   </section>
 
   <section class="vis-dark-domain" data-reveal id="domain-05-en">
@@ -611,6 +632,9 @@ hero:
           <div class="vis-dark-plan"><span class="vis-dark-plan-label">Implementation Plan</span><p>In partnership with external foundations, we will establish a sabbatical support program (KRW 25 million per semester) to lay the groundwork for collaborative research with leading overseas scholars and to create pathways for securing international joint research projects.</p></div>
         </div>
       </div>
+    </div>
+    <div class="vis-domain-photo">
+      <img src="/assets/2026/images/vision/vision-5.png" alt="Internationalization development plan">
     </div>
   </section>
 

@@ -5,7 +5,7 @@ permalink: "/resources/"
 header_transparent: true
 meta_og_title: "김영오 홈페이지 — 자료실"
 meta_og_description: "서울공대 33대 학장 후보 김영오의 주요 자료를 다운로드하세요."
-meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026-2.jpg"
+meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026-3.jpg"
 meta_og_url: "https://yokim05-snu-eng.github.io/resources/"
 hero:
   enabled: false
