@@ -180,7 +180,7 @@ hero:
         <div class="ach-dark-checks">
           <div class="ach-dark-check">서울시 라이즈 사업 (5년 45억 원) 수주 초기 기획</div>
           <div class="ach-dark-check">국방공학센터 · 산업AI센터 설립</div>
-          <div class="ach-dark-check">양재동 서울시 AI허브 (연간 118억 원, 28,514㎡ 위탁 운영)</div>
+          <div class="ach-dark-check">양재동 서울시 AI허브 (연간 118억 원, 28,514㎡) 위탁 운영</div>
         </div>
       </div>
       <div class="ach-card">
@@ -397,7 +397,7 @@ hero:
             <div class="tl-item">도전혁신(CGE) 특강 · 공휴 콘서트 론칭</div>
             <div class="tl-item">'창업가형 혁신인재' 교과목 개설</div>
             <div class="tl-item">공대 공통교과목 'AI 개론' 교안 개발 시작</div>
-            <div class="tl-item">이공계 지원 국가 정책 제언</div>
+            <div class="tl-item">이공계 지원 국가 정책 제언<span class="tl-detail">(예: 출입국심사시 이공계인력 우대 제도법 통과)</span></div>
             <div class="tl-item">열린토론회 10차 개최 · 학장 서신 33호 발송</div>
           </div>
         </div>

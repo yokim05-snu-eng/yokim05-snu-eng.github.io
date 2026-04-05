@@ -14,7 +14,7 @@ hero:
 <div class="abt-dark">
 
   <section class="abt-dark-hero">
-    <span class="abt-dark-period">서울공대 건설환경공학부 교수</span>
+    <span class="abt-dark-period">32대 서울공대 학장</span>
     <h1 class="abt-dark-title">김영오</h1>
     <span class="abt-dark-sub">PROFILE</span>
     <div class="abt-dark-hero-buttons">
@@ -30,7 +30,7 @@ hero:
   <section class="abt-dark-photo-section" data-reveal>
     <div class="abt-dark-photo-inner">
       <div class="abt-dark-photo">
-        <img src="/assets/images/about/학생처장실3.JPG" alt="김영오 교수">
+        <img src="/assets/2026/images/profile-2.jpg" alt="김영오 학장">
       </div>
       <div class="abt-dark-photo-caption">
         <span class="abt-dark-photo-name">김영오</span>
@@ -45,8 +45,8 @@ hero:
     <h2 class="abt-dark-domain-title">전공 분야</h2>
     <div class="abt-dark-items">
       <div class="abt-dark-item">
-        <span class="abt-dark-item-key">전공</span>
-        <span class="abt-dark-item-val">건설환경공학</span>
+        <span class="abt-dark-item-key">학부</span>
+        <span class="abt-dark-item-val">도시공학부</span>
       </div>
       <div class="abt-dark-item">
         <span class="abt-dark-item-key">세부전공</span>
@@ -62,7 +62,7 @@ hero:
       </div>
       <div class="abt-dark-item">
         <span class="abt-dark-item-key">연구실</span>
-        <span class="abt-dark-item-val">기후변화 적응 수자원 연구실 (<a href="https://ccawr.snu.ac.kr/sub1_1.php" target="_blank">링크</a>)</span>
+        <span class="abt-dark-item-val">기후변화 적응 수자원 연구실 (<a href="https://ccawr.snu.ac.kr/" target="_blank">링크</a>)</span>
       </div>
     </div>
   </section>
@@ -95,20 +95,8 @@ hero:
     <h2 class="abt-dark-domain-title">주요 경력 — 교육 & 연구</h2>
     <div class="abt-dark-timeline">
       <div class="abt-dark-tl-entry">
-        <span class="abt-dark-tl-year">2012–현재</span>
-        <span class="abt-dark-tl-text">서울대학교 공과대학 건설환경공학부 <strong>교수</strong></span>
-      </div>
-      <div class="abt-dark-tl-entry">
-        <span class="abt-dark-tl-year">2006–2012</span>
-        <span class="abt-dark-tl-text">서울대학교 공과대학 건설환경공학부 <strong>부교수</strong></span>
-      </div>
-      <div class="abt-dark-tl-entry">
-        <span class="abt-dark-tl-year">2002–2006</span>
-        <span class="abt-dark-tl-text">서울대학교 공과대학 지구환경시스템공학부 <strong>조교수</strong></span>
-      </div>
-      <div class="abt-dark-tl-entry">
-        <span class="abt-dark-tl-year">1999–2002</span>
-        <span class="abt-dark-tl-text">서울대학교 공과대학 지구환경시스템공학부 <strong>전임강사</strong></span>
+        <span class="abt-dark-tl-year">1999–현재</span>
+        <span class="abt-dark-tl-text">서울대학교 공과대학 <strong>전임강사, 조교수, 부교수, 정교수</strong></span>
       </div>
       <div class="abt-dark-tl-entry">
         <span class="abt-dark-tl-year">1997–1999</span>
@@ -130,7 +118,7 @@ hero:
     <h2 class="abt-dark-domain-title">주요 경력 — 대학 행정</h2>
     <div class="abt-dark-timeline">
       <div class="abt-dark-tl-entry abt-dark-tl-entry--highlight">
-        <span class="abt-dark-tl-year">2024–2026</span>
+        <span class="abt-dark-tl-year">2024–현재</span>
         <span class="abt-dark-tl-text">서울대학교 공과대학 <strong>학장</strong></span>
       </div>
       <div class="abt-dark-tl-entry">
@@ -140,10 +128,6 @@ hero:
       <div class="abt-dark-tl-entry">
         <span class="abt-dark-tl-year">2020–2021</span>
         <span class="abt-dark-tl-text">서울대학교 건설환경공학부 <strong>학부장</strong></span>
-      </div>
-      <div class="abt-dark-tl-entry">
-        <span class="abt-dark-tl-year">2017–2019</span>
-        <span class="abt-dark-tl-text">서울대학교 건설환경종합연구소 <strong>운영부장</strong></span>
       </div>
       <div class="abt-dark-tl-entry">
         <span class="abt-dark-tl-year">2012–2014</span>
@@ -169,24 +153,12 @@ hero:
     <h2 class="abt-dark-domain-title">주요 대외 활동</h2>
     <div class="abt-dark-timeline">
       <div class="abt-dark-tl-entry">
-        <span class="abt-dark-tl-year">2022</span>
-        <span class="abt-dark-tl-text">대한토목학회 <strong>부회장</strong></span>
-      </div>
-      <div class="abt-dark-tl-entry">
-        <span class="abt-dark-tl-year">2021–2022</span>
-        <span class="abt-dark-tl-text">한국수자원학회 <strong>부회장</strong></span>
-      </div>
-      <div class="abt-dark-tl-entry">
         <span class="abt-dark-tl-year">2020–2021</span>
         <span class="abt-dark-tl-text">바른 과학기술사회 실현을 위한 국민연합(과실연) <strong>상임대표</strong></span>
       </div>
       <div class="abt-dark-tl-entry">
-        <span class="abt-dark-tl-year">2019–2020</span>
-        <span class="abt-dark-tl-text">한국수자원학회 국문논문집 <strong>편집위원장</strong></span>
-      </div>
-      <div class="abt-dark-tl-entry">
-        <span class="abt-dark-tl-year">2017–2018</span>
-        <span class="abt-dark-tl-text">한국기후변화학회 <strong>부회장 겸 학술위원장</strong></span>
+        <span class="abt-dark-tl-year">2017, 2021, 2022</span>
+        <span class="abt-dark-tl-text">한국기후변화학회, 한국수자원학회, 대한토목학회 <strong>부회장</strong></span>
       </div>
       <div class="abt-dark-tl-entry">
         <span class="abt-dark-tl-year">2020–2024</span>
