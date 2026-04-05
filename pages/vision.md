@@ -49,8 +49,8 @@ hero:
           <span class="vis-overview-card-num">01</span>
           <h3 class="vis-overview-card-title">교육 · 교원</h3>
           <div class="vis-overview-card-stat">
-            <span class="vis-overview-card-big" data-count="85">0</span><span class="vis-overview-card-unit">억원</span>
-            <span class="vis-overview-card-stat-label">교육부 신규사업 규모</span>
+            <span class="vis-overview-card-big" data-count="24">0</span><span class="vis-overview-card-unit">억원</span>
+            <span class="vis-overview-card-stat-label">매년 40명 혁신인재</span>
           </div>
           <ul class="vis-overview-card-list">
             <li>혁신인재 육성사업 정착</li>
