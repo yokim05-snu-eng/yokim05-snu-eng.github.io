@@ -14,7 +14,7 @@ hero:
 <div class="abt-dark">
 
   <section class="abt-dark-hero">
-    <span class="abt-dark-period">32대 서울공대 학장</span>
+    <span class="abt-dark-period">건설환경공학부 교수</span>
     <h1 class="abt-dark-title">김영오</h1>
     <span class="abt-dark-sub">PROFILE</span>
     <div class="abt-dark-hero-buttons">
@@ -35,7 +35,7 @@ hero:
       <div class="abt-dark-photo-caption">
         <span class="abt-dark-photo-name">김영오</span>
         <span class="abt-dark-photo-role">33대 서울공대 학장 후보</span>
-        <span class="abt-dark-photo-dept">건설환경공학부 교수</span>
+        <span class="abt-dark-photo-dept">32대 서울공대 학장</span>
       </div>
     </div>
   </section>
@@ -46,7 +46,7 @@ hero:
     <div class="abt-dark-items">
       <div class="abt-dark-item">
         <span class="abt-dark-item-key">학부</span>
-        <span class="abt-dark-item-val">도시공학부</span>
+        <span class="abt-dark-item-val">건설환경도시공학부</span>
       </div>
       <div class="abt-dark-item">
         <span class="abt-dark-item-key">세부전공</span>
