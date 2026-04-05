@@ -6,7 +6,7 @@ description: "서울공대 33대 학장 발전계획서"
 header_transparent: true
 meta_og_title: "김영오 홈페이지"
 meta_og_description: "서울공대 33대 학장에 출마합니다."
-meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026.png"
+meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026-2.jpg"
 meta_og_url: "https://yokim05-snu-eng.github.io/vision/"
 hero:
   enabled: false
@@ -78,7 +78,7 @@ hero:
           <h3 class="vis-overview-card-title">기금 · 홍보 · 동문</h3>
           <div class="vis-overview-card-stat">
             <span class="vis-overview-card-big" data-count="365">0</span><span class="vis-overview-card-unit">억원</span>
-            <span class="vis-overview-card-stat-label">연간 발전기금 목표</span>
+            <span class="vis-overview-card-stat-label">임기중 발전기금 목표</span>
           </div>
           <ul class="vis-overview-card-list">
             <li>발전기금 및 선제적 홍보 지속</li>

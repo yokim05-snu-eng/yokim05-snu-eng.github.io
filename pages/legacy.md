@@ -6,7 +6,7 @@ description: "2년 전의 초심 확인"
 header_transparent: false
 meta_og_title: "김영오 홈페이지"
 meta_og_description: "서울공대 33대 학장에 출마합니다."
-meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026.png"
+meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026-2.jpg"
 meta_og_url: "https://yokim05-snu-eng.github.io/legacy/"
 
 hero:

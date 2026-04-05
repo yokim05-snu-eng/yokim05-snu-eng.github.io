@@ -5,7 +5,7 @@ permalink: "/achievements/"
 header_transparent: true
 meta_og_title: "김영오 홈페이지"
 meta_og_description: "서울공대 33대 학장에 출마합니다."
-meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026.png"
+meta_og_image: "https://yokim05-snu-eng.github.io/assets/2026/images/preview-2026-2.jpg"
 meta_og_url: "https://yokim05-snu-eng.github.io/achievements/"
 hero:
   enabled: false
@@ -80,7 +80,7 @@ hero:
       <span class="ach-dark-big counter" data-target="220">0</span>
       <span class="ach-dark-big-unit">억 원</span>
     </div>
-    <p class="ach-dark-hero-desc">재임기 중 발전기금 유치<span class="ach-dark-hero-detail">교대 150억 원 + 본부 70억 원</span></p>
+    <p class="ach-dark-hero-desc">재임기 중 발전기금 유치<span class="ach-dark-hero-detail">공대 150억 원 + 본부 70억 원</span></p>
     <div class="ach-dark-row">
       <div class="ach-dark-cell">
         <span class="ach-dark-cell-num counter" data-target="1000" data-comma="true">0</span>
@@ -172,7 +172,7 @@ hero:
       <div class="ach-card">
         <span class="ach-card-label">연구자 지원</span>
         <div class="ach-dark-checks">
-          <div class="ach-dark-check">연구자매칭 Xpert System 오픈</div>
+          <div class="ach-dark-check">연구자매칭 Xpert Search System 오픈</div>
         </div>
       </div>
       <div class="ach-card">
@@ -212,7 +212,7 @@ hero:
   <section class="tl-section">
     <div class="tl-header">
       <h2 class="tl-title">월별 주요 실적</h2>
-      <span class="tl-sub">ANNUAL ACHIEVEMENTS</span>
+      <span class="tl-sub">MONTHLY ACHIEVEMENTS</span>
     </div>
 
     <div class="tl-track">
@@ -345,7 +345,7 @@ hero:
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-card-inner">
-            <div class="tl-item">연구자매칭 Xpert System 오픈</div>
+            <div class="tl-item">연구자매칭 Xpert Search System 오픈</div>
             <div class="tl-item">관악이 배출한 혁신동문 50인 선정</div>
             <div class="tl-item">이슈&보이스 포럼 3차</div>
           </div>
