@@ -14,7 +14,7 @@ hero:
 <div class="abt-dark">
 
   <section class="abt-dark-hero">
-    <span class="abt-dark-period">건설환경공학부 교수</span>
+    <span class="abt-dark-period">33대 서울공대 학장 후보</span>
     <h1 class="abt-dark-title">김영오</h1>
     <span class="abt-dark-sub">PROFILE</span>
     <div class="abt-dark-hero-buttons">
