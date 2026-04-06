@@ -22,7 +22,7 @@ hero:
   <section class="res-dark-files" data-reveal>
     <div class="res-dark-files-inner">
 
-      <a href="/assets/2026/files/2026-vision-kor.pdf" target="_blank" class="res-card">
+      <a href="/assets/2026/files/2026-vision-kor-2.pdf" target="_blank" class="res-card">
         <div class="res-card-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
         </div>
@@ -35,7 +35,7 @@ hero:
         </div>
       </a>
 
-      <a href="/assets/2026/files/2026-vision-eng.pdf" target="_blank" class="res-card">
+      <a href="/assets/2026/files/2026-vision-eng-2.pdf" target="_blank" class="res-card">
         <div class="res-card-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
         </div>
@@ -61,7 +61,7 @@ hero:
         </div>
       </a>
 
-      <a href="/assets/2026/files/candidate%20application.pdf" target="_blank" class="res-card">
+      <a href="/assets/2026/files/candidate-application-2.pdf" target="_blank" class="res-card">
         <div class="res-card-icon">
           <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
         </div>
